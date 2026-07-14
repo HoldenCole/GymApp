@@ -1,0 +1,9 @@
+node_modules/
+dist/
+build/
+.expo/
+*.tsbuildinfo
+.DS_Store
+.env
+.env.*
+coverage/
