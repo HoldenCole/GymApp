@@ -31,6 +31,8 @@ export interface AppProfile extends UserProfile {
   onboarded?: boolean;
   /** Formation companion; Benedict is the catalog's default. */
   patronId?: PatronId;
+  /** The user's current offering intention — an invitation, never owed. */
+  intention?: string;
 }
 
 /**

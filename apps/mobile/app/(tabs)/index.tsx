@@ -21,8 +21,10 @@ import {
 } from "@kanon/fitness";
 import { dayTotals, filterCatalog } from "@kanon/food";
 import { activeAvoidSet, resolveObligation, type Weekday } from "@kanon/engine";
+import patrons from "@kanon/content/packaged/patrons.json";
 import { CATALOG } from "../../src/catalog";
 import { civilDayFactsToday } from "../../src/dayFacts";
+import { feastOn } from "../../src/feasts";
 import { todayWeekday } from "../../src/dates";
 import { useFasts } from "../../src/fasts";
 import { useFitness } from "../../src/fitness";
@@ -118,10 +120,27 @@ export default function Home() {
       </View>
       <View style={styles.rule} />
 
-      <Text style={[styles.offering, sacredSerif]}>
-        Offer this for the work of your hands.
-      </Text>
+      <OfferingLine />
     </ScrollView>
+  );
+}
+
+function OfferingLine() {
+  const { profile } = useProfile();
+  const patron = patrons.saints[profile.patronId ?? "benedict"];
+  const feast = feastOn(todayISO());
+  return (
+    <View style={{ gap: 4 }}>
+      {feast?.softens ? (
+        <Text style={[styles.softening, sacredSerif]}>
+          {feast.label} — the emphasis softens today.
+        </Text>
+      ) : null}
+      <Text style={[styles.offering, sacredSerif]}>{patron.offering_line}</Text>
+      {profile.intention ? (
+        <Text style={[styles.intentionLine, sacredSerif]}>{profile.intention}</Text>
+      ) : null}
+    </View>
   );
 }
 
@@ -271,4 +290,6 @@ const styles = StyleSheet.create({
   obligationLine: { color: colors.oxblood, fontSize: 14, fontWeight: "600" },
   pick: { paddingVertical: 2 },
   pickMacros: { fontSize: 12, color: colors.grayLabel },
+  softening: { fontSize: 13, fontStyle: "italic", color: colors.graySecondary },
+  intentionLine: { fontSize: 13, fontStyle: "italic", color: colors.graySecondary },
 });

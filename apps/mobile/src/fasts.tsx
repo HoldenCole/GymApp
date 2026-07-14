@@ -33,6 +33,7 @@ interface FastsStore {
   setAside: (id: string, date: string) => void;
   resume: (id: string, date: string) => void;
   dismissAccumulation: (fromDate: string) => void;
+  reset: () => void;
 }
 
 const FastsContext = createContext<FastsStore | null>(null);
@@ -84,6 +85,7 @@ export function FastsProvider({ children }: { children: ReactNode }) {
           .slice(0, 10);
         persist({ ...state, accumulationDismissedUntil: until });
       },
+      reset: () => persist({ fasts: [] }),
     };
   }, [state]);
 

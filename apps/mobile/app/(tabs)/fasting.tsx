@@ -13,6 +13,7 @@ import {
 import { civilDayFactsToday } from "../../src/dayFacts";
 import { todayWeekday } from "../../src/dates";
 import { useFasts } from "../../src/fasts";
+import { feastOn } from "../../src/feasts";
 import { useProfile } from "../../src/profile";
 import { colors, sacredSerif, sectionLabel } from "../../src/theme";
 
@@ -48,6 +49,12 @@ export default function Fasting() {
             ? describe(obligation.fast, obligation.abstinence)
             : "No fast or abstinence binds today."}
         </Text>
+        {feastOn(day.date)?.softens ? (
+          <Text style={[styles.heroSoftening, sacredSerif]}>
+            {feastOn(day.date)!.label} — a feast is a feast; the emphasis
+            softens today.
+          </Text>
+        ) : null}
       </View>
 
       <Text style={sectionLabel}>What today allows</Text>
@@ -206,6 +213,7 @@ const styles = StyleSheet.create({
   },
   heroLabel: { fontSize: 11, letterSpacing: 1.5, fontWeight: "600", color: colors.goldBright },
   heroLine: { color: colors.paperWhite, fontSize: 17, lineHeight: 24 },
+  heroSoftening: { color: colors.goldBright, fontSize: 13, fontStyle: "italic", lineHeight: 19 },
   body: {
     color: colors.graySecondary,
     fontSize: 13,

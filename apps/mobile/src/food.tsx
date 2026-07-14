@@ -38,6 +38,7 @@ interface FoodStore {
   addEntry: (entry: Omit<DiaryEntry, "id">) => void;
   removeEntry: (id: string) => void;
   update: (patch: Partial<Omit<FoodState, "diary">>) => void;
+  reset: () => void;
 }
 
 const FoodContext = createContext<FoodStore | null>(null);
@@ -71,6 +72,7 @@ export function FoodProvider({ children }: { children: ReactNode }) {
       removeEntry: (id) =>
         persist({ ...state, diary: state.diary.filter((e) => e.id !== id) }),
       update: (patch) => persist({ ...state, ...patch }),
+      reset: () => persist(DEFAULT_STATE),
     };
   }, [state]);
 

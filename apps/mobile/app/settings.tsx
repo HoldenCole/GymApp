@@ -1,6 +1,7 @@
-import { Link } from "expo-router";
+import { Link, useRouter } from "expo-router";
 import { useState } from "react";
 import {
+  Alert,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -8,6 +9,7 @@ import {
   TextInput,
   View,
 } from "react-native";
+import patrons from "@kanon/content/packaged/patrons.json";
 import {
   DISCIPLINE_ORDER,
   DISCIPLINES,
@@ -17,10 +19,14 @@ import {
 import type { UnitSystem } from "@kanon/fitness";
 import { ALLERGENS } from "@kanon/food";
 import { FAST_CATEGORIES } from "@kanon/engine";
+import { useFasts } from "../src/fasts";
 import { useFitness } from "../src/fitness";
 import { useFood } from "../src/food";
-import { useProfile } from "../src/profile";
+import { useJournal } from "../src/journal";
+import { DEFAULT_PROFILE, PatronId, useProfile } from "../src/profile";
 import { colors, sacredSerif, sectionLabel } from "../src/theme";
+
+const PATRON_IDS: PatronId[] = ["benedict", "joseph", "hyacinth", "therese", "anthony"];
 
 /**
  * Settings (UI brief §3.6). Scaffold scope: the resolver's three inputs —
@@ -32,13 +38,38 @@ import { colors, sacredSerif, sectionLabel } from "../src/theme";
  * (Project Master §1).
  */
 export default function Settings() {
+  const router = useRouter();
   const { profile, setProfile } = useProfile();
-  const { state, update } = useFitness();
-  const { state: food, update: updateFood } = useFood();
+  const { state, update, reset: resetFitness } = useFitness();
+  const { state: food, update: updateFood, reset: resetFood } = useFood();
+  const { reset: resetFasts } = useFasts();
+  const { reset: resetJournal } = useJournal();
   const [birthDraft, setBirthDraft] = useState(profile.birthDate);
 
   const toggle = (list: string[], value: string) =>
     list.includes(value) ? list.filter((x) => x !== value) : [...list, value];
+
+  const startOver = () => {
+    Alert.alert(
+      "Start over?",
+      "This erases everything on this device — plan, diary, weights, commitments, journal — and runs setup again. There's no undo.",
+      [
+        { text: "Keep everything", style: "cancel" },
+        {
+          text: "Erase and start over",
+          style: "destructive",
+          onPress: () => {
+            resetFitness();
+            resetFood();
+            resetFasts();
+            resetJournal();
+            setProfile({ ...DEFAULT_PROFILE, onboarded: false });
+            router.replace("/onboarding");
+          },
+        },
+      ],
+    );
+  };
 
   const commitBirthDate = () => {
     if (/^\d{4}-\d{2}-\d{2}$/.test(birthDraft)) {
@@ -198,6 +229,53 @@ export default function Settings() {
       />
       <View style={styles.rule} />
 
+      <Text style={sectionLabel}>Companion</Text>
+      <Text style={styles.help}>
+        The voice of your Rule tab. Change freely — a season under one
+        patron ends and another begins.
+      </Text>
+      {PATRON_IDS.map((id) => {
+        const saint = patrons.saints[id];
+        const active = (profile.patronId ?? "benedict") === id;
+        return (
+          <Pressable
+            key={id}
+            accessibilityRole="radio"
+            accessibilityState={{ selected: active }}
+            onPress={() => setProfile({ ...profile, patronId: id })}
+            style={styles.option}
+          >
+            <View style={styles.optionHead}>
+              <Text style={[styles.optionLabel, active && styles.optionActive]}>
+                {saint.name}
+              </Text>
+              {active ? <Text style={styles.check}>✓</Text> : null}
+            </View>
+            <Text style={[styles.optionBody, sacredSerif]}>
+              {saint.selector_descriptor}
+            </Text>
+          </Pressable>
+        );
+      })}
+      <View style={styles.rule} />
+
+      <Text style={sectionLabel}>What Kanon will never do</Text>
+      <Text style={styles.help}>
+        No surveillance, no ads, no sale of your data — everything here
+        lives on your device. No gamification of spiritual progress: no
+        streaks, badges, or scores on anything sacred. The app states the
+        Church's law and routes real doubt to your pastor, confessor, or
+        doctor — it never judges your conscience. These aren't v1
+        limitations; they're permanent.
+      </Text>
+      <View style={styles.rule} />
+
+      <Text style={sectionLabel}>Start over</Text>
+      <Pressable onPress={startOver} accessibilityRole="button">
+        <Text style={styles.danger}>Erase everything and run setup again</Text>
+      </Pressable>
+      <View style={styles.rule} />
+
       <Text style={[styles.footer, sacredSerif]}>
         Calendar data: Introibo — import pending.
       </Text>
@@ -248,6 +326,7 @@ const styles = StyleSheet.create({
   },
   chipActive: { borderColor: colors.inkNavy, color: colors.inkNavy, fontWeight: "600" },
   allergyChipActive: { borderColor: colors.oxblood, color: colors.oxblood, fontWeight: "600" },
+  danger: { color: colors.oxblood, fontSize: 14 },
   unitsRow: { flexDirection: "row", gap: 16, marginTop: 4 },
   unitChoice: { fontSize: 13, color: colors.graySecondary },
   unitActive: { color: colors.inkNavy, fontWeight: "600" },

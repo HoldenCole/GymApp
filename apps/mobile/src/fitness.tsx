@@ -49,6 +49,7 @@ interface FitnessStore {
   update: (patch: Partial<FitnessState>) => void;
   /** Log today's weight; also keeps body.weightKg current for targets. */
   logWeight: (entry: WeightEntry) => void;
+  reset: () => void;
 }
 
 const FitnessContext = createContext<FitnessStore | null>(null);
@@ -78,6 +79,7 @@ export function FitnessProvider({ children }: { children: ReactNode }) {
           weightLog: normalizeLog([...state.weightLog, entry]),
           body: state.body ? { ...state.body, weightKg: entry.weightKg } : state.body,
         }),
+      reset: () => persist(DEFAULT_STATE),
     };
   }, [state]);
 
