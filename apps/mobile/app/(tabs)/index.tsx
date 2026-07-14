@@ -19,10 +19,15 @@ import {
   weeklyRate,
   weightUnitLabel,
 } from "@kanon/fitness";
-import { dayTotals } from "@kanon/food";
-import type { Weekday } from "@kanon/engine";
+import { dayTotals, filterCatalog } from "@kanon/food";
+import { activeAvoidSet, resolveObligation, type Weekday } from "@kanon/engine";
+import { CATALOG } from "../../src/catalog";
+import { civilDayFactsToday } from "../../src/dayFacts";
+import { todayWeekday } from "../../src/dates";
+import { useFasts } from "../../src/fasts";
 import { useFitness } from "../../src/fitness";
 import { todayISO, useFood } from "../../src/food";
+import { useProfile } from "../../src/profile";
 import { colors, sacredSerif, sectionLabel } from "../../src/theme";
 
 /**
@@ -71,18 +76,12 @@ export default function Home() {
       <MacroGlance />
       <View style={styles.rule} />
 
-      <Text style={sectionLabel}>Training</Text>
-      <View style={styles.baselineRow}>
-        <Text style={styles.body}>
-          Today: {session ? session.name : "Rest"} · {GOAL_LABELS[state.plan.goal]}
-        </Text>
-        <Link href="/split" style={styles.link}>
-          Split
-        </Link>
-      </View>
-      <Text style={styles.placeholder}>
-        Fast-day collision notes arrive with the calendar import.
-      </Text>
+      <Text style={sectionLabel}>Fasting · Training</Text>
+      <FastingTrainingSplit sessionName={session ? session.name : "Rest"} />
+      <View style={styles.rule} />
+
+      <Text style={sectionLabel}>Today's picks</Text>
+      <MealPicks />
       <View style={styles.rule} />
 
       <Text style={sectionLabel}>Weight · trend</Text>
@@ -123,6 +122,76 @@ export default function Home() {
         Offer this for the work of your hands.
       </Text>
     </ScrollView>
+  );
+}
+
+function FastingTrainingSplit({ sessionName }: { sessionName: string }) {
+  const { profile } = useProfile();
+  const { state } = useFitness();
+  const day = civilDayFactsToday();
+  const obligation = resolveObligation(day, profile);
+  const bound = obligation.fast || obligation.abstinence !== "none";
+
+  return (
+    <View style={{ gap: 4 }}>
+      <Text style={bound ? styles.obligationLine : styles.body}>
+        {bound
+          ? `The Church asks: ${[
+              obligation.fast ? "fast" : "",
+              obligation.abstinence !== "none" ? "abstinence" : "",
+            ]
+              .filter(Boolean)
+              .join(" and ")} today.`
+          : "No fast or abstinence binds today."}
+        {day.liturgicalFactsPending ? " (weekday rules only — calendar pending)" : ""}
+      </Text>
+      <View style={styles.baselineRow}>
+        <Text style={styles.body}>
+          {sessionName} · {GOAL_LABELS[state.plan.goal]}
+        </Text>
+        <Link href="/split" style={styles.link}>
+          Split
+        </Link>
+      </View>
+    </View>
+  );
+}
+
+/**
+ * Tappable meal picks — day-aware: filtered by allergies, dislikes, and
+ * the day's commitments; the church obligation joins automatically once
+ * real day-facts arrive. Easy efforts, protein-forward, rotated by date.
+ */
+function MealPicks() {
+  const { state: food } = useFood();
+  const { state: fasts } = useFasts();
+  const personalToday = activeAvoidSet(fasts.fasts, todayISO(), todayWeekday());
+
+  const candidates = filterCatalog(CATALOG, {
+    allergies: food.allergies,
+    avoidCategories: personalToday.categories,
+    dislikedCategories: food.dislikedCategories,
+    effortMax: 2,
+    type: "recipe",
+  }).sort((a, b) => b.macros.proteinG - a.macros.proteinG);
+
+  const offset = new Date().getDate() % Math.max(1, candidates.length - 3);
+  const picks = candidates.slice(offset, offset + 3);
+
+  if (picks.length === 0) {
+    return <Text style={styles.placeholder}>No picks match today's filters.</Text>;
+  }
+  return (
+    <View style={{ gap: 8 }}>
+      {picks.map((p) => (
+        <Link key={p.id} href={`/recipe/${p.id}`} style={styles.pick}>
+          <Text style={styles.body}>{p.title} </Text>
+          <Text style={styles.pickMacros}>
+            {p.macros.kcal} kcal · {p.macros.proteinG}g P
+          </Text>
+        </Link>
+      ))}
+    </View>
   );
 }
 
@@ -199,4 +268,7 @@ const styles = StyleSheet.create({
   glanceGoal: { fontSize: 12, fontWeight: "300", color: colors.grayInactive },
   glanceTrack: { height: 2.5, borderRadius: 1.25, overflow: "hidden" },
   glanceFill: { height: 2.5 },
+  obligationLine: { color: colors.oxblood, fontSize: 14, fontWeight: "600" },
+  pick: { paddingVertical: 2 },
+  pickMacros: { fontSize: 12, color: colors.grayLabel },
 });

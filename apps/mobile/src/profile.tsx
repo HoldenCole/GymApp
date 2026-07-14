@@ -23,26 +23,40 @@ import type { UserProfile } from "@kanon/engine";
 
 const STORAGE_KEY = "kanon.profile.v1";
 
+export type PatronId = "joseph" | "benedict" | "hyacinth" | "therese" | "anthony";
+
+/** The resolver's UserProfile plus app-level onboarding state. */
+export interface AppProfile extends UserProfile {
+  /** Gates the tabs; false routes to onboarding. */
+  onboarded?: boolean;
+  /** Formation companion; Benedict is the catalog's default. */
+  patronId?: PatronId;
+}
+
 /**
- * Scaffold default. US profile per the master doc's v1 recommendation;
- * the birth date is a stand-in until onboarding captures the real one —
- * Settings surfaces it so binding ages aren't silently wrong.
+ * Pre-onboarding default. US profile per the master doc's v1
+ * recommendation; the birth date is a stand-in that onboarding replaces.
  */
-export const DEFAULT_PROFILE: UserProfile = {
+export const DEFAULT_PROFILE: AppProfile = {
   discipline: "of",
   normProfile: "us",
   birthDate: "1990-01-01",
+  onboarded: false,
+  patronId: "benedict",
 };
 
 interface ProfileState {
-  profile: UserProfile;
-  setProfile: (next: UserProfile) => void;
+  profile: AppProfile;
+  /** True once persisted state has been read — gate routing on this. */
+  loaded: boolean;
+  setProfile: (next: AppProfile) => void;
 }
 
 const ProfileContext = createContext<ProfileState | null>(null);
 
 export function ProfileProvider({ children }: { children: ReactNode }) {
-  const [profile, setState] = useState<UserProfile>(DEFAULT_PROFILE);
+  const [profile, setState] = useState<AppProfile>(DEFAULT_PROFILE);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     AsyncStorage.getItem(STORAGE_KEY)
@@ -51,18 +65,20 @@ export function ProfileProvider({ children }: { children: ReactNode }) {
       })
       .catch(() => {
         // Unreadable stored profile: keep the default rather than crash.
-      });
+      })
+      .finally(() => setLoaded(true));
   }, []);
 
   const value = useMemo<ProfileState>(
     () => ({
       profile,
+      loaded,
       setProfile: (next) => {
         setState(next);
         AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(next)).catch(() => {});
       },
     }),
-    [profile],
+    [profile, loaded],
   );
 
   return <ProfileContext.Provider value={value}>{children}</ProfileContext.Provider>;

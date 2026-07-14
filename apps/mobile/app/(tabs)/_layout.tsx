@@ -1,5 +1,6 @@
-import { Tabs } from "expo-router";
+import { Redirect, Tabs } from "expo-router";
 import { Text } from "react-native";
+import { useProfile } from "../../src/profile";
 import { colors } from "../../src/theme";
 
 /**
@@ -15,6 +16,10 @@ function glyph(char: string) {
 }
 
 export default function TabsLayout() {
+  const { profile, loaded } = useProfile();
+  if (!loaded) return null; // wait for persisted state — no flash
+  if (!profile.onboarded) return <Redirect href="/onboarding" />;
+
   return (
     <Tabs
       screenOptions={{

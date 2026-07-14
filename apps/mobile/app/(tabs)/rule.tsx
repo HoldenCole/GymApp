@@ -1,5 +1,6 @@
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import patrons from "@kanon/content/packaged/patrons.json";
+import { useProfile } from "../../src/profile";
 import { colors, sacredSerif } from "../../src/theme";
 
 /**
@@ -7,13 +8,14 @@ import { colors, sacredSerif } from "../../src/theme";
  * drop-cap reading, offering, journal. Set like a devotional; zero
  * mechanics. Parchment ground, entirely serif.
  *
- * Scaffold: renders the default patron (Benedict) from the packaged
- * catalog. Quote rotation, readings, and the journal build out from here.
+ * Renders the user's chosen patron; the quote rotates daily through the
+ * launch set. Readings and the journal build out from here.
  */
-const patron = patrons.saints.benedict;
-const quote = patron.quotes[0];
-
 export default function Rule() {
+  const { profile } = useProfile();
+  const patron = patrons.saints[profile.patronId ?? "benedict"];
+  const quote = patron.quotes[new Date().getDate() % patron.quotes.length];
+
   return (
     <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
       <View style={styles.masthead}>

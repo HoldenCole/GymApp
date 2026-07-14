@@ -23,6 +23,7 @@ export default function RootLayout() {
             <StatusBar style="dark" />
             <Stack screenOptions={{ headerShown: false }}>
               <Stack.Screen name="(tabs)" />
+              <Stack.Screen name="onboarding" options={{ gestureEnabled: false }} />
               <Stack.Screen name="settings" options={detailScreen("Settings")} />
               <Stack.Screen name="plan" options={detailScreen("Plan")} />
               <Stack.Screen name="split" options={detailScreen("Split")} />
