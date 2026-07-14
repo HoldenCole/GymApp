@@ -3,7 +3,8 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "@kanon/engine": ["../../packages/engine/src"]
+      "@kanon/engine": ["../../packages/engine/src"],
+      "@kanon/fitness": ["../../packages/fitness/src"]
     }
   },
   "include": ["app", "src", "expo-env.d.ts"]

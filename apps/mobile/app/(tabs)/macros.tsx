@@ -1,34 +1,60 @@
+import { Link } from "expo-router";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { energyTargets } from "@kanon/fitness";
+import { useFitness } from "../../src/fitness";
 import { colors, sectionLabel } from "../../src/theme";
 
 /**
- * Macros — the ledger (UI brief §3.3). Today view: kcal lead, four macro
- * bars, meal sections, pinned add-food bar. Trends view: axed thin charts
- * and the adherence grid. Scaffold: ledger skeleton; the tracker (Mifflin-
- * St Jeor baseline, USDA FoodData Central values) wires in next.
+ * Macros — the ledger (UI brief §3.3). Targets are live from the plan
+ * (Mifflin-St Jeor baseline, every value user-overridable); consumed
+ * amounts fill in when the diary + USDA FoodData Central lookup build out.
  */
 export default function Macros() {
+  const { state } = useFitness();
+  const today = new Date().toISOString().slice(0, 10);
+  const targets = state.body ? energyTargets(state.body, state.plan, today) : null;
+
+  const macroRows = targets
+    ? ([
+        ["Protein", targets.proteinG, colors.goldDeep],
+        ["Carbs", targets.carbG, colors.teal],
+        ["Fat", targets.fatG, colors.burntCoral],
+      ] as const)
+    : ([
+        ["Protein", null, colors.goldDeep],
+        ["Carbs", null, colors.teal],
+        ["Fat", null, colors.burntCoral],
+      ] as const);
+
   return (
     <View style={styles.screen}>
       <ScrollView contentContainerStyle={styles.content}>
         <Text style={styles.kcal}>
-          — <Text style={styles.kcalGoal}>/ goal kcal</Text>
+          0 <Text style={styles.kcalGoal}>/ {targets ? `${targets.kcal} kcal` : "set your plan"}</Text>
         </Text>
+        {!targets ? (
+          <Text style={styles.placeholder}>
+            <Link href="/plan" style={styles.link}>
+              Set up your plan
+            </Link>{" "}
+            — goal, rate, and targets. Every computed value is overridable.
+          </Text>
+        ) : (
+          <Text style={styles.placeholder}>
+            {targets.dailyDeltaKcal === 0
+              ? "Maintenance"
+              : `${targets.dailyDeltaKcal > 0 ? "+" : ""}${targets.dailyDeltaKcal} kcal/day`}{" "}
+            · <Link href="/plan" style={styles.link}>Plan</Link>
+          </Text>
+        )}
         <View style={styles.rule} />
 
-        {(
-          [
-            ["Protein", colors.goldDeep],
-            ["Carbs", colors.teal],
-            ["Fat", colors.burntCoral],
-            ["Fiber", colors.graySecondary],
-          ] as const
-        ).map(([label, color]) => (
+        {macroRows.map(([label, goal, color]) => (
           <View key={label} style={styles.macroRow}>
             <View style={styles.macroBaseline}>
               <Text style={styles.macroLabel}>{label}</Text>
               <Text style={styles.macroValue}>
-                — <Text style={styles.kcalGoal}>/ goal g</Text>
+                0 <Text style={styles.kcalGoal}>/ {goal ?? "—"} g</Text>
               </Text>
             </View>
             <View style={[styles.macroTrack, { backgroundColor: `${color}22` }]}>
@@ -67,6 +93,7 @@ const styles = StyleSheet.create({
   macroTrack: { height: 3, borderRadius: 1.5, overflow: "hidden" },
   macroFill: { height: 3 },
   placeholder: { color: colors.grayInactive, fontSize: 13, marginBottom: 8 },
+  link: { color: colors.oxblood },
   addBar: {
     position: "absolute",
     left: 0,

@@ -1,3 +1,4 @@
+import { Link } from "expo-router";
 import { useState } from "react";
 import {
   Pressable,
@@ -13,6 +14,8 @@ import {
   NORM_PROFILE_INFO,
   NORM_PROFILE_ORDER,
 } from "@kanon/engine";
+import type { UnitSystem } from "@kanon/fitness";
+import { useFitness } from "../src/fitness";
 import { useProfile } from "../src/profile";
 import { colors, sacredSerif, sectionLabel } from "../src/theme";
 
@@ -27,6 +30,7 @@ import { colors, sacredSerif, sectionLabel } from "../src/theme";
  */
 export default function Settings() {
   const { profile, setProfile } = useProfile();
+  const { state, update } = useFitness();
   const [birthDraft, setBirthDraft] = useState(profile.birthDate);
 
   const commitBirthDate = () => {
@@ -39,6 +43,34 @@ export default function Settings() {
 
   return (
     <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
+      <Text style={sectionLabel}>Training & nutrition</Text>
+      <View style={styles.linkRow}>
+        <Link href="/plan" style={styles.navLink}>
+          Plan — goal, rate, targets
+        </Link>
+        <Link href="/split" style={styles.navLink}>
+          Split — sessions & week
+        </Link>
+      </View>
+      <View style={styles.unitsRow}>
+        {(["imperial", "metric"] as UnitSystem[]).map((u) => {
+          const active = state.units === u;
+          return (
+            <Pressable
+              key={u}
+              accessibilityRole="radio"
+              accessibilityState={{ selected: active }}
+              onPress={() => update({ units: u })}
+            >
+              <Text style={[styles.unitChoice, active && styles.unitActive]}>
+                {u === "imperial" ? "lb / in" : "kg / cm"}
+              </Text>
+            </Pressable>
+          );
+        })}
+      </View>
+      <View style={styles.rule} />
+
       <Text style={sectionLabel}>Discipline</Text>
       <Text style={styles.help}>
         Which fasting discipline the Church's calendar applies to you. If
@@ -140,4 +172,9 @@ const styles = StyleSheet.create({
   },
   footer: { fontSize: 13, fontStyle: "italic", color: colors.graySecondary, marginTop: 12 },
   footerQuiet: { fontSize: 11, color: colors.grayInactive },
+  linkRow: { gap: 10 },
+  navLink: { color: colors.oxblood, fontSize: 14, paddingVertical: 2 },
+  unitsRow: { flexDirection: "row", gap: 16, marginTop: 4 },
+  unitChoice: { fontSize: 13, color: colors.graySecondary },
+  unitActive: { color: colors.inkNavy, fontWeight: "600" },
 });
