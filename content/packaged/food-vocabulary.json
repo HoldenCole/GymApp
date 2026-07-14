@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "source": "content/Kanon_Fasting_Engine_Content_Pack.md — Part 4 (shared food vocabulary)",
+    "status": "drafted — needs reconciliation against the recipe tag schema; wheat/soy decision open",
+    "single_source_of_truth": "This list is THE one controlled vocabulary. The personal-fast UI, the recipe tagger, and the recommender's hard filter all import it. It is never edited in one surface and not the others.",
+    "filter_rule": "allowed(recipe, user) = recipe.contained_categories ∩ user.avoided_categories == ∅",
+    "ambiguity_rule": "When a recipe is genuinely ambiguous, the tagger errs toward INCLUDING the category (recipe filtered out). Wrongly hiding a fine dish is a mild cost; wrongly recommending a forbidden one is the real failure.",
+    "open_decisions": [
+      { "id": "wheat-soy", "note": "The shipped recipe database extends fast_codes with `wheat` and `soy` (110 rows) beyond the seven categories. Decide: first-class fast categories (nine) or allergen tags reused as filters. Must be one documented source of truth shared with the allergen list." },
+      { "id": "meat-broth-scopes", "note": "EF complete abstinence permits meat broth (B1); the `meat` tag includes broth (safe-erring). The obligation-layer filter and the personal-fast filter may need different meat scopes — resolve BEFORE the single-filter consolidation is built." },
+      { "id": "trace-line", "note": "Where exactly trace flavoring ends (e.g. wine simmered into a long-cooked sauce — proposed: trips `alcohol` if named as an ingredient). Reviewer to set." }
+    ]
+  },
+  "categories": [
+    {
+      "code": "meat",
+      "label": "Meat",
+      "tagging_mode": "ingredient",
+      "means": "Flesh of mammals and birds",
+      "includes_derivatives": ["meat stock/broth", "lard", "gelatin", "drippings", "bacon/meat bits", "meat-based gravy"],
+      "excludes": ["fish/seafood (separate category)"]
+    },
+    {
+      "code": "fish",
+      "label": "Fish & seafood",
+      "tagging_mode": "ingredient",
+      "means": "Aquatic animals: finfish, shellfish, crustaceans, mollusks",
+      "includes_derivatives": ["fish stock", "fish sauce", "anchovy in dressings/Worcestershire"],
+      "excludes": []
+    },
+    {
+      "code": "dairy",
+      "label": "Dairy",
+      "tagging_mode": "ingredient",
+      "means": "Milk and milk products: milk, cheese, butter, cream, yogurt",
+      "includes_derivatives": ["whey", "casein", "milk powder", "butter used in cooking/baking"],
+      "excludes": ["eggs (separate category)", "plant 'milks'"]
+    },
+    {
+      "code": "eggs",
+      "label": "Eggs",
+      "tagging_mode": "ingredient",
+      "means": "Eggs and egg-containing items",
+      "includes_derivatives": ["mayonnaise", "egg wash", "egg pasta", "egg in baked goods"],
+      "excludes": []
+    },
+    {
+      "code": "alcohol",
+      "label": "Alcohol",
+      "tagging_mode": "ingredient",
+      "means": "Alcoholic beverages, and alcohol added as a cooking ingredient",
+      "includes_derivatives": ["wine/beer/spirits cooked into a dish as a named ingredient"],
+      "excludes": ["trace flavoring (e.g. vanilla extract) — see trace rule"]
+    },
+    {
+      "code": "oil",
+      "label": "Oil",
+      "tagging_mode": "ingredient",
+      "means": "Added culinary oils and fats of plant origin (olive, seed, vegetable)",
+      "includes_derivatives": ["added cooking oil", "oil in dressings/frying"],
+      "excludes": ["fat naturally in whole foods (nuts, olives, avocado)", "animal fats route to their source: lard → meat, butter → dairy"]
+    },
+    {
+      "code": "sweets",
+      "label": "Sweets",
+      "tagging_mode": "dish",
+      "means": "Dish class: desserts, confections, sweetened treats",
+      "includes_derivatives": ["cake", "cookies", "candy", "ice cream", "sweet pastries", "sugary drinks"],
+      "excludes": ["incidental sugar in a savory dish — dish-class rule"],
+      "note": "Dish-driven, not ingredient-driven: a teaspoon of sugar in a savory sauce does NOT trip it. The tagging pipeline must support both modes — easiest place for the tagger to be built wrong."
+    }
+  ],
+  "trace_rule": "Derivatives that are a structural part of the dish count (a soup built on chicken stock is `meat`; a sauce with a named pour of wine is `alcohol`). Flavoring agents present only in trace amounts do not trip the category — standing example: vanilla extract does not flag `alcohol`.",
+  "custom_field": {
+    "code": "custom",
+    "enforcement": "advisory",
+    "rules": [
+      "A custom free-text commitment is tracked and displayed for the user's own observance.",
+      "It does NOT filter recipes — unless the user maps it onto an existing category, in which case it filters normally.",
+      "The UI says plainly which custom commitments meal suggestions can and can't account for. Silent non-enforcement is the dishonest failure mode."
+    ]
+  },
+  "obligation_layer_reuse": "A day ruled as abstinence is mechanically a system-applied avoid:meat with fish allowed — the reason meat and fish are separate categories. Holds only if meat/fish definitions stay canonically consistent; see meat-broth-scopes open decision.",
+  "orthodox_bridge": "The list maps onto Orthodox fasting tiers (meat / dairy+eggs / fish / wine / oil) — why oil and alcohol are in a Roman v1. Refinements when Orthodox lands: wine vs broader alcohol; oil as added olive oil specifically."
+}

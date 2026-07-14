@@ -1,0 +1,773 @@
+{
+  "meta": {
+    "source": "content/Kanon_Patron_Content_v1.docx",
+    "generated_by": "tools/package_content.py",
+    "status": "draft — priest review, single scripture edition, and one editor holding the voice remain on the critical path",
+    "editorial_flags": [
+      "‘Begin again’ is Kanon's own phrase echoing Benedict's spirit — never set it in quotation marks attributed to St. Benedict.",
+      "The ‘May today there be peace within’ passage is NOT Thérèse and stays blacklisted.",
+      "Hyacinth left no recorded words; the Kiev lines are Our Lady's, correctly attributed.",
+      "Scripture wording is verified Douay-Rheims; punctuation/spelling await single-edition standardization."
+    ]
+  },
+  "saints": {
+    "joseph": {
+      "id": "joseph",
+      "name": "St. Joseph the Worker",
+      "tagline": "Strength and labor. Anchor.",
+      "wellbeing_note": null,
+      "selector_descriptor": "St. Joseph, strength and the work of provision.",
+      "overview": [
+        "Joseph worked with his hands. Before he is anything else to the person who trains under him, he is the man in the workshop at Nazareth, the one Scripture calls the carpenter, who got up each morning to make by his labor the bread, the roof, and the safety of the two people entrusted to him. That is where his patronage touches the body. He is the saint of honest work and the strength that work demands, and he is the patron a serious lifter reaches for first.",
+        "What is striking about Joseph is that he never says a word. The Gospels record no single sentence from him. What they record is what he did: he rose in the night when he was told to rise, he took the child and his mother into Egypt to keep them from Herod, he came back, he provided, he stayed. His holiness is made of action, not speech. For a man training his body, this is the right model. The work is the prayer. You do not need to say much; you need to show up, lift the load, and carry it home.",
+        "Train under Joseph and you train toward provision, not display. The strength you build is for someone: a family to feed, a household to defend, work to be done that no one else will do for you. This is the hardest-working emphasis in the catalog, heavy and plain, the labor of building. But it is never strength for the mirror. Joseph is called most valiant in the Church’s litany, and in the same breath lover of poverty. The strength and the humility belong together. A body made strong for service is a gift rightly used; a body made strong to be admired has missed the point, and Joseph would not recognize it.",
+        "His table is the table of a working man who eats to labor: bread, fish, lentils, lamb, olive oil, the plain substantial fare of his part of the world. He fasts as a worker fasts, plainly, without drama, because there is still a day’s work to do and people depending on it.",
+        "Choose Joseph if your discipline is provision. If you are the one carrying a household, the parent who has to be strong because others are not strong yet, the worker whose body is your instrument, this is your companion. He asks for the same thing he gave: quiet, durable, daily strength, offered for the people you were given to protect."
+      ],
+      "charism_notes": {
+        "charism": "Honest labor as a path to holiness: strength given for provision, protection, and the hidden service of those entrusted to you.",
+        "training_emphasis": "Strength-forward and high-output. Heavy compound lifts (squat, deadlift, press, row), loaded carries, the work of building and hauling. This is the highest-output emphasis in the catalog, the one to program for a person who wants to get genuinely, usefully strong. For the coach: prioritize compound barbell strength and weighted carries, progressive and repeatable, framed as capacity for real-world labor rather than peak aesthetic.",
+        "eating_table": "Mediterranean-Levantine, the carpenter’s table of Nazareth. Hearty and high in protein: bread, fish, lentils, lamb, olive oil, beans, simple vegetables. The food of a working man who eats in order to work. Substantial, not indulgent; plain, not spare.",
+        "fasting_note": "Joseph is not a deep-fasting patron, and his content should not pretend otherwise. His fast is the ordinary, sustainable discipline of someone who still has to labor and provide: he eats to do the day’s work and to feed others. The disposition is provision first. A person under Joseph who wants to fast should fast in a way that leaves them able to work and to carry their responsibilities. Point the person drawn to deep fasting toward Anthony, with Anthony’s own cautions attached.",
+        "who_for": "The one whose discipline is provision. The worker, the tradesperson, the parent carrying a household, the person who trains to be strong for someone other than themselves. Anyone whose holiness is going to be made, like Joseph’s, out of showing up and doing the work without being seen."
+      },
+      "quotes": [
+        {
+          "text": "Joseph her husband, being a just man.",
+          "attribution": "Of Joseph, Matthew 1:19"
+        },
+        {
+          "text": "Fear not to take unto thee Mary thy wife.",
+          "attribution": "The angel to Joseph, Matthew 1:20"
+        },
+        {
+          "text": "Arise, and take the child and his mother, and fly into Egypt.",
+          "attribution": "The angel to Joseph, Matthew 2:13"
+        },
+        {
+          "text": "Is not this the carpenter’s son?",
+          "attribution": "Of Jesus and Joseph, Matthew 13:55"
+        },
+        {
+          "text": "Go to Joseph.",
+          "attribution": "The Josephite motto; spoken of Joseph the Patriarch in Genesis 41:55, applied to St. Joseph by long tradition"
+        },
+        {
+          "text": "Model of all who labor.",
+          "attribution": "Litany of St. Joseph"
+        },
+        {
+          "text": "Joseph most valiant.",
+          "attribution": "Litany of St. Joseph"
+        },
+        {
+          "text": "Lover of poverty.",
+          "attribution": "Litany of St. Joseph"
+        },
+        {
+          "text": "Pillar of families.",
+          "attribution": "Litany of St. Joseph"
+        },
+        {
+          "text": "Mirror of patience.",
+          "attribution": "Litany of St. Joseph"
+        },
+        {
+          "text": "Terror of demons.",
+          "attribution": "Litany of St. Joseph"
+        }
+      ],
+      "quotes_slot_note": "Joseph speaks no recorded words, so this slot is filled, exactly as the brief directs for saints who left few words, with Scripture about him and lines from his tradition, each clearly framed as such rather than presented as his speech. The app surfaces only the line; framing and source are held in the working file. Sources are in the appendix.",
+      "quotes_register_note": "Registers are mixed by design: the consoling and protective (just man, fear not, pillar of families) sit beside the bracing (most valiant, terror of demons), so the line that meets a person mid-lift on a strong day is not the same line that meets them on a heavy one.",
+      "scripture": [
+        {
+          "reference": "Matthew 1:19",
+          "text_and_gloss": "Joseph her husband, being a just man. The whole of Joseph in three words: a just man, who acts rightly and quietly. Train as the just man trains, without spectacle."
+        },
+        {
+          "reference": "Matthew 2:13–14",
+          "text_and_gloss": "Arise, and take the child and his mother, and fly into Egypt. Strength as protection of what is entrusted to you. Joseph’s body served to carry his family out of danger; yours is built for the same kind of guarding."
+        },
+        {
+          "reference": "Psalm 126:1",
+          "text_and_gloss": "Unless the Lord build the house, they labour in vain that build it. The line that keeps the work rightly ordered. You labor hard, and you remember whose the work finally is, which is the cure for both laziness and pride."
+        },
+        {
+          "reference": "Colossians 3:23",
+          "text_and_gloss": "Whatsoever you do, do it from the heart, as to the Lord. The carpenter’s whole spirituality. The set, the carry, the shift at work: done from the heart, it becomes an offering."
+        },
+        {
+          "reference": "Genesis 2:15",
+          "text_and_gloss": "The Lord God took man, and put him into the paradise of pleasure, to dress it, and to keep it. Work is older than the fall. It is not punishment; it is what the body was made good for."
+        },
+        {
+          "reference": "2 Thessalonians 3:10",
+          "text_and_gloss": "If any man will not work, neither let him eat. The dignity of labor, framed as honor rather than threat: the worker has a right to the table, and Joseph held that table for his family by his hands."
+        }
+      ],
+      "scripture_note": "Douay-Rheims wording, verified word-for-word (see 7.6); standardize punctuation and spelling to one chosen edition before ship.",
+      "offering_line": "Offer this for the work of your hands, that it may provide for those you love.",
+      "readings": [
+        {
+          "title": "The workshop is the altar",
+          "paragraphs": [
+            "We imagine the holy places as the quiet ones: the chapel, the cell, the still hour before dawn. Joseph’s holy place was loud. It smelled of cut wood and sweat. It was a workshop, and the holiest work done in Nazareth for thirty years was not obviously holy at all. It was joinery. It was a man making the things a village needs and being paid for them and bringing the money home.",
+            "This is the heart of training under Joseph: the work itself is the prayer, not a distraction from it. You do not lift in order to get the workout over with so you can go and be spiritual somewhere else. The lift is where the spiritual thing is happening. The strain under the bar, the carry across the yard, the long unglamorous consistency of showing up: this is the matter your sanctification is being made out of, the same way Joseph’s was made out of wood and labor.",
+            "So bring the whole of it. Do not leave your faith at the door of the gym as though the two belong to different parts of your life. The set you are about to do can be done from the heart, as to the Lord, and when it is, the ordinary work is quietly transfigured without becoming any less ordinary. Joseph never told us this. He simply did it, every day, for years, and let the doing be the witness. You can train the same way."
+          ]
+        },
+        {
+          "title": "Strong for someone",
+          "paragraphs": [
+            "There is a kind of strength that is built to be looked at, and there is a kind that is built to be leaned on. Joseph’s was the second kind. We never hear that he was admired. We hear that he provided, that he protected, that when the family had to move in the night, he was the one who could carry them through it.",
+            "That distinction matters more than it sounds, because it decides what your training is for. Build strength to be looked at and you are always performing, always measuring yourself against the mirror, never quite enough. Build strength to be leaned on and the whole thing turns outward. The question stops being how you look and becomes what you can now do for the people who depend on you. Lift the heavy thing so they do not have to. Have the capacity ready before the day comes that needs it.",
+            "Joseph is called both most valiant and lover of poverty, in the same breath, in the same prayer. The Church puts those two side by side on purpose. The valor is real, and it is held by a man with no interest in being seen. That is the strength worth having, and it is the only kind Joseph will help you build. Train toward being leaned on. It is quieter, and it lasts."
+          ]
+        },
+        {
+          "title": "The saint who said nothing",
+          "paragraphs": [
+            "Joseph is the patron of everyone who is better at doing than at saying. Not one word of his survives. In a faith full of great preachers and writers and doctors of the Church, here is a saint at the very center of the story who is completely silent, and whose silence is not a gap but the point.",
+            "If you have ever felt that you are not the articulate one, not the person with the ready answer or the moving words, Joseph is your companion. He shows that a whole life of holiness can be built without a single speech, out of nothing but reliability: rising when you are needed, doing the work in front of you, staying when staying is hard, providing without being thanked. The Gospel never quotes him because it did not need to. It could simply point at what he did.",
+            "This is a freeing thing for a person training their body. You do not have to narrate your discipline. You do not have to announce the fast or post the lift or explain the early mornings. You can just do them, quietly, the way Joseph did everything, and let the doing be enough. The work speaks. It always did under Joseph, and it still does."
+          ]
+        }
+      ],
+      "feast_notes": [
+        {
+          "heading": "March 19, the Solemnity of St. Joseph",
+          "paragraphs": [
+            "Today is Joseph’s great feast, his solemnity, the high point of his year. A solemnity is the Church at full volume, and the app should feel it with you: the fasting and tracking emphasis softens today, because a feast is a feast and Joseph of all saints understood that the table is part of a holy life. Eat well today. Eat the substantial, working-man’s food he would have known, and eat it gratefully.",
+            "If you train today, train it as an offering rather than a session: keep it heavy and plain in his spirit, the work of building, and offer it for the people you provide for, by name.",
+            "And if the day does not allow it, that is well too. Joseph would not want the feast turned into one more obligation. Mark the day however your life permits, even quietly, and let it be enough. We begin again tomorrow."
+          ]
+        },
+        {
+          "heading": "May 1, St. Joseph the Worker",
+          "paragraphs": [
+            "May 1 is Joseph under his working title: Joseph the Worker, patron of labor, of every person whose hands or back or long hours hold a household together. The Church gave him this feast to bless ordinary work and the ordinary worker, and that is exactly what Kanon is built around.",
+            "So today, honor the work. If you train, let the session be plainly about capacity: the strength to do real things for real people. If you train, let it be carries and the labor of building, offered for whoever depends on your work. Or simply put in an honest day, and let the honest day be the feast.",
+            "Whatever you do today, do it from the heart, as to the Lord. That single line of Saint Paul is the whole of Joseph’s working spirituality, and the whole of why this day exists."
+          ]
+        }
+      ]
+    },
+    "benedict": {
+      "id": "benedict",
+      "name": "St. Benedict",
+      "tagline": "Balance and sustainability, the default. Anchor.",
+      "wellbeing_note": null,
+      "selector_descriptor": "St. Benedict, balanced and sustainable, the lifelong baseline.",
+      "overview": [
+        "Benedict wrote the book on not burning out. Fifteen centuries ago he sat down to give his monks a rule of life, and the first thing he promised them was that he would set down nothing harsh, nothing burdensome. That sentence is why he is the default patron of this app. He is the saint who makes the case, against every instinct toward extremity, that the discipline you can keep for a lifetime beats the discipline that breaks you in a month.",
+        "His whole vision fits in three words the tradition gave him: ora et labora, prayer and work, held in rhythm. A life is not built out of heroic bursts. It is built out of the same sane, repeatable day, done again and again, prayer and work and rest each given its measure, none of them allowed to swallow the others. Benedict called the governing virtue discretion, and he called discretion the mother of virtues. He meant the judgment that knows how much is enough and refuses to push past it.",
+        "Train under Benedict and you train for the long run. Nothing extreme, nothing you could not still be doing in ten years. The emphasis is balanced and repeatable: enough to get genuinely stronger and fitter, never so much that it cannot be sustained. This is the default starter, and it is the place to come back to after any patron’s season has run its course or after a stretch of pushing too hard. It is the sane baseline a whole life can be hung on.",
+        "His table follows the same measure. Monastic, moderate, seasonal: enough and not too much, wine in moderation, the meal as part of the ordered day rather than its centerpiece or its enemy. Benedict’s fasting is the same. It is real but rule-bound, never extreme, and built from the start with exemptions for the young, the old, the sick, and the weak. He assumed people are different and need different measures, and he wrote that in.",
+        "Choose Benedict if you want a rule of life you can actually live. If you have burned out on intensity, if you are starting over, if you simply want the durable, lifelong version of all this, he is your companion. He is also the saint who, gently and with great authority, will talk you out of doing St. Anthony before you are ready. That is not weakness. That is discretion, and Benedict would call it the beginning of wisdom."
+      ],
+      "charism_notes": {
+        "charism": "Order and moderation: a whole life held in measured balance, prayer and work in rhythm, so that discipline can be carried for a lifetime rather than spent in a season.",
+        "training_emphasis": "Balanced and sustainable. Nothing extreme, everything repeatable. A moderate, well-rounded program (strength, conditioning, and mobility in proportion) that a person could hold for years without breaking. For the coach: this is the default and the regression target. Moderate volume and intensity, high consistency, built to be maintainable indefinitely. When any other patron’s season ends, the user comes home to this.",
+        "eating_table": "Moderate, monastic, seasonal. Italian-monastic simplicity: bread, vegetables, legumes, cheese, fish, wine in moderation. The Rule’s own measure, enough and not too much, the table as a part of the ordered day. Nothing restrictive and nothing indulgent.",
+        "fasting_note": "Benedict is the moderation counterweight of the whole catalog. His fasting is measured, rule-bound, and never extreme, and it is built with exemptions in from the start (the young, the old, the sick, the weak, the laboring). His content should carry the clear message that the daily measure, kept faithfully, outlasts any heroic fast, and that knowing when to ease is discretion, not failure.",
+        "who_for": "The beginner. The returner. The one who has burned out on intensity and needs a sane way back. Anyone who wants a rule of life they can keep for the rest of their life rather than for a heroic month. The default, and the safe harbor."
+      },
+      "quotes": [
+        {
+          "text": "Idleness is the enemy of the soul.",
+          "attribution": "Rule, ch. 48"
+        },
+        {
+          "text": "We hope to set down nothing harsh, nothing burdensome.",
+          "attribution": "Rule, Prologue"
+        },
+        {
+          "text": "Discretion is the mother of virtues.",
+          "attribution": "Rule, ch. 64"
+        },
+        {
+          "text": "Let the strong have something to strive for, the weak nothing to run from.",
+          "attribution": "Rule, ch. 64"
+        },
+        {
+          "text": "Nothing is so contrary to a Christian as excess.",
+          "attribution": "Rule, ch. 39"
+        },
+        {
+          "text": "Then are they truly monks when they live by the labour of their hands.",
+          "attribution": "Rule, ch. 48"
+        },
+        {
+          "text": "Observe measure in all things.",
+          "attribution": "Rule, ch. 39"
+        },
+        {
+          "text": "The first degree of humility is prompt obedience.",
+          "attribution": "Rule, ch. 5"
+        },
+        {
+          "text": "Listen, and incline the ear of your heart.",
+          "attribution": "Rule, Prologue"
+        },
+        {
+          "text": "We run the way of God’s commandments with unspeakable sweetness of love.",
+          "attribution": "Rule, Prologue"
+        },
+        {
+          "text": "Let them first pray together, that so they may associate in peace.",
+          "attribution": "Rule"
+        },
+        {
+          "text": "Let all things be done with moderation, for the sake of the faint-hearted.",
+          "attribution": "Rule, ch. 48; confirm exact wording, see appendix"
+        }
+      ],
+      "quotes_slot_note": "All drawn from the Rule of St. Benedict, verified. Wording follows standard public-domain English translations of the Rule; sources and chapter numbers are in the appendix. Note the important finding on “begin again” in the appendix: it is the spirit of Benedict but not a line of the Rule, so it should never be set in quotation marks under his name.",
+      "quotes_register_note": "Registers are mixed: the bracing (idleness is the enemy of the soul; prompt obedience) against the consoling (nothing harsh, nothing burdensome; the weak nothing to run from; unspeakable sweetness of love), which is exactly the balance Benedict himself held.",
+      "scripture": [
+        {
+          "reference": "Ecclesiastes 3:1",
+          "text_and_gloss": "All things have their season, and in their times all things pass under heaven. The scriptural root of ora et labora. There is a time to work and a time to rest, and the discipline is in honoring both, not in collapsing one into the other."
+        },
+        {
+          "reference": "Matthew 11:30",
+          "text_and_gloss": "For my yoke is sweet, and my burden light. The verse behind nothing harsh, nothing burdensome. A rule of life that has become crushing has stopped being Christ’s yoke; Benedict would have you lighten it."
+        },
+        {
+          "reference": "1 Corinthians 14:40",
+          "text_and_gloss": "Let all things be done decently, and according to order. Order is not the opposite of freedom; it is what makes a sustainable life possible. The ordered day is the freeing one."
+        },
+        {
+          "reference": "Philippians 4:5",
+          "text_and_gloss": "Let your modesty be known to all men. Modesty here means measure, the moderate middle Benedict built everything on. Visible in how you train, how you eat, how you rest."
+        },
+        {
+          "reference": "1 Timothy 4:8",
+          "text_and_gloss": "For bodily exercise is profitable to little: but godliness is profitable to all things. The verse that keeps training in its place. The body is worth disciplining, and it is not the highest thing; hold both, and you have Benedict’s balance."
+        },
+        {
+          "reference": "Psalm 1:3",
+          "text_and_gloss": "He shall be like a tree which is planted near the running waters. The image of stability: rooted, fed, fruitful in season. Not dramatic. Just alive, and still alive years from now."
+        }
+      ],
+      "scripture_note": "Douay-Rheims wording, verified word-for-word (see 7.6); standardize punctuation and spelling to one chosen edition before ship.",
+      "offering_line": "Offer this as part of an ordered day, work and prayer in their measure, for the grace to keep faith for a lifetime.",
+      "readings": [
+        {
+          "title": "What a rule is for",
+          "paragraphs": [
+            "The word in Kanon’s own name, kanon, and the word in Benedict’s life’s work, his Rule, mean nearly the same thing: a measuring line, a standard, something straight you hold the rest against. People hear “rule” and brace for a cage. Benedict meant the opposite. He meant the thing that holds a life together so it does not fly apart.",
+            "Here is the secret a rule protects you from: motivation. Motivation is a liar. It is high on the days you do not need it and gone on the days you do. A life built on motivation is a series of strong starts and quiet collapses. Benedict’s whole genius was to build a life that does not depend on how you feel today. The rule decides; you simply keep it. On the strong days the rule keeps you from overreaching, and on the empty days, and this is its real gift, the rule carries you when you have nothing, because you are not deciding anymore, you are just doing the next ordinary thing.",
+            "That is what your training rule is for. Not to make you heroic. To make you consistent, which is harder and worth far more. Pick a measure you can keep on an average Tuesday, not the measure you can manage on your best day, and then keep it on the average Tuesdays, which is most of them. Benedict promised his monks nothing harsh and nothing burdensome, and then he asked them to do it for the rest of their lives. That is the trade. It is a good one."
+          ]
+        },
+        {
+          "title": "Prayer and work, one rhythm",
+          "paragraphs": [
+            "Ora et labora. Pray and work. Benedict did not mean that you pray for an hour and then, separately, work for eight. He meant a single rhythm in which the two feed each other, so that the work is steadied by the prayer and the prayer is kept honest by the work.",
+            "A body in training knows this rhythm even if it has never heard the Latin. There is the effort, and there is the rest that makes the effort possible. There is the hard day and the easy day. There is the season of pushing and the season of holding steady. Get the rhythm right and you can continue almost indefinitely. Get it wrong, all effort and no rest, all push and no hold, and you break, every time, without exception. The body is not impressed by your intentions. It responds to the rhythm.",
+            "Benedict built his entire Rule around getting that rhythm right, dividing the day so that no single part of it could devour the others. Prayer, work, reading, rest, the table, sleep, each given its measure and its place. You can do the same with far less than a monastery. Decide the rhythm of your week before the week starts. Honor the rest as seriously as the work, because the rest is not the absence of the discipline. Under Benedict, the rest is part of it."
+          ]
+        },
+        {
+          "title": "Nothing harsh, nothing burdensome",
+          "paragraphs": [
+            "Read enough about the saints and you can come away thinking holiness is for the extreme: the longest fasts, the hardest disciplines, the people who slept on stone. Benedict is the saint who says, gently and with enormous authority, no. He opened his Rule by promising nothing harsh and nothing burdensome, and he ran a movement that has lasted fifteen hundred years on exactly that promise. The extremists burned bright and went out. The moderate ones are still here.",
+            "This matters for anyone tempted to measure their discipline by how much it hurts. Benedict would tell you that the goal was never the suffering. The goal is the ordered life, the steady love, the faith kept all the way to the end, and a discipline so harsh you cannot sustain it serves none of those. It just breaks you and then, worse, convinces you that you are the kind of person who fails at this. You are not. You were just handed the wrong measure.",
+            "So if your training or your fasting has become a burden you are white-knuckling, that is not a sign to grit harder. It is a sign to recover the measure. Ease it to something you can actually keep, and then keep it. That is not the lesser path. Under Benedict it is the whole path, the one that lasts, and choosing it is not weakness. It is discretion, which he called the mother of every other virtue."
+          ]
+        }
+      ],
+      "feast_notes": [
+        {
+          "heading": "July 11, the Feast of St. Benedict",
+          "paragraphs": [
+            "Today the Church keeps the feast of Benedict, father of Western monasticism and the patron of this app’s whole idea: a rule of life you can actually live. (The older calendar also keeps March 21, the Transitus, the day of his death; if that is your calendar, mark it then.)",
+            "A feast is a feast, and the man who wrote enough and not too much would be the first to tell you to ease the measure today and enjoy the table. So enjoy it, moderately and gratefully, the way he taught. The fasting and tracking emphasis softens today by design.",
+            "If you train, keep it in his spirit: balanced, unhurried, the sustainable kind, offered in thanks for a discipline you get to keep for a lifetime.",
+            "And if you have fallen off your rule lately, today is a good day to simply pick it back up. No accounting, no penalty. We begin again. Benedict built his whole Rule around people who would."
+          ]
+        }
+      ]
+    },
+    "hyacinth": {
+      "id": "hyacinth",
+      "name": "St. Hyacinth",
+      "tagline": "Bearing burdens and covering distance. Standard depth.",
+      "wellbeing_note": null,
+      "selector_descriptor": "St. Hyacinth, carrying what matters over the long road.",
+      "overview": [
+        "Hyacinth covered ground. He was a Dominican friar of the thirteenth century who carried the Gospel on foot across Poland and the lands to the north and east, so far and so faithfully that the Church remembers him as the Apostle of the North. Before he is anything else to the person training under him, he is the saint of the long road: of endurance over distance, of the body that keeps going under load because something at the far end depends on its arrival.",
+        "His defining image fixes the whole of his patronage. When the Tatars sacked Kiev and the church was burning, Hyacinth would not leave the Blessed Sacrament to be desecrated, so he took it up to carry it out. As he passed the statue of Our Lady, the tradition says he heard her ask why he would carry her Son and leave her behind. The alabaster statue was far too heavy to lift, and he carried it anyway, the Sacrament in one arm and Our Lady in the other, out of the burning city. That is the spine of his content: you carry what is precious, and you do not set it down, however far the road or however heavy the load.",
+        "Train under Hyacinth and you train for that. The emphasis is lower on the barbell and higher on the carry and the march: loaded carries, rucking, weighted walks, long-distance conditioning. This is the training of someone who can cover ground under weight and still be standing at the end. It is not built for peak effort. It is built for endurance, for the person whose discipline is simply continuing.",
+        "His table is the food of the long northern road: Polish and central-European, the Dominican table, hearty cold-weather fare that travels and sustains. Rye bread, grains and kasza, root vegetables, beets and cabbage, preserved and portable food, the dumplings his own legend made famous. The food of someone with miles still to go.",
+        "Choose Hyacinth if your discipline is endurance rather than intensity. If you are the parent carrying weight that never quite sets down, the traveler, the one whose strength is measured in distance covered and faith kept rather than in any single hard effort, he is your companion. He will not ask you to lift the heaviest thing once. He will ask you to carry a real load a long way, and to refuse to put down what matters."
+      ],
+      "charism_notes": {
+        "charism": "Endurance over distance, and the refusal to set down what is precious: carrying what matters through hardship all the way to safety.",
+        "training_emphasis": "Loaded carries, rucking, weighted walks, long-distance and low-intensity conditioning. Lower on the barbell, higher on the carry and the march. For the coach: prioritize carries (farmer, suitcase, front-rack, overhead), rucking and loaded walks, and aerobic base over maximal strength. Progress by distance and load carried over time, not by one-rep ceilings. The training of someone who covers ground under weight.",
+        "eating_table": "Polish and central-European, the Dominican table. Hearty, warming, road-worthy food: rye bread, grains and kasza, root vegetables, beets, cabbage, preserved meats and vegetables, and the dumplings (pierogi) of his own legend. This is the cuisine that broadens the catalog north and east of the Mediterranean. Substantial fare for cold weather and long distances.",
+        "fasting_note": "Hyacinth’s is the fast of the traveler and the friar: real and observed, but always carrying enough to finish the journey. The Dominican life included its fasts, and Hyacinth kept them on the road, which is the disposition his content should carry. Fast as one who still has miles to walk and a load to carry, never so depleted that you would have to set down what you are carrying. Endurance, not depletion.",
+        "who_for": "The one whose discipline is endurance rather than peak effort. The parent carrying weight that does not set down, the traveler, the long-haul worker, the person whose strength is in continuing. Anyone whose holiness will be made, like his, of covering the distance and keeping faith all the way to the far bank."
+      },
+      "quotes": [
+        {
+          "text": "Hyacinth, my son, why do you leave me behind? Take me with you.",
+          "attribution": "Our Lady to Hyacinth, in the legend of the flight from Kiev"
+        },
+        {
+          "text": "How can I carry thee? The burden is too heavy.",
+          "attribution": "Hyacinth’s reply, from the tradition"
+        },
+        {
+          "text": "Only try.",
+          "attribution": "Our Lady’s answer, in the legend"
+        },
+        {
+          "text": "To praise, to bless, to preach.",
+          "attribution": "Motto of the Dominican Order, Hyacinth’s order"
+        },
+        {
+          "text": "Bear ye one another’s burdens.",
+          "attribution": "Galatians 6:2"
+        },
+        {
+          "text": "I have finished my course, I have kept the faith.",
+          "attribution": "2 Timothy 4:7"
+        },
+        {
+          "text": "We have this treasure in earthen vessels.",
+          "attribution": "2 Corinthians 4:7"
+        },
+        {
+          "text": "So run that you may obtain.",
+          "attribution": "1 Corinthians 9:24"
+        },
+        {
+          "text": "How beautiful are the feet of him that bringeth good tidings.",
+          "attribution": "Isaiah 52:7"
+        },
+        {
+          "text": "I have lifted up my eyes to the mountains, from whence help shall come to me.",
+          "attribution": "Psalm 120:1"
+        },
+        {
+          "text": "Apostle of the North.",
+          "attribution": "Traditional title of St. Hyacinth"
+        }
+      ],
+      "quotes_slot_note": "Hyacinth left no recorded writings or sayings, so this slot is built, openly, from Scripture about his charism, the words of his tradition and legend (correctly attributed: the famous Kiev words are spoken by Our Lady to him, not by him), the motto of his Order, and Polish folk devotion. None is presented as his own speech. Sources are in the appendix.",
+      "quotes_register_note": "Registers mix the bracing (finish the course; so run that you may obtain) with the consoling and human (the burden is too heavy; only try), so the line that meets a person three miles into a ruck is not the same one that meets them when the load feels too much.",
+      "scripture": [
+        {
+          "reference": "Galatians 6:2",
+          "text_and_gloss": "Bear ye one another’s burdens; and so you shall fulfil the law of Christ. The carry, made spiritual. The load you train to carry is finally for someone else’s sake, which is the whole of Hyacinth."
+        },
+        {
+          "reference": "2 Corinthians 4:7",
+          "text_and_gloss": "We have this treasure in earthen vessels. Hyacinth carried the Sacrament in his arms out of the fire; you carry something sacred in the frail vessel of your own body. Train the vessel to carry it well and far."
+        },
+        {
+          "reference": "2 Timothy 4:7",
+          "text_and_gloss": "I have fought a good fight, I have finished my course, I have kept the faith. The prayer of the one who endures to the end. Not the fastest, not the strongest. The one still going at the finish."
+        },
+        {
+          "reference": "Isaiah 52:7",
+          "text_and_gloss": "How beautiful upon the mountains are the feet of him that bringeth good tidings. The missionary on foot. The miles themselves are the ministry; the road is where the work is done."
+        },
+        {
+          "reference": "1 Corinthians 9:24",
+          "text_and_gloss": "So run that you may obtain. Conditioning as discipline: the long, patient building of the capacity to cover ground, run with the end in view."
+        },
+        {
+          "reference": "Psalm 120:1",
+          "text_and_gloss": "I have lifted up my eyes to the mountains, from whence help shall come to me. The traveler’s psalm. You lift your load and you lift your eyes; the strength to finish is asked for, not only summoned."
+        }
+      ],
+      "scripture_note": "Douay-Rheims wording, verified word-for-word (see 7.6); standardize punctuation and spelling to one chosen edition before ship.",
+      "offering_line": "Offer this for the strength to carry what is yours to carry, all the way, without setting it down.",
+      "readings": [
+        {
+          "title": "What you refuse to set down",
+          "paragraphs": [
+            "The image at the center of Hyacinth’s life is a man walking out of a burning city with his arms full. The Sacrament in one arm. A stone statue of Our Lady, far too heavy to lift, in the other. The tradition says she made herself light enough to carry. What it does not say is that he put anything down. He had every reason to. The statue was alabaster, the city was on fire, and no one would have blamed him for saving the Sacrament alone and leaving the rest. He carried both.",
+            "This is the question Hyacinth puts to anyone who trains under him: what are you carrying, and what would it take to make you set it down? Because most of us, under enough load and enough heat, start looking for what we can drop. And some things you carry, the people who depend on you, the faith you are keeping, the responsibilities that are genuinely yours, are not the things to drop, however heavy they get.",
+            "The loaded carry is the truest training there is for this, because it is exactly that: picking up real weight and refusing to put it down until you have covered the distance. Every step under load is practice in not setting down what matters. Train it in the body and you build the thing in the soul: the capacity to keep your arms full all the way to the far bank, even when the city is burning behind you."
+          ]
+        },
+        {
+          "title": "The long road, not the single lift",
+          "paragraphs": [
+            "There is a kind of strength the gym loves to measure: the heaviest thing you can lift one time. Hyacinth’s strength was never that. His was the strength to walk for years, across countries, carrying the Gospel on his back, and to still be walking when most people would have stopped. Endurance, not peak. Distance, not display.",
+            "If your life is built on endurance, you already know this strength even if no one ever measured it for you. The parent who has been carrying weight for a decade with no end in sight. The worker on the long shift. The person whose discipline is not one heroic effort but the unglamorous fact of continuing, day after day, when continuing is the hard part. That is Hyacinth’s strength, and it is real, and it counts, and the gym’s one-rep maximum has nothing to say about it.",
+            "Train it the way he lived it. Pick up a real load and cover real distance under it. Build the engine that lets you keep going. The point is never to find your limit in a single moment; it is to extend how far you can carry a meaningful weight before you have to rest. That is the strength of the long road. It is quieter than the heavy single, and over a life it carries far more."
+          ]
+        },
+        {
+          "title": "The treasure and the vessel",
+          "paragraphs": [
+            "Saint Paul said we carry a treasure in earthen vessels, in clay jars, in fragile and ordinary containers. Hyacinth lived it almost literally: the treasure of the Sacrament carried out of the fire in the frail vessel of a tired human body, on foot, under threat. The body was not the treasure. The body was the vessel that got the treasure to safety.",
+            "This is a steadying way to think about your own training, and a freeing one. Your body is not the point. It is the vessel, and you train it for the sake of what it carries: your work, your people, your faith, your capacity to show up when something sacred needs carrying. That reorders everything. You are not building the vessel to be admired. You are building it to be useful, strong enough and durable enough to carry what has been entrusted to it through whatever the road holds.",
+            "A clay jar can be made remarkably strong without ever pretending to be the treasure. That is the goal under Hyacinth: a strong, reliable vessel, kept fit not for its own sake but for the sake of what it carries and where it has to go. Train the jar. Guard the treasure. Cover the distance."
+          ]
+        }
+      ],
+      "feast_notes": [
+        {
+          "heading": "August 17, the Feast of St. Hyacinth",
+          "paragraphs": [
+            "Today the Church keeps the feast of Hyacinth, the Apostle of the North, the friar who carried the faith on foot across half a continent and carried the Sacrament out of a burning city without setting it down.",
+            "A feast is a feast, so ease the road today and enjoy his table: the hearty northern food, the rye and the root vegetables and the dumplings his own legend made famous. The fasting and tracking emphasis softens today by design. Eat as a traveler eats when the day’s walking is done, gratefully and well.",
+            "If you train, train it as a carry in his honor: pick up an honest load, cover some real ground, and offer the distance for someone who depends on you to keep going.",
+            "And if today is a day for rest instead, rest. Even the long road has its halts. We begin again tomorrow."
+          ]
+        }
+      ]
+    },
+    "therese": {
+      "id": "therese",
+      "name": "St. Thérèse of Lisieux",
+      "tagline": "The little way, the gentle path. Standard depth.",
+      "wellbeing_note": "Wellbeing role. Thérèse is the catalog’s safety valve. Her content must make a vulnerable, depleted, postpartum, recovering, or discouraged user feel, with their whole heart, that less is holy and that rest is faithful. Everything below is written to that first. There is no shame anywhere in this patron, and nothing in her content gives any guidance toward restriction. See appendix and brief section 5.",
+      "selector_descriptor": "St. Thérèse, gentle and small, where rest is faithful.",
+      "overview": [
+        "Thérèse found a way to be holy without being heroic, and that is exactly why she belongs in this app. She died at twenty-four, a Carmelite nun who never did anything the world would call great, and she is a Doctor of the Church. Her whole teaching, the one she called her little way, is that you do not have to be great to be holy. You have to be small, and faithful in small things, and to do them with love. Before she is anything else to the person training under her, she is the saint who tells a tired person that the small faithful thing is enough.",
+        "That makes her the gentlest companion in the catalog, and the most important one for anyone in a hard season. The training under Thérèse is gentle and accessible by design: mobility, walking, light and recoverable work, the kind of movement that restores rather than depletes. It is built for the postpartum body, the recovering body, the older body, the frail or exhausted body, and for anyone in a stretch of life that simply calls for less. The little way is not the lesser way. In her hands, smallness is not a consolation prize for people who cannot do the real thing. Smallness is the real thing.",
+        "Hear this clearly, because it is the heart of her: easing off is not failing. Resting is not quitting. A gentle walk offered with love is worth more than a punishing session done to prove something, and Thérèse would tell you so without a moment’s hesitation. If you have come to her because everything is heavy right now, you have come to the right place, and you are not asked to apologize for needing the gentle path.",
+        "Her table matches. Simple, nourishing, unfussy, the food of care rather than performance: warm, restorative, French-domestic comfort. Never restrictive, never austere, because depriving the body was never her way. She fed her soul on small things done with great love, and she would have you feed your body the same way, gently and enough.",
+        "Choose Thérèse when you need less, for any reason or no reason you have to justify. When you are depleted, healing, beginning again from very little, or simply worn out, she is the companion who will meet you there, tell you the small thing counts, and mean it."
+      ],
+      "charism_notes": {
+        "charism": "The little way: holiness reached not by great feats but by small things done with great love, and by the trust that smallness itself is a true path to God.",
+        "training_emphasis": "Gentle, accessible, recoverable. Mobility, walking, light movement, restorative work. For the coach: this is the floor of the catalog and the destination for anyone who needs less. Low intensity, high recoverability, walking-forward and mobility-forward, explicitly and always scalable downward with no penalty. The emphasis for the postpartum, the recovering, the ill, the older, the frail, the exhausted, and for anyone in a season that calls for gentleness. Never programmed toward “earning” a harder tier.",
+        "eating_table": "Simple, nourishing, French-domestic warmth. The food of care: restorative, gentle, comforting, enough. Explicitly never restrictive and never austere. This patron’s table communicates that nourishing the body well is part of the faithfulness, not opposed to it.",
+        "fasting_note": "Handle with the greatest care. Thérèse’s relation to fasting is the little way applied to the body: the smallest offering, freely chosen, and gladly set aside the moment the body needs care. For her, a glass of water taken gratefully can be holier than a heroic fast taken to impress. Her content should make a depleted user feel that eating enough is faithful, that easing or skipping a fast is not a failure, and that the Church’s exemptions (pregnancy, nursing, illness, youth, age, exhaustion) are gifts of a tender God, not loopholes. This patron never presents fasting as a measure of devotion, and gives no guidance toward restriction of any kind.",
+        "who_for": "The postpartum. The recovering and the ill. The older and the frail. The exhausted and the discouraged. Anyone in a season that calls for less, and anyone who needs to hear, and believe, that less is holy and rest is faithful."
+      },
+      "quotes": [
+        {
+          "text": "My vocation is love.",
+          "attribution": "Story of a Soul"
+        },
+        {
+          "text": "I will spend my heaven doing good upon earth.",
+          "attribution": "Last Conversations"
+        },
+        {
+          "text": "Everything is a grace.",
+          "attribution": "Among her last words"
+        },
+        {
+          "text": "When one loves, one does not calculate.",
+          "attribution": "Story of a Soul"
+        },
+        {
+          "text": "It is your arms, Jesus, that are the lift to carry me to heaven.",
+          "attribution": "Story of a Soul"
+        },
+        {
+          "text": "Jesus does not demand great actions, but only surrender and gratitude.",
+          "attribution": "Story of a Soul"
+        },
+        {
+          "text": "I prefer the monotony of obscure sacrifice to all ecstasies.",
+          "attribution": "Story of a Soul"
+        },
+        {
+          "text": "He cherishes simplicity.",
+          "attribution": "Story of a Soul"
+        },
+        {
+          "text": "Miss no single opportunity of making some small sacrifice.",
+          "attribution": "Story of a Soul"
+        },
+        {
+          "text": "Without love, the most brilliant deeds count for nothing.",
+          "attribution": "Story of a Soul; confirm exact wording, appendix"
+        },
+        {
+          "text": "I have never given the good God anything but love.",
+          "attribution": "Last Conversations; confirm, appendix"
+        }
+      ],
+      "quotes_slot_note": "From Story of a Soul and her recorded Last Conversations, verified. Weighted toward the tender and consoling, with a few that carry the quiet radicalism of the little way. Sources in the appendix; a few flagged for final exact-wording confirmation.",
+      "quotes_register_note": "Even here the registers are mixed, gently: the deeply consoling (everything is a grace; his arms are the lift) beside the quietly bracing (when one loves, one does not calculate; miss no single opportunity), so the pool meets both a discouraged user and a user ready to be stirred toward small faithful effort, without either tipping into demand.",
+      "scripture": [
+        {
+          "reference": "Matthew 18:3",
+          "text_and_gloss": "Unless you be converted, and become as little children, you shall not enter into the kingdom of heaven. The scriptural root of the little way. Smallness is not the obstacle to the kingdom; it is the door."
+        },
+        {
+          "reference": "Matthew 11:28",
+          "text_and_gloss": "Come to me, all you that labour, and are burdened, and I will refresh you. The verse for the depleted. The invitation is to come and be refreshed, not to push harder. Rest is part of the faith, not time stolen from it."
+        },
+        {
+          "reference": "Isaiah 66:13",
+          "text_and_gloss": "As one whom the mother caresseth, so will I comfort you. The tenderness of God, in the gentlest image Scripture gives. The same gentleness Thérèse would have you show your own tired body."
+        },
+        {
+          "reference": "Matthew 11:25",
+          "text_and_gloss": "Thou hast hid these things from the wise and prudent, and hast revealed them to little ones. The little ones are not last in line. They are the ones to whom it is given."
+        },
+        {
+          "reference": "Luke 1:48",
+          "text_and_gloss": "He hath regarded the humility of his handmaid. God looks toward the lowly and the small. Being little is not being overlooked; under this gaze it is being seen."
+        },
+        {
+          "reference": "1 Corinthians 13:3",
+          "text_and_gloss": "And have not charity, it profiteth me nothing. The measure is never the size of the deed. A small thing done with love outweighs a great thing done without it. The whole little way in a single verse."
+        }
+      ],
+      "scripture_note": "Douay-Rheims wording, verified word-for-word (see 7.6); standardize punctuation and spelling to one chosen edition before ship.",
+      "offering_line": "Offer this small thing, done with love, for someone dear to you; it is more than enough.",
+      "readings": [
+        {
+          "title": "The little way is not the lesser way",
+          "paragraphs": [
+            "It is easy to hear “the little way” and quietly translate it as “the beginner’s way,” the path for people who cannot manage the real thing, a holding pattern until you are strong enough for proper holiness. Thérèse would gently and firmly tell you that you have misunderstood her entirely. The little way is not the path to greatness. It is the greatness. She was named a Doctor of the Church, set beside the towering theologians and martyrs, for teaching that the small thing done with love is not a lesser holiness but the whole of it.",
+            "This matters enormously for anyone who has come to this patron because they cannot, right now, do much. Maybe you are healing. Maybe you are exhausted in a way sleep does not fix. Maybe a body that used to do a great deal can presently do very little. The temptation is to treat the little you can do as almost nothing, a sad placeholder until real life resumes.",
+            "Thérèse stands directly against that. The gentle walk is not a downgrade from the workout you wish you could do. Offered with love, it is complete in itself. The small faithful thing is not what you settle for. It is what counts, fully and without apology. You are not in a waiting room until you are strong enough to matter. You are already, in the small thing done with love, doing the realest thing there is."
+          ]
+        },
+        {
+          "title": "Rest is faithful",
+          "paragraphs": [
+            "There is a lie that gets especially loud when you are most tired: that rest is laziness, that easing off is giving up, that a faithful person would push through. Thérèse did not believe it, and you should not either. When Christ saw the people worn out, he did not tell them to try harder. He said come to me, all you who labour and are burdened, and I will refresh you. Refreshment. Rest. That is the invitation, and it is not the consolation prize. It is the gift.",
+            "If you are depleted right now, hear this plainly: resting is not quitting. Easing the discipline when your body is asking for care is not failure, and it is not the discipline breaking down. It is the discipline working exactly as it should, because a discipline that cannot bend to care for the body it serves has stopped being wisdom and become a trap.",
+            "Thérèse fed her soul on tiny things and trusted completely that the gentleness she received from God was real. Receive the same gentleness toward your own body. Take the rest. Eat enough. Do the small, recoverable thing, or some days do nothing but recover, and do not let anyone, least of all the voice in your own head, tell you that this is less holy than grinding yourself down. Under Thérèse, it is more."
+          ]
+        },
+        {
+          "title": "Small things, great love",
+          "paragraphs": [
+            "Thérèse’s secret was almost embarrassingly simple. She could not do great things, so she did small things, and she poured great love into them. A kind word. A swallowed complaint. A smile offered to someone difficult. None of it impressive. All of it, in her hands, holy, because of the love inside it.",
+            "Bring that to your training and it changes what you are even doing. The measure stops being how much, how heavy, how long, and becomes how much love is in it. A short gentle walk, taken as a small gift to God and to the people you carry, is not a lesser workout that you should feel bad about. It is a small thing done with great love, which is precisely the thing Thérèse spent her life telling us is the whole point.",
+            "This frees you from the tyranny of the number. You do not have to do a great deal for what you do to count. You have to do it with love, and the smallest faithful movement, offered that way, is full and complete. On the days you can do more, do more, with love. On the days you can barely do anything, do the little you can, with love. Thérèse promises you, on the authority of her whole short life, that it is enough."
+          ]
+        }
+      ],
+      "feast_notes": [
+        {
+          "heading": "October 1, the Feast of St. Thérèse of Lisieux",
+          "paragraphs": [
+            "Today the Church keeps the feast of Thérèse, the Little Flower, Doctor of the Church, who taught the whole world that holiness is for the small. (The traditional calendar keeps her on October 3; if that is yours, mark it then.)",
+            "A feast is a feast, and gentleness is her whole language, so let today be especially gentle. Ease the discipline, soften the tracking, and enjoy her simple, warm, comforting table without a second thought. The point of the day is not to achieve anything. It is to receive: to let yourself be cared for, the way she trusted God to care for her.",
+            "If you move at all today, let it be a small thing done with love, a gentle walk, offered for someone dear to you. That is the most fitting tribute she could be paid. And if today is a day to simply rest, then rest, gladly and without apology. With Thérèse, rest is not the absence of the discipline. It is the heart of it."
+          ]
+        }
+      ]
+    },
+    "anthony": {
+      "id": "anthony",
+      "name": "St. Anthony of the Desert",
+      "tagline": "Austerity and deep fasting. Standard depth.",
+      "wellbeing_note": "Wellbeing flag, the sharpest in the catalog. Anthony must be authored austere and wise in the same breath. “Follow Anthony” must never read as “match Anthony’s asceticism.” Every austere note below carries the counterweight the desert tradition itself supplies, because the vulnerable user is the one most likely to over-identify with exactly this patron. The gentlest framing belongs here precisely because the edge is sharpest. Written to satisfy every wellbeing rule with room to spare. See appendix and brief sections 4 and 5.",
+      "selector_descriptor": "St. Anthony, austere and deep, fasting ruled by discretion.",
+      "overview": [
+        "Anthony went into the desert to fight for the freedom of his soul, and he did it with his body: long fasts, spare food, the elemental discipline of a man who had reduced life to what sustains it. He is the father of monasticism and the deepest-fasting patron in the catalog, the one naturally paired with the app’s fasting engine. He is also the patron who requires the most care, and the desert tradition itself tells you why.",
+        "Here is the thing the desert fathers understood that a careless reader misses: Anthony’s whole point was discretion, not severity. He taught it directly. A hunter once found him resting with the brothers and was scandalized that the great ascetic was taking his ease. Anthony told him to shoot arrow after arrow, and the hunter said that if he kept his bow bent all the time, it would break. Exactly, said Anthony. If you stretch people beyond measure, they break too; sometimes you must relax the effort. That is Anthony in his own words, and it is the key to following him rightly. He said that some people afflict their bodies with great asceticism but, lacking discernment, end up far from God. He warned that the proud faster is in more danger than the humble one. The desert was never about who could suffer the most. It was about freedom, and freedom needs discretion to reach it.",
+        "So choosing Anthony means choosing the desert’s wisdom, which is moderation and discernment, not raw extremity. To follow him is to take on his disposition, that the body’s discipline is ordered to the soul’s freedom and to prayer, and that it must be ruled by discretion, hidden in humility, and built with the Church’s exemptions in place. It does not mean copying his most extreme acts. It never did. The saints who fasted hardest are the very ones who warned loudest against fasting without wisdom, and Anthony is first among them.",
+        "His table is the spare and ancient fare of the desert: bread, water, dates, the minimum that sustains. His fasting content runs the deepest in the app, and for that reason it carries the most care.",
+        "Choose Anthony if you are genuinely drawn to fasting as prayer, and if you come to it healthy, humble, and free, ready to be governed by discretion rather than by a number or a need to control. If what draws you is the severity itself, that is exactly the warning sign the desert fathers wrote about. Anthony, of all of them, would tell you to ease the bow."
+      ],
+      "charism_notes": {
+        "charism": "The discipline of the body for the freedom of the soul: fasting and ascetic struggle ordered toward prayer and inner freedom, and always ruled by discretion.",
+        "training_emphasis": "Austere and elemental, and explicitly governed. Bodyweight, walking, structured fasting, the minimal-equipment work of the desert. The intense end of the catalog. For the coach: bodyweight strength and long walks paired with structured, exemption-aware, scalable fasting; program deloads and rest as non-negotiable parts of the plan, not rewards, building in “relax the bow” by design. This is the one emphasis where the programming must actively prevent the user from pushing past measure, because the patron attracts the user most likely to try.",
+        "eating_table": "Spare and ancient: bread, water, dates, olives, the minimal desert fare of someone who has reduced food to what sustains. Where the fasting content runs deepest. Critical framing: this table describes simplicity and sufficiency, what genuinely sustains, and never holds up restriction itself as the goal or the achievement.",
+        "fasting_note": "Anthony’s fasting is deep and it is ruled by discretion, and his content must always carry both. Hold these together, every time: fasting is ordered toward freedom and prayer, never toward control, punishment, or a number; the desert fathers warned that asceticism without discernment drives a person away from God, not toward it; the body is a fellow-traveler in salvation, not an enemy to be destroyed; the bow that is always bent breaks; the proud faster falls where the humble one stands; and the Church builds in exemptions (pregnancy, nursing, illness, labor, youth, age) on purpose, as wisdom and not as weakness. Never present extreme restriction as aspirational. If a user shows any sign of over-identifying, depleting, or chasing severity, the content steers firmly toward eating, rest, and the gentler patrons. “Follow Anthony” is never “match Anthony.”",
+        "who_for": "It is for the person genuinely drawn to fasting as prayer who comes to it healthy, humble, and interiorly free, and is willing to be governed by discretion. It is not for the person seeking control, self-punishment, a number on a scale, or proof of devotion through severity, and his content should be unafraid to say so. For that person, the right move is Benedict or Thérèse, and a good meal."
+      },
+      "quotes": [
+        {
+          "text": "Some afflict their bodies by asceticism, but lacking discernment, they are far from God.",
+          "attribution": "Sayings of Anthony"
+        },
+        {
+          "text": "If we stretch beyond measure, we soon break.",
+          "attribution": "Sayings of Anthony, the bow and the hunter"
+        },
+        {
+          "text": "Discretion is the mother of virtues.",
+          "attribution": "Cassian, Conferences, credited to Anthony and the fathers"
+        },
+        {
+          "text": "Control your tongue and your stomach.",
+          "attribution": "Sayings of Anthony, to Abba Pambo"
+        },
+        {
+          "text": "God lays on us less than on those before us, for we are weaker now and cannot bear so much.",
+          "attribution": "Sayings of Anthony; condensed, see appendix"
+        },
+        {
+          "text": "Without temptations, no one can be saved.",
+          "attribution": "Sayings of Anthony"
+        },
+        {
+          "text": "Expect temptation to your last breath.",
+          "attribution": "Sayings of Anthony"
+        },
+        {
+          "text": "Against the snares of the enemy, only humility passes through.",
+          "attribution": "Sayings of Anthony; condensed from the vision of the snares, see appendix"
+        },
+        {
+          "text": "Our life and our death is with our neighbour.",
+          "attribution": "Sayings of Anthony"
+        },
+        {
+          "text": "I no longer fear God, but I love him; for love casts out fear.",
+          "attribution": "Sayings of Anthony"
+        },
+        {
+          "text": "Obedience with abstinence gives power even over wild beasts.",
+          "attribution": "Sayings of Anthony"
+        },
+        {
+          "text": "My book is the nature of created things.",
+          "attribution": "Sayings of Anthony, to the philosopher"
+        }
+      ],
+      "quotes_slot_note": "From the Sayings of the Desert Fathers (the alphabetical collection, Anthony) and, for the line on discretion, John Cassian’s Conferences, where it is credited to the judgment of Anthony and the fathers. Verified. Deliberately weighted toward the desert’s own wisdom and counterweights rather than toward raw severity, exactly as this patron requires. A few are condensed from longer sayings and are flagged in the appendix for confirmation against the full text.",
+      "quotes_register_note": "The weighting is deliberate and is itself a wellbeing measure: the bracing lines (without temptations no one is saved; expect temptation to your last breath) are outnumbered by the lines on discretion, humility, and not breaking the bow, so the pool a faster actually sees, day after day, leans toward wisdom rather than severity.",
+      "scripture": [
+        {
+          "reference": "Matthew 4:1–2",
+          "text_and_gloss": "Then Jesus was led by the spirit into the desert… And when he had fasted forty days and forty nights, afterwards he was hungry. The pattern Anthony followed into the desert. Even the Lord’s fast had an end, and was followed by being fed."
+        },
+        {
+          "reference": "1 Corinthians 10:13",
+          "text_and_gloss": "God is faithful, who will not suffer you to be tempted above that which you are able. The verse that sets a limit. Temptation, and the strain of any discipline, has a ceiling God himself guards, and he provides the way out. You are never asked to bear past what you can bear."
+        },
+        {
+          "reference": "Matthew 6:17–18",
+          "text_and_gloss": "When thou fastest, anoint thy head, and wash thy face; that thou appear not to men to fast. The fast is hidden, never performed. The moment it becomes something to be seen doing, it has lost its way. This guards directly against the pride the desert fathers feared most."
+        },
+        {
+          "reference": "Isaiah 58:6–7",
+          "text_and_gloss": "Is not this rather the fast that I have chosen?… Deal thy bread to the hungry. Scripture’s own correction to fasting that turns inward. The fast God chooses ends in mercy and bread shared, not in mere abstinence admired."
+        },
+        {
+          "reference": "Galatians 5:1",
+          "text_and_gloss": "Stand fast, and be not held again under the yoke of bondage. Fasting is for freedom. If a discipline has become a new bondage, a cage of compulsion or fear, it has inverted, and the desert’s whole purpose was the opposite."
+        },
+        {
+          "reference": "Romans 8:6",
+          "text_and_gloss": "The wisdom of the flesh is death; but the wisdom of the spirit is life and peace. The discipline of the body is ordered toward life and peace, never toward death. A practice that produces neither has stopped being Anthony’s."
+        }
+      ],
+      "scripture_note": "Douay-Rheims wording, verified word-for-word (see 7.6); standardize punctuation and spelling to one chosen edition before ship.",
+      "offering_line": "Offer this fast for freedom of heart, that you may hold all things lightly and God alone tightly.",
+      "readings": [
+        {
+          "title": "Do not break the bow",
+          "paragraphs": [
+            "A hunter came upon Anthony resting and laughing with the brothers and was offended; this was not how a great ascetic was supposed to behave. Anthony asked him to draw his bow and shoot, then to shoot again, and again, and again. The hunter finally objected: if I keep the bow bent all the time, it will break. That, said Anthony, is the whole point. Bend people past their measure and they break in just the same way. Sometimes you must relax the effort.",
+            "Sit with the fact that this is Anthony, the father of the desert, the hardest of the hard, teaching that you must not push without measure. The man you might be tempted to use as a license to grind yourself down is the very one telling you that grinding yourself down breaks the instrument and serves nothing.",
+            "So if you have chosen Anthony, choose this part of him, because it is not optional and it is not the soft edge of his teaching. It is the center of it. The fast has a measure. The discipline has a measure. The body has a measure, and it is not an insult to it to honor it. The rest day, the broken fast when your body needs food, the eased effort when you are depleted, these are not failures of discipline. They are discipline, the discerning kind, the only kind Anthony ever actually taught. Keep some slack in the bow. The desert’s greatest faster will tell you himself: a bow always bent is a bow about to break."
+          ]
+        },
+        {
+          "title": "Fasting is for freedom, never for control",
+          "paragraphs": [
+            "Anthony fasted to be free. That is the entire purpose, and it is worth saying slowly, because it is so easily inverted. He went hungry so that hunger would lose its grip on him, so that he would not be ruled by his appetites, so that his heart would be free for God. The fast was a means, and freedom was the end.",
+            "The inversion happens when the fast stops serving freedom and starts serving control. When it becomes about the number, about how little, about proving something, about a discipline you are now afraid to relax, you have quietly turned Anthony’s purpose inside out. A fast that has become a cage is no longer a fast in his sense. It is a new bondage, and Saint Paul’s warning lands directly on it: do not be held again under a yoke of bondage.",
+            "This is why the Church builds exemptions into fasting on purpose, for pregnancy and nursing and illness and hard labor and youth and age. Those are not loopholes for the weak. They are the wisdom of a tradition that has watched fasting go wrong for centuries and has guarded against it. They are discretion, written into the rule.",
+            "So examine the fast honestly, the way the desert fathers examined everything. Is it making you freer, lighter of heart, more at peace, more available to God and to the people around you? Then it is Anthony’s fast. Is it making you anxious, controlling, depleted, afraid to stop? Then set it down. That is not weakness. With Anthony, it is the beginning of wisdom."
+          ]
+        },
+        {
+          "title": "The humble faster",
+          "paragraphs": [
+            "Anthony said that some people punish their bodies with tremendous asceticism and yet, because they lack discernment, end up far from God. Read that again, because it is one of the most important things any saint ever said about discipline. The asceticism was real. The fasting was severe. And it carried them in the wrong direction, away from God, because the one thing it lacked was discernment, and the thing that grew in its place was pride.",
+            "The desert fathers feared the proud faster more than the weak one, and with reason. The weak one knows they are weak and stays humble; the proud faster begins to measure, to compare, to find their identity in how much they can endure, and that is spiritually far more dangerous than the hunger itself. This is why Christ said to fast in secret, to wash your face and tell no one, so that the fast cannot become a performance even for an audience of one inside your own head.",
+            "So if you fast under Anthony, fast humbly and fast hidden. Do not track it to admire it. Do not let it become who you are. Hold it loosely, as one small means among many toward the only goal that matters, which is a heart set free for God. The humble faster, Anthony promised, stands exactly where the proud one falls. Aim to be the one still standing, which means aiming, first and always, to stay small."
+          ]
+        }
+      ],
+      "feast_notes": [
+        {
+          "heading": "January 17, the Feast of St. Anthony of the Desert",
+          "paragraphs": [
+            "Today the Church keeps the feast of Anthony the Great, father of monasticism, the deepest faster among the saints, and, just as truly, the one who taught that the bow must not be kept always bent.",
+            "So here is the most fitting thing you can do on the feast of the great faster: today, do not fast. Feast. The desert fathers kept the feasts gladly, and a tradition that fasts as seriously as theirs also knows how to stop and eat with joy when the day calls for it. The fasting and tracking emphasis lifts today by design, and on this patron’s feast that lifting is itself part of the lesson. Receive the table gratefully.",
+            "If you train, keep it simple and elemental in his spirit, bodyweight and a long walk, offered for freedom of heart.",
+            "And if the discipline has felt heavy lately, let the feast be permission to ease the bow. Even Anthony rested. We begin again tomorrow."
+          ]
+        }
+      ]
+    }
+  },
+  "feasts": [
+    {
+      "date": "03-19",
+      "saint": "joseph",
+      "label": "Solemnity of St. Joseph",
+      "softens": true
+    },
+    {
+      "date": "05-01",
+      "saint": "joseph",
+      "label": "St. Joseph the Worker",
+      "softens": true
+    },
+    {
+      "date": "07-11",
+      "saint": "benedict",
+      "label": "Feast of St. Benedict",
+      "softens": true,
+      "note": "The older calendar keeps March 21 (the Transitus)."
+    },
+    {
+      "date": "08-17",
+      "saint": "hyacinth",
+      "label": "Feast of St. Hyacinth",
+      "softens": true
+    },
+    {
+      "date": "10-01",
+      "saint": "therese",
+      "label": "Feast of St. Thérèse of Lisieux",
+      "softens": true,
+      "note": "The traditional calendar keeps October 3."
+    },
+    {
+      "date": "01-17",
+      "saint": "anthony",
+      "label": "Feast of St. Anthony of the Desert",
+      "softens": true
+    }
+  ],
+  "intentions": {
+    "free_tier": [
+      "For the souls in purgatory.",
+      "For my family.",
+      "For the Church.",
+      "For the conversion of sinners.",
+      "For my own sanctification."
+    ],
+    "full_pool": [
+      "For the souls in purgatory.",
+      "For my family.",
+      "For the Church.",
+      "For the conversion of sinners.",
+      "For my own sanctification.",
+      "For the sick, and those who care for them.",
+      "For the dying, that they may not be alone.",
+      "For vocations, that the called may answer.",
+      "For marriages, and for families under strain.",
+      "For the unborn, and for their mothers.",
+      "For the persecuted Church.",
+      "For a particular person’s return to the faith.",
+      "For freedom from a besetting sin.",
+      "In thanksgiving, for a grace already given.",
+      "For the holy souls of my own family.",
+      "For those who have no one to pray for them.",
+      "For the poor, and the hungry.",
+      "For peace, among nations and in my own home.",
+      "For those who have wronged me, that I may forgive.",
+      "For perseverance in my own vocation."
+    ],
+    "tone_note": "A note on tone for the offering flow: these are invitations, never obligations. The act of offering a session or a fast is itself a gift freely given, and the copy around it should never imply that an unoffered workout is wasted or that the user owes the offering. The charism offering line for the active patron (Joseph’s and Benedict’s are in their packages above) may surface alongside this pool, gently, as one more way in, not as a replacement for the user’s own intention.",
+    "intro": "An intention is who or what the user offers their training or fast for. These belong to the user’s life, not to any saint’s charism, so they are one shared pool across the whole app, surfaced regardless of active patron. Twenty written presets below; the user-created path (a named person, a private need) is handled in product, and is a paid-tier feature. The five free-tier presets are marked. Each line is dignified, one line, sentence case, never maudlin."
+  }
+}

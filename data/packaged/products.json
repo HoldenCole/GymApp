@@ -1,0 +1,3066 @@
+{
+  "meta": {
+    "source": "data/Kanon_Recipe_Database_v2.xlsx — 'Data export (AI)' sheet",
+    "generated_by": "tools/package_content.py",
+    "note": "64 SKU physical-label checks pending (data/Kanon_Product_Verification_Worklist.xlsx). Allergen lines are the safety field."
+  },
+  "products": [
+    {
+      "id": "P010",
+      "type": "product",
+      "title": "Rotisserie chicken breast",
+      "brand": "Grocery deli",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "3 oz w/ skin",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 17.1,
+      "abstinence_friendly": false,
+      "cultural_tag": null,
+      "verified": true,
+      "source": "Label/USDA May 2026",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Skinless ~120 kcal.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "meat"
+      ],
+      "allergen_codes": [],
+      "training_tags": [
+        "high-protein",
+        "post-workout"
+      ]
+    },
+    {
+      "id": "P011",
+      "type": "product",
+      "title": "Tyson Grilled & Ready strips (Original)",
+      "brand": "Tyson",
+      "effort_level": 2,
+      "effort_name": "2 One-step",
+      "servings": "3 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 21,
+      "abstinence_friendly": false,
+      "cultural_tag": null,
+      "verified": true,
+      "source": "Label/Tyson May 2026",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Southwestern variety adds wheat+soy; tag per SKU.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "meat"
+      ],
+      "allergen_codes": [],
+      "training_tags": [
+        "high-protein",
+        "post-workout"
+      ]
+    },
+    {
+      "id": "P012",
+      "type": "product",
+      "title": "Core Power Elite chocolate shake",
+      "brand": "fairlife",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 bottle (14 oz)",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 18.3,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": true,
+      "source": "Label/fairlife May 2026",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Dairy-only; stays on a meat fast.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk"
+      ],
+      "training_tags": [
+        "post-workout",
+        "abstinence-friendly high-protein",
+        "fast-compatible / light"
+      ]
+    },
+    {
+      "id": "P013",
+      "type": "product",
+      "title": "Oikos Triple Zero Greek yogurt",
+      "brand": "Oikos",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 cup (5.3 oz)",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 15,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": true,
+      "source": "Label/Oikos May 2026",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Lactose, not added sugar.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein",
+        "fast-compatible / light"
+      ]
+    },
+    {
+      "id": "P014",
+      "type": "product",
+      "title": "Biltong (traditional beef)",
+      "brand": "Generic",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "30 g",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 20,
+      "abstinence_friendly": false,
+      "cultural_tag": null,
+      "verified": true,
+      "source": "Label May 2026",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "MEAT; hide on fast days.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "meat"
+      ],
+      "allergen_codes": [],
+      "training_tags": [
+        "post-workout",
+        "high-protein"
+      ]
+    },
+    {
+      "id": "P015",
+      "type": "product",
+      "title": "Chomps original beef stick",
+      "brand": "Chomps",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 stick",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 10,
+      "abstinence_friendly": false,
+      "cultural_tag": null,
+      "verified": true,
+      "source": "Label/Chomps May 2026",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "MEAT; top-9 allergen free.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "meat"
+      ],
+      "allergen_codes": [],
+      "training_tags": [
+        "high-protein"
+      ]
+    },
+    {
+      "id": "P016",
+      "type": "product",
+      "title": "Deli turkey breast",
+      "brand": "Generic",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "3 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 18.9,
+      "abstinence_friendly": false,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "May add carrageenan/soy.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "meat"
+      ],
+      "allergen_codes": [],
+      "training_tags": [
+        "high-protein",
+        "fast-compatible / light"
+      ]
+    },
+    {
+      "id": "P017",
+      "type": "product",
+      "title": "Deli ham",
+      "brand": "Generic",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "3 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 15.6,
+      "abstinence_friendly": false,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Some add sugar/honey.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "meat"
+      ],
+      "allergen_codes": [],
+      "training_tags": [
+        "high-protein"
+      ]
+    },
+    {
+      "id": "P018",
+      "type": "product",
+      "title": "Beef hot dog",
+      "brand": "Generic",
+      "effort_level": 2,
+      "effort_name": "2 One-step",
+      "servings": "1 link",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 3.3,
+      "abstinence_friendly": false,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "May have milk/wheat binders.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "meat"
+      ],
+      "allergen_codes": [],
+      "training_tags": []
+    },
+    {
+      "id": "P019",
+      "type": "product",
+      "title": "Pre-cooked bacon",
+      "brand": "Generic",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "2 slices",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 7.1,
+      "abstinence_friendly": false,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Microwave-ready.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "meat"
+      ],
+      "allergen_codes": [],
+      "training_tags": []
+    },
+    {
+      "id": "P020",
+      "type": "product",
+      "title": "Frozen grilled chicken (plain)",
+      "brand": "Generic",
+      "effort_level": 2,
+      "effort_name": "2 One-step",
+      "servings": "3 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 20,
+      "abstinence_friendly": false,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Seasoned may add soy/wheat.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "meat"
+      ],
+      "allergen_codes": [],
+      "training_tags": [
+        "high-protein",
+        "post-workout"
+      ]
+    },
+    {
+      "id": "P021",
+      "type": "product",
+      "title": "Frozen beef meatballs",
+      "brand": "Generic",
+      "effort_level": 2,
+      "effort_name": "2 One-step",
+      "servings": "3 meatballs",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 5.2,
+      "abstinence_friendly": false,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Breadcrumb+cheese+egg binders.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "meat",
+        "wheat",
+        "dairy"
+      ],
+      "allergen_codes": [
+        "wheat",
+        "milk",
+        "eggs"
+      ],
+      "training_tags": [
+        "high-protein"
+      ]
+    },
+    {
+      "id": "P022",
+      "type": "product",
+      "title": "Rotisserie chicken thigh",
+      "brand": "Grocery deli",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "3 oz w/ skin",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 10,
+      "abstinence_friendly": false,
+      "cultural_tag": null,
+      "verified": true,
+      "source": "Label/USDA May 2026",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Darker, higher fat.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "meat"
+      ],
+      "allergen_codes": [],
+      "training_tags": [
+        "high-protein"
+      ]
+    },
+    {
+      "id": "P023",
+      "type": "product",
+      "title": "Pepperoni slices",
+      "brand": "Generic",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 4.3,
+      "abstinence_friendly": false,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Topping/snack.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "meat"
+      ],
+      "allergen_codes": [],
+      "training_tags": []
+    },
+    {
+      "id": "P024",
+      "type": "product",
+      "title": "Canned chicken breast",
+      "brand": "Generic",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "3 oz drained",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 18.8,
+      "abstinence_friendly": false,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Shelf-stable.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "meat"
+      ],
+      "allergen_codes": [],
+      "training_tags": [
+        "high-protein",
+        "fast-compatible / light"
+      ]
+    },
+    {
+      "id": "P025",
+      "type": "product",
+      "title": "Turkey jerky",
+      "brand": "Generic",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 15.7,
+      "abstinence_friendly": false,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Marinade usually soy sauce.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "meat"
+      ],
+      "allergen_codes": [
+        "soy",
+        "wheat"
+      ],
+      "training_tags": [
+        "high-protein"
+      ]
+    },
+    {
+      "id": "P026",
+      "type": "product",
+      "title": "Canned tuna in water",
+      "brand": "Generic",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 can drained",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 22,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": true,
+      "source": "Label/USDA May 2026",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Abstinence-friendly staple.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "fish"
+      ],
+      "allergen_codes": [
+        "fish"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein",
+        "fast-compatible / light"
+      ]
+    },
+    {
+      "id": "P027",
+      "type": "product",
+      "title": "Canned salmon",
+      "brand": "Generic",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "3 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 14.2,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": true,
+      "source": "Label/USDA May 2026",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Abstinence-friendly.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "fish"
+      ],
+      "allergen_codes": [
+        "fish"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P028",
+      "type": "product",
+      "title": "String cheese",
+      "brand": "Generic mozzarella",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 stick",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 7.5,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Dairy snack.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein",
+        "fast-compatible / light"
+      ]
+    },
+    {
+      "id": "P029",
+      "type": "product",
+      "title": "Hard-boiled eggs (pre-cooked)",
+      "brand": "Generic",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "2 eggs",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 8.6,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": true,
+      "source": "Label/USDA May 2026",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Abstinence-friendly.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "eggs"
+      ],
+      "allergen_codes": [
+        "eggs"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P030",
+      "type": "product",
+      "title": "Protein granola bar",
+      "brand": "Generic",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 bar",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 6,
+      "abstinence_friendly": false,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Most contain milk/nuts/soy; verify SKU.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk",
+        "tree_nuts",
+        "soy"
+      ],
+      "training_tags": [
+        "high-protein"
+      ]
+    },
+    {
+      "id": "P040",
+      "type": "product",
+      "title": "Quest Chocolate Chip Cookie Dough bar",
+      "brand": "Quest Nutrition (60g bar)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 bar",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 10.5,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": true,
+      "source": "Label/Quest May 2026",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Reformulated to include soy lecithin; milk + almonds. Dairy-based, abstinence-friendly.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk",
+        "tree_nuts",
+        "soy"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P041",
+      "type": "product",
+      "title": "Quest Birthday Cake bar",
+      "brand": "Quest Nutrition (60g bar)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 bar",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 11.1,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Verify flavor-specific allergens; Quest reformulations add soy.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk",
+        "tree_nuts",
+        "soy"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P042",
+      "type": "product",
+      "title": "David Gold protein bar",
+      "brand": "David Protein (62g bar)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 bar",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 18.7,
+      "abstinence_friendly": false,
+      "cultural_tag": null,
+      "verified": true,
+      "source": "Label/David May 2026",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Contains bovine collagen + porcine gelatin = MEAT; NOT abstinence-friendly. Also milk/soy/coconut/egg.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "meat",
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk",
+        "soy",
+        "eggs",
+        "tree_nuts"
+      ],
+      "training_tags": [
+        "high-protein"
+      ]
+    },
+    {
+      "id": "P043",
+      "type": "product",
+      "title": "Built Puff bar",
+      "brand": "Built (43g bar)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 bar",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 10.7,
+      "abstinence_friendly": false,
+      "cultural_tag": null,
+      "verified": true,
+      "source": "Label/Built May 2026",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Contains collagen + gelatin = MEAT; NOT abstinence-friendly. Marshmallowy dessert bar (milk, soy). Verify per flavor.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "meat",
+        "dairy",
+        "sweets"
+      ],
+      "allergen_codes": [
+        "milk",
+        "soy"
+      ],
+      "training_tags": [
+        "high-protein"
+      ]
+    },
+    {
+      "id": "P044",
+      "type": "product",
+      "title": "Barebells protein bar",
+      "brand": "Barebells (55g bar)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 bar",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 10,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Verify per-flavor nut allergens.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk",
+        "soy",
+        "tree_nuts"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P045",
+      "type": "product",
+      "title": "Pure Protein bar (chocolate)",
+      "brand": "Pure Protein (50g bar)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 bar",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 10.5,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Often contains peanuts; verify SKU.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk",
+        "soy",
+        "peanuts"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P046",
+      "type": "product",
+      "title": "ONE protein bar",
+      "brand": "ONE Brands (60g bar)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 bar",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 9.1,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Verify per-flavor nut/peanut.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk",
+        "soy",
+        "peanuts",
+        "tree_nuts"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P047",
+      "type": "product",
+      "title": "RXBAR",
+      "brand": "RXBAR (52g bar)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 bar",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 5.7,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Egg-white + nut + date based; abstinence-friendly (no meat). Verify nuts per flavor.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "eggs"
+      ],
+      "allergen_codes": [
+        "eggs",
+        "tree_nuts"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P048",
+      "type": "product",
+      "title": "Kind Protein bar",
+      "brand": "KIND (50g bar)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 bar",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 4.8,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Nut-based; abstinence-friendly. Verify dairy per flavor.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "tree_nuts",
+        "peanuts",
+        "soy",
+        "milk"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P049",
+      "type": "product",
+      "title": "Clif Builders protein bar",
+      "brand": "Clif (68g bar)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 bar",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 7.1,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Soy-protein based; abstinence-friendly. Verify nuts.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy",
+        "soy"
+      ],
+      "allergen_codes": [
+        "milk",
+        "soy",
+        "peanuts",
+        "tree_nuts"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P050",
+      "type": "product",
+      "title": "Premier Protein shake (vanilla)",
+      "brand": "Premier Protein (11 oz)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 bottle",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 18.8,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": true,
+      "source": "Label/Premier May 2026",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Milk-protein based; abstinence-friendly. Some contain soy.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk",
+        "soy"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein",
+        "fast-compatible / light"
+      ]
+    },
+    {
+      "id": "P051",
+      "type": "product",
+      "title": "Fairlife Nutrition Plan shake (vanilla)",
+      "brand": "fairlife (11.5 oz)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 bottle",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 20,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": true,
+      "source": "Label/fairlife May 2026",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Lactose-free, gluten-free; abstinence-friendly.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein",
+        "fast-compatible / light"
+      ]
+    },
+    {
+      "id": "P052",
+      "type": "product",
+      "title": "Muscle Milk shake",
+      "brand": "Muscle Milk (14 oz)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 bottle",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 15.6,
+      "abstinence_friendly": false,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Milk + soy; verify SKU.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk",
+        "soy"
+      ],
+      "training_tags": [
+        "high-protein",
+        "post-workout"
+      ]
+    },
+    {
+      "id": "P053",
+      "type": "product",
+      "title": "Orgain Clean Protein shake",
+      "brand": "Orgain (11 oz)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 bottle",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 13.3,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Grass-fed dairy; verify.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P054",
+      "type": "product",
+      "title": "OWYN plant-based shake",
+      "brand": "OWYN (12 oz)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 bottle",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 11.1,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Pea-protein; vegan, allergen-friendly base; verify nuts.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [],
+      "allergen_codes": [
+        "peanuts",
+        "tree_nuts"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P055",
+      "type": "product",
+      "title": "Ensure Max Protein shake",
+      "brand": "Ensure (11 oz)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 bottle",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 20,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Milk + soy; verify.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk",
+        "soy"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P056",
+      "type": "product",
+      "title": "Slim Fast High Protein shake",
+      "brand": "SlimFast (11 oz)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 bottle",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 11.1,
+      "abstinence_friendly": false,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Verify SKU.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk",
+        "soy"
+      ],
+      "training_tags": [
+        "high-protein"
+      ]
+    },
+    {
+      "id": "P060",
+      "type": "product",
+      "title": "Whey protein powder (1 scoop)",
+      "brand": "Generic whey isolate",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 scoop",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 20.8,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Whey = dairy; abstinence-friendly. Many add soy lecithin.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk",
+        "soy"
+      ],
+      "training_tags": [
+        "post-workout",
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P061",
+      "type": "product",
+      "title": "Casein protein powder (1 scoop)",
+      "brand": "Generic casein",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 scoop",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 20,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Dairy; abstinence-friendly.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P062",
+      "type": "product",
+      "title": "Plant protein powder (1 scoop)",
+      "brand": "Generic pea/rice blend",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 scoop",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 16.7,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Pea/rice; verify allergens per blend.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [],
+      "allergen_codes": [
+        "soy",
+        "tree_nuts"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P063",
+      "type": "product",
+      "title": "Collagen protein powder (1 scoop)",
+      "brand": "Generic bovine collagen",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 scoop",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 25.7,
+      "abstinence_friendly": false,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Collagen is bovine = MEAT; NOT abstinence-friendly.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "meat"
+      ],
+      "allergen_codes": [],
+      "training_tags": [
+        "high-protein"
+      ]
+    },
+    {
+      "id": "P070",
+      "type": "product",
+      "title": "Halo Top ice cream (1/2 cup)",
+      "brand": "Halo Top",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1/2 cup",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 6.2,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": true,
+      "source": "Label/Halo Top May 2026",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "DESSERT = sweets tag. Dairy; abstinence-friendly. Verify per-flavor nuts.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy",
+        "sweets"
+      ],
+      "allergen_codes": [
+        "milk"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P071",
+      "type": "product",
+      "title": "Yasso frozen Greek yogurt bar",
+      "brand": "Yasso",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 bar",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 5,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "DESSERT = sweets. Verify per-flavor (some have nuts).",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy",
+        "sweets"
+      ],
+      "allergen_codes": [
+        "milk"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P072",
+      "type": "product",
+      "title": "Chobani Greek yogurt (plain, nonfat)",
+      "brand": "Chobani (5.3 oz)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 cup",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 17.8,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Plain is NOT sweets; flavored fruit-on-bottom may be.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein",
+        "fast-compatible / light"
+      ]
+    },
+    {
+      "id": "P073",
+      "type": "product",
+      "title": "Two Good Greek yogurt",
+      "brand": "Two Good (5.3 oz)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 cup",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 15,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Low-sugar; plain not sweets.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein",
+        "fast-compatible / light"
+      ]
+    },
+    {
+      "id": "P074",
+      "type": "product",
+      "title": "Ratio protein yogurt cup",
+      "brand": "Ratio (5.3 oz)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 cup",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 14.7,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Keto yogurt; abstinence-friendly.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P075",
+      "type": "product",
+      "title": "Protein pudding cup",
+      "brand": "Generic ready-to-eat",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 cup",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 10,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "DESSERT class = sweets. Verify SKU.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy",
+        "sweets"
+      ],
+      "allergen_codes": [
+        "milk"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P076",
+      "type": "product",
+      "title": "Cottage cheese single (low-fat)",
+      "brand": "Generic",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 cup",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 15,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": true,
+      "source": "Label/USDA May 2026",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Plain; abstinence-friendly staple.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P080",
+      "type": "product",
+      "title": "Quest protein chips",
+      "brand": "Quest Nutrition (1 bag)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 bag",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 13.6,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Milk-protein chips; abstinence-friendly. Verify SKU.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P081",
+      "type": "product",
+      "title": "Whisps cheese crisps",
+      "brand": "Whisps",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 6,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "100% cheese; abstinence-friendly.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P082",
+      "type": "product",
+      "title": "Hard-boiled egg 2-pack",
+      "brand": "Generic",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "2 eggs",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 8.6,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": true,
+      "source": "Label/USDA May 2026",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Abstinence-friendly.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "eggs"
+      ],
+      "allergen_codes": [
+        "eggs"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P083",
+      "type": "product",
+      "title": "Babybel cheese (3 wheels)",
+      "brand": "Babybel",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "3 wheels",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 7.1,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Cheese snack; abstinence-friendly.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P084",
+      "type": "product",
+      "title": "Roasted chickpeas (snack)",
+      "brand": "Generic",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 5,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Plant snack; light beans note still applies to meals not snacks.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [],
+      "allergen_codes": [],
+      "training_tags": [
+        "abstinence-friendly high-protein",
+        "fast-compatible / light"
+      ]
+    },
+    {
+      "id": "P085",
+      "type": "product",
+      "title": "Edamame snack pack",
+      "brand": "Generic",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1/2 cup",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 9,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Soy allergen.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [],
+      "allergen_codes": [
+        "soy"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein",
+        "fast-compatible / light"
+      ]
+    },
+    {
+      "id": "P086",
+      "type": "product",
+      "title": "Greek yogurt drink (Kefir)",
+      "brand": "Generic",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 cup",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 10,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Cultured dairy; abstinence-friendly.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P087",
+      "type": "product",
+      "title": "Tuna pouch (flavored)",
+      "brand": "Generic",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 pouch",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 18.9,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Fish; abstinence-friendly. Some flavors add soy.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "fish"
+      ],
+      "allergen_codes": [
+        "fish"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein",
+        "fast-compatible / light"
+      ]
+    },
+    {
+      "id": "P088",
+      "type": "product",
+      "title": "Sardines in olive oil",
+      "brand": "Generic",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 can",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 12.1,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": true,
+      "source": "Label/USDA May 2026",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Fish; abstinence-friendly.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "fish",
+        "oil"
+      ],
+      "allergen_codes": [
+        "fish"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P089",
+      "type": "product",
+      "title": "Salmon jerky",
+      "brand": "Generic",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 16.7,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Fish; verify added soy in marinade.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "fish"
+      ],
+      "allergen_codes": [
+        "fish"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P090",
+      "type": "product",
+      "title": "Protein cookie",
+      "brand": "Generic soft-baked",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 cookie",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 5,
+      "abstinence_friendly": false,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "DESSERT = sweets. Verify; many contain wheat/egg/nuts.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy",
+        "eggs",
+        "sweets"
+      ],
+      "allergen_codes": [
+        "milk",
+        "eggs",
+        "wheat",
+        "soy"
+      ],
+      "training_tags": [
+        "high-protein"
+      ]
+    },
+    {
+      "id": "P100",
+      "type": "product",
+      "title": "Tofu (firm, plain)",
+      "brand": "Generic",
+      "effort_level": 2,
+      "effort_name": "2 One-step",
+      "servings": "3 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 11.4,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": true,
+      "source": "Label/USDA May 2026",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Soy; abstinence-friendly. Needs cooking (level 2 use).",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [],
+      "allergen_codes": [
+        "soy"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P101",
+      "type": "product",
+      "title": "Tempeh",
+      "brand": "Generic",
+      "effort_level": 2,
+      "effort_name": "2 One-step",
+      "servings": "3 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 10.6,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Soy; some contain grains (wheat).",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [],
+      "allergen_codes": [
+        "soy"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P102",
+      "type": "product",
+      "title": "Beyond Burger patty",
+      "brand": "Beyond Meat",
+      "effort_level": 2,
+      "effort_name": "2 One-step",
+      "servings": "1 patty",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 8.7,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Pea-protein; allergen-light base; abstinence-friendly. Verify SKU.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [],
+      "allergen_codes": [],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P103",
+      "type": "product",
+      "title": "Impossible Burger patty",
+      "brand": "Impossible Foods",
+      "effort_level": 2,
+      "effort_name": "2 One-step",
+      "servings": "1 patty",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 7.9,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Soy-protein; abstinence-friendly.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [],
+      "allergen_codes": [
+        "soy"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P104",
+      "type": "product",
+      "title": "Seitan (plain)",
+      "brand": "Generic",
+      "effort_level": 2,
+      "effort_name": "2 One-step",
+      "servings": "3 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 19.1,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Wheat gluten = wheat allergen; abstinence-friendly.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [],
+      "allergen_codes": [
+        "wheat"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P105",
+      "type": "product",
+      "title": "Plant-based deli slices",
+      "brand": "Generic",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "3 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 13.3,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Usually soy/wheat based; abstinence-friendly.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [],
+      "allergen_codes": [
+        "soy",
+        "wheat"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P106",
+      "type": "product",
+      "title": "Plant-based ground (crumbles)",
+      "brand": "Generic",
+      "effort_level": 2,
+      "effort_name": "2 One-step",
+      "servings": "3 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 8.9,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Verify pea vs soy base per brand.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [],
+      "allergen_codes": [
+        "soy",
+        "wheat"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P110",
+      "type": "product",
+      "title": "Quest Protein Chips",
+      "brand": "Quest Nutrition (1 bag)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 bag",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 13.6,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": true,
+      "source": "Label/Quest May 2026",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Baked, gluten-free, milk-protein based; abstinence-friendly. Verify per-flavor.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P111",
+      "type": "product",
+      "title": "Wonderful Pistachios",
+      "brand": "Wonderful (1 oz)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 3.8,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": true,
+      "source": "Label/Wonderful May 2026",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Tree nut; abstinence-friendly. Complete plant protein.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [],
+      "allergen_codes": [
+        "tree_nuts"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein",
+        "fast-compatible / light"
+      ]
+    },
+    {
+      "id": "P112",
+      "type": "product",
+      "title": "Almonds (roasted, salted)",
+      "brand": "Generic (1 oz)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 3.5,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": true,
+      "source": "Label/USDA May 2026",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Tree nut; abstinence-friendly.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [],
+      "allergen_codes": [
+        "tree_nuts"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein",
+        "fast-compatible / light"
+      ]
+    },
+    {
+      "id": "P113",
+      "type": "product",
+      "title": "Beef jerky",
+      "brand": "Generic (1 oz)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 13.8,
+      "abstinence_friendly": false,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "MEAT; not abstinence-friendly. Marinade usually soy sauce (soy+wheat).",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "meat"
+      ],
+      "allergen_codes": [
+        "soy",
+        "wheat"
+      ],
+      "training_tags": [
+        "high-protein"
+      ]
+    },
+    {
+      "id": "P114",
+      "type": "product",
+      "title": "Turkey stick (snack)",
+      "brand": "Generic (1 stick)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 stick",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 10,
+      "abstinence_friendly": false,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "MEAT; not abstinence-friendly.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "meat"
+      ],
+      "allergen_codes": [],
+      "training_tags": [
+        "high-protein"
+      ]
+    },
+    {
+      "id": "P115",
+      "type": "product",
+      "title": "String cheese",
+      "brand": "Generic mozzarella (1 stick)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 stick",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 7.5,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Dairy; abstinence-friendly.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein",
+        "fast-compatible / light"
+      ]
+    },
+    {
+      "id": "P116",
+      "type": "product",
+      "title": "Babybel cheese",
+      "brand": "Babybel (1 wheel)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 wheel",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 7.1,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Dairy snack.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein",
+        "fast-compatible / light"
+      ]
+    },
+    {
+      "id": "P117",
+      "type": "product",
+      "title": "Whisps cheese crisps",
+      "brand": "Whisps (1 oz)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 6,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "100% cheese; abstinence-friendly.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P118",
+      "type": "product",
+      "title": "Skinny Pop popcorn",
+      "brand": "SkinnyPop (1 bag)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 bag",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 1.3,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Low protein; not tagged high-protein.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [],
+      "allergen_codes": [],
+      "training_tags": [
+        "abstinence-friendly",
+        "fast-compatible / light"
+      ]
+    },
+    {
+      "id": "P119",
+      "type": "product",
+      "title": "Roasted seaweed snack",
+      "brand": "Generic (1 pack)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 pack",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 3.3,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Very light snack; sesame oil in some brands (verify).",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "oil"
+      ],
+      "allergen_codes": [],
+      "training_tags": [
+        "abstinence-friendly",
+        "fast-compatible / light"
+      ]
+    },
+    {
+      "id": "P120",
+      "type": "product",
+      "title": "Trail mix (nut & chocolate)",
+      "brand": "Generic (1 oz)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 2.9,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Verify nut/dairy/soy per blend.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "tree_nuts",
+        "peanuts",
+        "soy",
+        "milk"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P121",
+      "type": "product",
+      "title": "Peanut butter to-go cup",
+      "brand": "Generic (1 cup)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 cup",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 3.7,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Peanut allergen; abstinence-friendly.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [],
+      "allergen_codes": [
+        "peanuts"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P122",
+      "type": "product",
+      "title": "Roasted chickpea snack",
+      "brand": "Generic (1 oz)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 4.6,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Plant snack; abstinence-friendly.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [],
+      "allergen_codes": [],
+      "training_tags": [
+        "abstinence-friendly high-protein",
+        "fast-compatible / light"
+      ]
+    },
+    {
+      "id": "P123",
+      "type": "product",
+      "title": "Greek yogurt drink (Kefir)",
+      "brand": "Generic (1 cup)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 cup",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 10,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Cultured dairy; abstinence-friendly.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P124",
+      "type": "product",
+      "title": "Protein granola clusters",
+      "brand": "Generic (1/2 cup)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1/2 cup",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 4.8,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Verify nut/soy per brand.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk",
+        "tree_nuts",
+        "soy"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P125",
+      "type": "product",
+      "title": "Dark chocolate square",
+      "brand": "Generic 70% (1 oz)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 1.2,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "DESSERT = sweets. Often milk/soy traces; low protein.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy",
+        "sweets"
+      ],
+      "allergen_codes": [
+        "milk",
+        "soy"
+      ],
+      "training_tags": [
+        "abstinence-friendly"
+      ]
+    },
+    {
+      "id": "P126",
+      "type": "product",
+      "title": "Apple sauce pouch",
+      "brand": "Generic (1 pouch)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 pouch",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": null,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "No protein; light snack.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [],
+      "allergen_codes": [],
+      "training_tags": [
+        "abstinence-friendly",
+        "fast-compatible / light"
+      ]
+    },
+    {
+      "id": "P127",
+      "type": "product",
+      "title": "Protein pretzels",
+      "brand": "Generic (1 oz)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 6.7,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Verify SKU.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy",
+        "wheat"
+      ],
+      "allergen_codes": [
+        "milk",
+        "wheat",
+        "soy"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P128",
+      "type": "product",
+      "title": "Salmon jerky",
+      "brand": "Generic (1 oz)",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 oz",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 16.7,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Fish; abstinence-friendly. Verify added soy in marinade.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "fish"
+      ],
+      "allergen_codes": [
+        "fish",
+        "soy"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    },
+    {
+      "id": "P129",
+      "type": "product",
+      "title": "Cheese and nut snack box",
+      "brand": "Generic",
+      "effort_level": 1,
+      "effort_name": "1 Assembly",
+      "servings": "1 box",
+      "active_min": 0,
+      "total_min": 0,
+      "kcal_per_serv": 0,
+      "protein_g": 0,
+      "carb_g": 0,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "protein_density": 4.3,
+      "abstinence_friendly": true,
+      "cultural_tag": null,
+      "verified": false,
+      "source": "NEEDS verification",
+      "ingredients": "— (packaged)",
+      "steps": "— (ready to eat)",
+      "notes": "Cheese + nuts + fruit; abstinence-friendly. Verify components.",
+      "sodium_mg": 0,
+      "potassium_mg": 0,
+      "fast_codes": [
+        "dairy"
+      ],
+      "allergen_codes": [
+        "milk",
+        "tree_nuts"
+      ],
+      "training_tags": [
+        "abstinence-friendly high-protein"
+      ]
+    }
+  ]
+}

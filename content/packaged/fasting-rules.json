@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "source": "content/Kanon_Fasting_Engine_Content_Pack.md — Part 1 (rule corpora), Part D (country selector)",
+    "status": "priest-confirmed corpora, hand-encoded; the encoded rules still need the same dual-competence reviewer's sign-off before ship (Part C standing caution)",
+    "invariants": [
+      "The two corpora are separate bodies of law — never cross-wire days, binding ages, or rank-lift thresholds between OF and EF.",
+      "The calendar is imported (Introibo day-facts), never re-derived: the resolver computes no dates, ranks, or transfers.",
+      "Vigils omitted from the 1962 calendar (Immaculate Conception, All Saints) are modeled as ABSENT, not as days with a `none` obligation.",
+      "Unauthored countries fall back to universal law, never silently to US."
+    ],
+    "open_items": [
+      { "id": "water-medicine-record", "note": "What does and does not break the penitential fast must be written into the corpus and priest-confirmed; the training guidance cross-links to it and currently dangles." },
+      { "id": "ef-b5-primary-source", "note": "Lenten weekday partial-abstinence pattern (B5) flagged for primary-source confirmation at encode-review." },
+      { "id": "ef-b9-lent-interaction", "note": "Exact Lenten Sunday/feast-of-precept interaction (B9) flagged for primary-source confirmation at encode-review." },
+      { "id": "assumption-vigil-abstinence", "note": "Vigil of the Assumption is a retained fast-day vigil; its abstinence status is open until pinned against Introibo's 1962 calendar." }
+    ]
+  },
+
+  "obligation_kinds": {
+    "fast": "One full meal plus smaller meals per the discipline's definition (OF: two smaller that together don't equal a full one; EF: a small morning and evening collation per approved local custom; meat and fish may be taken at the same meal under EF).",
+    "abstinence_of": "OF abstinence: no flesh meat that day.",
+    "complete_abstinence_ef": "EF complete abstinence: no flesh meat and no meat broth/soup; eggs, milk products, and condiments/seasonings even from animal fat are permitted.",
+    "partial_abstinence_ef": "EF partial abstinence: meat permitted, but only at the one principal meal of the day.",
+    "penance_or_abstinence": "Friday remains penitential; abstinence from meat has first place, and (US norm, c. 1253) another act of penance or work of charity may be substituted."
+  },
+
+  "disciplines": {
+    "of": {
+      "name": "Ordinary Form — current discipline (1983 Code + USCCB)",
+      "binding_ages": {
+        "fast": { "from_completed_year": 18, "until_start_of_year": 60 },
+        "abstinence": { "from_completed_year": 14 }
+      },
+      "rank_lift": {
+        "threshold": "solemnity",
+        "rule": "A solemnity falling on a Friday lifts the Friday abstinence (c. 1251). The solemnity list comes from the imported calendar, never re-derived.",
+        "source_record": "A5"
+      },
+      "rules": [
+        {
+          "id": "A1",
+          "day_fact": "ash_wednesday",
+          "obligation": { "fast": true, "abstinence": "abstinence_of" },
+          "source": "1983 CIC c. 1251; USCCB Fast & Abstinence",
+          "review_status": "confirmed"
+        },
+        {
+          "id": "A2",
+          "day_fact": "good_friday",
+          "obligation": { "fast": true, "abstinence": "abstinence_of" },
+          "recommendation": {
+            "id": "paschal_fast",
+            "note": "USCCB recommends continuing the fast to the Easter Vigil — a recommendation, not an added obligation; must never surface as binding.",
+            "binding": false
+          },
+          "source": "1983 CIC c. 1251; USCCB",
+          "review_status": "confirmed"
+        },
+        {
+          "id": "A3",
+          "day_fact": "friday_of_lent",
+          "obligation": { "fast": false, "abstinence": "abstinence_of" },
+          "lifted_by": "rank_lift",
+          "source": "1983 CIC c. 1251; USCCB Fast & Abstinence",
+          "review_status": "confirmed"
+        },
+        {
+          "id": "A4",
+          "day_fact": "friday_outside_lent",
+          "obligation": { "fast": false, "abstinence": "penance_or_abstinence" },
+          "lifted_by": "rank_lift",
+          "product_note": "The app states the practice — Friday is penitential, abstinence has first place, substitution is permitted — and does not pronounce on whether omitting it is sinful. Gravity belongs to pastor/confessor (Part 2 §3 boundary).",
+          "source": "1983 CIC cc. 1250, 1253; USCCB 1966 Pastoral Statement",
+          "review_status": "confirmed"
+        }
+      ]
+    },
+
+    "ef": {
+      "name": "Extraordinary Form — 1962 discipline, as practiced",
+      "binding_ages": {
+        "fast": {
+          "from_completed_year_by_profile": { "us": 18, "universal": 21 },
+          "until_start_of_year": 60,
+          "note": "Universal 1962 law: completed 21st year. US particular law lowered this to 18. Scope-gated with the Ember Wed/Sat rule — the two must move together (B10, Part C #1)."
+        },
+        "abstinence": { "from_completed_year": 7 }
+      },
+      "rank_lift": {
+        "threshold": "feast_of_precept_or_sunday",
+        "rule": "A Sunday or feast of precept lifts the abstinence/fast of a coinciding penitential day — EXCEPT during Lent, where the penance stands. Narrower than, and never to be confused with, the OF solemnity threshold.",
+        "lent_exception": true,
+        "vigil_on_sunday": "dropped_that_year_not_anticipated",
+        "source_record": "B9",
+        "flag": "ef-b9-lent-interaction"
+      },
+      "rules": [
+        {
+          "id": "B2",
+          "day_fact": "friday",
+          "obligation": { "fast": false, "abstinence": "complete_abstinence_ef" },
+          "lifted_by": "rank_lift",
+          "lift_note": "Lifts only outside Lent, and only for a feast of precept / Sunday (B9).",
+          "source": "1962 discipline (c. 1252 §1)",
+          "review_status": "confirmed"
+        },
+        {
+          "id": "B3",
+          "day_fact": "ash_wednesday",
+          "obligation": { "fast": true, "abstinence": "complete_abstinence_ef" },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "B4",
+          "day_fact": "good_friday",
+          "obligation": { "fast": true, "abstinence": "complete_abstinence_ef" },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "B5a",
+          "day_fact": "lenten_friday_or_saturday",
+          "obligation": { "fast": true, "abstinence": "complete_abstinence_ef" },
+          "source": "1962 discipline (c. 1252 §§2–3 + standard practice)",
+          "review_status": "confirmed"
+        },
+        {
+          "id": "B5b",
+          "day_fact": "lenten_weekday_mon_thu",
+          "obligation": { "fast": true, "abstinence": "partial_abstinence_ef" },
+          "source": "1962 discipline (standard summaries)",
+          "review_status": "confirmed",
+          "flag": "ef-b5-primary-source"
+        },
+        {
+          "id": "B6",
+          "day_fact": "ember_day",
+          "obligation": { "fast": true, "abstinence": "by_weekday_and_profile" },
+          "abstinence_by_weekday": {
+            "friday": "complete_abstinence_ef",
+            "wednesday_saturday_by_profile": {
+              "us": "partial_abstinence_ef",
+              "universal": "complete_abstinence_ef"
+            }
+          },
+          "note": "Ember Wed/Sat partial abstinence is the 1949 US modification; older universal practice was complete abstinence on all Ember days. Label as US norm in-app. Dates of all four sets come from the imported calendar.",
+          "source": "1962 discipline (US norm), priest-confirmed",
+          "review_status": "confirmed"
+        },
+        {
+          "id": "B7",
+          "day_fact": "fast_day_vigil",
+          "vigils": {
+            "vigil_of_christmas": { "fast": true, "abstinence": "complete_abstinence_ef" },
+            "vigil_of_the_assumption": { "fast": true, "abstinence": "open — confirm against calendar", "flag": "assumption-vigil-abstinence" },
+            "vigil_of_pentecost": { "fast": true, "abstinence": "partial_abstinence_ef" }
+          },
+          "omitted_vigils_note": "Immaculate Conception and All Saints vigils were omitted from the 1962 calendar itself — model as absent, never as `none`-obligation days.",
+          "on_sunday": "dropped_that_year_not_anticipated",
+          "source": "1962 discipline, priest-confirmed",
+          "review_status": "confirmed"
+        }
+      ]
+    }
+  },
+
+  "norm_profiles": {
+    "us": {
+      "name": "United States",
+      "ef_fast_age_from": 18,
+      "ef_ember_wed_sat": "partial_abstinence_ef",
+      "of_friday_substitution_permitted": true
+    },
+    "universal": {
+      "name": "Universal law",
+      "ef_fast_age_from": 21,
+      "ef_ember_wed_sat": "complete_abstinence_ef",
+      "of_friday_substitution_permitted": false,
+      "note": "Fallback for unauthored countries — shown with: 'your country's bishops may specify differently — check with your parish.' Never silently serve US rules to a non-US user."
+    },
+    "selection": "Onboarding captures a home country selecting ONE norm profile carrying all country-dependent values together — never separate toggles. Home country, not live location; the engine does not auto-switch when a user travels."
+  }
+}
