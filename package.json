@@ -10,8 +10,8 @@
     "data"
   ],
   "scripts": {
-    "test": "npm run test --workspaces --if-present",
-    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test -w @kanon/engine -w @kanon/fitness -w @kanon/food",
+    "typecheck": "npm run typecheck -w @kanon/engine -w @kanon/fitness -w @kanon/food -w @kanon/mobile",
     "package-content": "python3 tools/package_content.py"
   }
 }

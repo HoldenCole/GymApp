@@ -1,21 +1,24 @@
 import { Link, useRouter } from "expo-router";
+import { useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { energyTargets } from "@kanon/fitness";
 import { dayTotals, MEAL_LABELS, MEALS, mealEntries, sumMacros } from "@kanon/food";
 import { useFitness } from "../../src/fitness";
 import { todayISO, useFood } from "../../src/food";
 import { colors, sectionLabel } from "../../src/theme";
+import { TrendsView } from "../../src/trendsView";
 
 /**
- * Macros — the ledger (UI brief §3.3). Live: kcal lead with running
- * total, macro bars filling toward plan targets, diary rows per meal,
- * pinned add-food bar. Values come from the catalog placeholders until
- * the USDA re-pull.
+ * Macros — the ledger (UI brief §3.3). Two faces: Today (kcal lead,
+ * macro bars, diary rows, pinned add-food bar) and Trends (axed thin
+ * charts + adherence grid). Values come from the catalog placeholders
+ * until the USDA re-pull.
  */
 export default function Macros() {
   const router = useRouter();
   const { state: fitness } = useFitness();
   const { state: food, removeEntry } = useFood();
+  const [view, setView] = useState<"today" | "trends">("today");
   const today = todayISO();
 
   const targets = fitness.body
@@ -32,6 +35,38 @@ export default function Macros() {
   return (
     <View style={styles.screen}>
       <ScrollView contentContainerStyle={styles.content}>
+        <View style={styles.segments}>
+          {(["today", "trends"] as const).map((v) => (
+            <Pressable key={v} onPress={() => setView(v)} accessibilityRole="tab">
+              <Text style={[styles.segment, view === v && styles.segmentActive]}>
+                {v === "today" ? "Today" : "Trends"}
+              </Text>
+            </Pressable>
+          ))}
+        </View>
+
+        {view === "trends" ? (
+          <TrendsView />
+        ) : (
+          <TodayView />
+        )}
+      </ScrollView>
+
+      {view === "today" ? (
+        <Pressable
+          style={styles.addBar}
+          onPress={() => router.push("/(tabs)/food")}
+          accessibilityRole="button"
+        >
+          <Text style={styles.addBarText}>Add food</Text>
+        </Pressable>
+      ) : null}
+    </View>
+  );
+
+  function TodayView() {
+    return (
+      <>
         <Text style={styles.kcal}>
           {totals.kcal}{" "}
           <Text style={styles.kcalGoal}>
@@ -104,17 +139,9 @@ export default function Macros() {
             </View>
           );
         })}
-      </ScrollView>
-
-      <Pressable
-        style={styles.addBar}
-        onPress={() => router.push("/(tabs)/food")}
-        accessibilityRole="button"
-      >
-        <Text style={styles.addBarText}>Add food</Text>
-      </Pressable>
-    </View>
-  );
+      </>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
@@ -155,4 +182,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   addBarText: { color: colors.paperWhite, fontSize: 14, letterSpacing: 0.5 },
+  segments: { flexDirection: "row", gap: 18 },
+  segment: {
+    fontSize: 13,
+    color: colors.grayInactive,
+    paddingBottom: 3,
+  },
+  segmentActive: {
+    color: colors.inkNavy,
+    fontWeight: "600",
+    borderBottomWidth: 2,
+    borderBottomColor: colors.inkNavy,
+  },
 });
