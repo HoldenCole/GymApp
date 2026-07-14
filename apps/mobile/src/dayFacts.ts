@@ -1,17 +1,23 @@
 /**
- * PLACEHOLDER day-facts source.
+ * The app's day-facts source, reading through the calendar import seam.
  *
- * The real source is Introibo's verified liturgical calendar (7,671
- * entries), consumed through the calendar-import seam — the resolver
- * never re-derives the calendar. Until that import lands, this module
- * supplies civil-only facts (date + weekday + a crude season guess is
- * deliberately NOT attempted: no liturgical fact is fabricated here).
- *
- * Everything liturgical is left unset, which the UI must treat as
- * "calendar not yet available", never as "no obligation".
+ * Currently loads the PROVISIONAL 2026 fixture — a labeled stand-in,
+ * not Introibo. The verified Introibo export replaces the JSON file and
+ * nothing else changes. Dates outside coverage fall back to civil facts
+ * (date + weekday only), which the UI must present as "calendar
+ * pending", never as a liturgical claim.
  */
 
-import type { DayFacts, Weekday } from "@kanon/engine";
+import calendarJson from "@kanon/data/packaged/calendar-2026-provisional.json";
+import {
+  CalendarData,
+  DayFacts,
+  Discipline,
+  loadCalendar,
+  Weekday,
+} from "@kanon/engine";
+
+const calendar = loadCalendar(calendarJson as CalendarData);
 
 const WEEKDAYS: Weekday[] = [
   "sunday",
@@ -23,19 +29,47 @@ const WEEKDAYS: Weekday[] = [
   "saturday",
 ];
 
-export interface PlaceholderDayFacts extends DayFacts {
-  /** True until the Introibo import provides real liturgical facts. */
-  liturgicalFactsPending: true;
+export type DayFactsProvenance = "introibo" | "provisional" | "civil_fallback";
+
+export interface TodaysFacts {
+  facts: DayFacts;
+  provenance: DayFactsProvenance;
 }
 
-export function civilDayFactsToday(now: Date = new Date()): PlaceholderDayFacts {
+export function todaysDayFacts(discipline: Discipline, now: Date = new Date()): TodaysFacts {
   const iso = now.toISOString().slice(0, 10);
+  const imported = calendar.dayFacts(iso, discipline);
+  if (imported) {
+    return { facts: imported, provenance: calendar.meta.provenance };
+  }
   return {
-    date: iso,
-    weekday: WEEKDAYS[now.getDay()] as Weekday,
-    // Season is a liturgical fact; "ordinary" here is a stand-in the UI
-    // must label as pending, not present as truth.
-    season: "ordinary",
-    liturgicalFactsPending: true,
+    facts: {
+      date: iso,
+      weekday: WEEKDAYS[now.getDay()] as Weekday,
+      // Liturgical facts unknown — "ordinary" is a stand-in the UI must
+      // label as pending, never present as truth.
+      season: "ordinary",
+    },
+    provenance: "civil_fallback",
   };
 }
+
+/** Human header for the day: celebration if named, else season + weekday. */
+export function dayHeader(facts: DayFacts): string {
+  if (facts.celebration) return facts.celebration;
+  const wd = facts.weekday.charAt(0).toUpperCase() + facts.weekday.slice(1);
+  const seasonLabel: Record<string, string> = {
+    advent: "Advent",
+    christmastide: "Christmastide",
+    lent: "Lent",
+    eastertide: "Eastertide",
+    ordinary: "Ordinary Time",
+  };
+  return `${wd} in ${seasonLabel[facts.season] ?? facts.season}`;
+}
+
+export const PROVENANCE_NOTE: Record<DayFactsProvenance, string | null> = {
+  introibo: null,
+  provisional: "Provisional calendar — Introibo verification pending.",
+  civil_fallback: "Liturgical calendar not available for this date.",
+};

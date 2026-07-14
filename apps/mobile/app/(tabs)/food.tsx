@@ -8,12 +8,19 @@ import {
   TextInput,
   View,
 } from "react-native";
-import { activeAvoidSet, FAST_CATEGORIES } from "@kanon/engine";
+import {
+  activeAvoidSet,
+  FAST_CATEGORIES,
+  obligationAvoids,
+  resolveObligation,
+} from "@kanon/engine";
 import { CatalogItem, filterCatalog } from "@kanon/food";
 import { CATALOG } from "../../src/catalog";
+import { todaysDayFacts } from "../../src/dayFacts";
 import { todayISO, todayWeekday } from "../../src/dates";
 import { useFasts } from "../../src/fasts";
 import { useFood } from "../../src/food";
+import { useProfile } from "../../src/profile";
 import { colors, sectionLabel } from "../../src/theme";
 
 /**
@@ -31,20 +38,28 @@ export default function Food() {
   const [effortMax, setEffortMax] = useState<number | undefined>(undefined);
   const [abstinenceOnly, setAbstinenceOnly] = useState(false);
 
-  // Day-aware pre-filtering: the user's chosen commitments apply today
-  // automatically; the manual facets stack on top. The engine's church
-  // obligation joins this set when the calendar import lands.
+  // Day-aware pre-filtering (UI brief §4 layer 2): the engine's church
+  // obligation and the user's chosen commitments apply automatically;
+  // the manual facets stack on top. EF partial abstinence deliberately
+  // does not hard-filter (meat is permitted at the principal meal).
+  const { profile } = useProfile();
   const personalToday = useMemo(
     () => activeAvoidSet(fastsState.fasts, todayISO(), todayWeekday()),
     [fastsState.fasts],
   );
+  const churchToday = useMemo(() => {
+    const { facts } = todaysDayFacts(profile.discipline);
+    return obligationAvoids(resolveObligation(facts, profile));
+  }, [profile]);
 
   const results = useMemo(
     () =>
       filterCatalog(CATALOG, {
         query,
         allergies: state.allergies,
-        avoidCategories: [...new Set([...avoid, ...personalToday.categories])],
+        avoidCategories: [
+          ...new Set([...avoid, ...personalToday.categories, ...churchToday]),
+        ],
         dislikedCategories: state.dislikedCategories,
         effortMax,
         abstinenceFriendlyOnly: abstinenceOnly,
@@ -57,6 +72,7 @@ export default function Food() {
       state.allergies,
       state.dislikedCategories,
       personalToday,
+      churchToday,
     ],
   );
 
@@ -112,6 +128,12 @@ export default function Food() {
             ))}
           </View>
 
+          {churchToday.length > 0 ? (
+            <Text style={styles.churchLine}>
+              Today is a day of abstinence — meatless, fish allowed. Applied
+              automatically.
+            </Text>
+          ) : null}
           {personalToday.categories.length > 0 ? (
             <Text style={styles.personalLine}>
               Your commitments today: {personalToday.categories.map((c) => `no ${c}`).join(" · ")}
@@ -202,6 +224,7 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
   count: { color: colors.grayLabel, fontSize: 12, marginTop: 2 },
+  churchLine: { color: colors.oxblood, fontSize: 12, fontWeight: "600" },
   personalLine: { color: colors.graySecondary, fontSize: 12 },
   advisoryLine: { color: colors.grayLabel, fontSize: 12 },
   link: { color: colors.oxblood },

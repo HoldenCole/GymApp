@@ -53,3 +53,20 @@ export function recipeAllowed(
 export function abstinenceAvoids(): FastCategory[] {
   return ["meat"];
 }
+
+/**
+ * The avoid-set a resolved obligation contributes to the food filter.
+ * Full/OF abstinence → avoid meat. EF PARTIAL abstinence permits meat at
+ * the one principal meal, so it must NOT hard-filter the whole day — the
+ * UI notes it instead. Only a binding obligation filters.
+ */
+export function obligationAvoids(obligation: {
+  abstinence: string;
+  binds: { abstinence: boolean };
+}): FastCategory[] {
+  if (!obligation.binds.abstinence) return [];
+  if (obligation.abstinence === "abstinence" || obligation.abstinence === "complete") {
+    return abstinenceAvoids();
+  }
+  return [];
+}

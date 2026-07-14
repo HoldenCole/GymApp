@@ -10,8 +10,8 @@ import {
   resolveObligation,
   SET_ASIDE_COPY,
 } from "@kanon/engine";
-import { civilDayFactsToday } from "../../src/dayFacts";
-import { todayWeekday } from "../../src/dates";
+import { dayHeader, PROVENANCE_NOTE, todaysDayFacts } from "../../src/dayFacts";
+import { todayISO, todayWeekday } from "../../src/dates";
 import { useFasts } from "../../src/fasts";
 import { feastOn } from "../../src/feasts";
 import { useProfile } from "../../src/profile";
@@ -29,25 +29,22 @@ import { colors, sacredSerif, sectionLabel } from "../../src/theme";
 
 export default function Fasting() {
   const { profile } = useProfile();
-  const day = civilDayFactsToday();
+  const { facts: day, provenance } = todaysDayFacts(profile.discipline);
   const obligation = resolveObligation(day, profile);
-  const pending = day.liturgicalFactsPending;
   const discipline = DISCIPLINES[profile.discipline];
+  const note = PROVENANCE_NOTE[provenance];
 
   return (
     <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
       <View style={styles.hero}>
         <Text style={styles.heroLabel}>TODAY</Text>
-        {pending ? (
-          <Text style={[styles.heroLine, sacredSerif]}>
-            Liturgical calendar not yet connected.{"\n"}
-            Weekday rules only, shown provisionally.
-          </Text>
-        ) : null}
+        <Text style={[styles.heroDay, sacredSerif]}>{dayHeader(day)}</Text>
         <Text style={[styles.heroLine, sacredSerif]}>
           {obligation.abstinence !== "none" || obligation.fast
             ? describe(obligation.fast, obligation.abstinence)
-            : "No fast or abstinence binds today."}
+            : obligation.lifted
+              ? "The day's penance is lifted — a feast of the Lord's own keeping."
+              : "No fast or abstinence binds today."}
         </Text>
         {feastOn(day.date)?.softens ? (
           <Text style={[styles.heroSoftening, sacredSerif]}>
@@ -55,6 +52,7 @@ export default function Fasting() {
             softens today.
           </Text>
         ) : null}
+        {note ? <Text style={styles.heroNote}>{note}</Text> : null}
       </View>
 
       <Text style={sectionLabel}>What today allows</Text>
@@ -91,7 +89,7 @@ export default function Fasting() {
  */
 function PersonalCommitments() {
   const { state, setAside, resume, dismissAccumulation } = useFasts();
-  const today = civilDayFactsToday().date;
+  const today = todayISO();
   const weekday = todayWeekday();
 
   const accumulation = accumulationCheck(state.fasts, today);
@@ -212,8 +210,10 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   heroLabel: { fontSize: 11, letterSpacing: 1.5, fontWeight: "600", color: colors.goldBright },
+  heroDay: { color: colors.goldBright, fontSize: 14, fontStyle: "italic" },
   heroLine: { color: colors.paperWhite, fontSize: 17, lineHeight: 24 },
   heroSoftening: { color: colors.goldBright, fontSize: 13, fontStyle: "italic", lineHeight: 19 },
+  heroNote: { color: "#B4B0A6", fontSize: 11, marginTop: 4 },
   body: {
     color: colors.graySecondary,
     fontSize: 13,

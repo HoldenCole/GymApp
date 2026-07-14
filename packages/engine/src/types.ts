@@ -55,6 +55,8 @@ export interface DayFacts {
   /** Supplied by the calendar source alongside the date. */
   weekday: Weekday;
   season: Season;
+  /** Display label from the calendar, e.g. "Solemnity of the Annunciation". */
+  celebration?: string;
   /** The two fixed fast-and-abstinence days, when this day is one. */
   key?: "ash_wednesday" | "good_friday";
   /** OF calendar: this day is a solemnity (rank-lift threshold, A5). */

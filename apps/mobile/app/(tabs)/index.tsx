@@ -20,10 +20,15 @@ import {
   weightUnitLabel,
 } from "@kanon/fitness";
 import { dayTotals, filterCatalog } from "@kanon/food";
-import { activeAvoidSet, resolveObligation, type Weekday } from "@kanon/engine";
+import {
+  activeAvoidSet,
+  obligationAvoids,
+  resolveObligation,
+  type Weekday,
+} from "@kanon/engine";
 import patrons from "@kanon/content/packaged/patrons.json";
 import { CATALOG } from "../../src/catalog";
-import { civilDayFactsToday } from "../../src/dayFacts";
+import { dayHeader, PROVENANCE_NOTE, todaysDayFacts } from "../../src/dayFacts";
 import { feastOn } from "../../src/feasts";
 import { todayWeekday } from "../../src/dates";
 import { useFasts } from "../../src/fasts";
@@ -64,14 +69,7 @@ export default function Home() {
 
   return (
     <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
-      <View style={styles.header}>
-        <Text style={styles.liturgicalHeader}>
-          Liturgical day — awaiting calendar import
-        </Text>
-        <Link href="/settings" style={styles.settingsLink}>
-          Settings
-        </Link>
-      </View>
+      <LiturgicalHeader />
       <View style={styles.rule} />
 
       <Text style={sectionLabel}>Macros</Text>
@@ -144,10 +142,27 @@ function OfferingLine() {
   );
 }
 
+function LiturgicalHeader() {
+  const { profile } = useProfile();
+  const { facts, provenance } = todaysDayFacts(profile.discipline);
+  const note = PROVENANCE_NOTE[provenance];
+  return (
+    <View style={{ gap: 2 }}>
+      <View style={styles.header}>
+        <Text style={styles.liturgicalHeader}>{dayHeader(facts)}</Text>
+        <Link href="/settings" style={styles.settingsLink}>
+          Settings
+        </Link>
+      </View>
+      {note ? <Text style={styles.provenance}>{note}</Text> : null}
+    </View>
+  );
+}
+
 function FastingTrainingSplit({ sessionName }: { sessionName: string }) {
   const { profile } = useProfile();
   const { state } = useFitness();
-  const day = civilDayFactsToday();
+  const { facts: day, provenance } = todaysDayFacts(profile.discipline);
   const obligation = resolveObligation(day, profile);
   const bound = obligation.fast || obligation.abstinence !== "none";
 
@@ -162,7 +177,7 @@ function FastingTrainingSplit({ sessionName }: { sessionName: string }) {
               .filter(Boolean)
               .join(" and ")} today.`
           : "No fast or abstinence binds today."}
-        {day.liturgicalFactsPending ? " (weekday rules only — calendar pending)" : ""}
+        {provenance === "civil_fallback" ? " (weekday rules only — calendar pending)" : ""}
       </Text>
       <View style={styles.baselineRow}>
         <Text style={styles.body}>
@@ -184,11 +199,14 @@ function FastingTrainingSplit({ sessionName }: { sessionName: string }) {
 function MealPicks() {
   const { state: food } = useFood();
   const { state: fasts } = useFasts();
+  const { profile } = useProfile();
   const personalToday = activeAvoidSet(fasts.fasts, todayISO(), todayWeekday());
+  const { facts } = todaysDayFacts(profile.discipline);
+  const churchToday = obligationAvoids(resolveObligation(facts, profile));
 
   const candidates = filterCatalog(CATALOG, {
     allergies: food.allergies,
-    avoidCategories: personalToday.categories,
+    avoidCategories: [...new Set([...personalToday.categories, ...churchToday])],
     dislikedCategories: food.dislikedCategories,
     effortMax: 2,
     type: "recipe",
@@ -267,6 +285,7 @@ const styles = StyleSheet.create({
   header: { flexDirection: "row", justifyContent: "space-between", alignItems: "baseline", gap: 12 },
   liturgicalHeader: { ...sacredSerif, fontSize: 16, color: colors.inkNavy, flexShrink: 1 },
   settingsLink: { color: colors.oxblood, fontSize: 13 },
+  provenance: { fontSize: 10, color: colors.grayInactive },
   rule: { height: 1, backgroundColor: colors.hairlineMajor, marginHorizontal: -16 },
   placeholder: { color: colors.graySecondary, fontSize: 13, lineHeight: 18 },
   body: { color: colors.inkNavy, fontSize: 14 },

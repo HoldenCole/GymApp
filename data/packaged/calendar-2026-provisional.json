@@ -1,0 +1,4476 @@
+{
+ "meta": {
+  "source": "tools/generate_calendar_fixture.py — PROVISIONAL stand-in, NOT Introibo",
+  "provenance": "provisional",
+  "coverage": {
+   "from": "2026-01-01",
+   "to": "2026-12-31"
+  }
+ },
+ "records": [
+  {
+   "date": "2026-01-01",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "christmastide",
+   "is_solemnity": true,
+   "celebration": "Solemnity of Mary, Mother of God"
+  },
+  {
+   "date": "2026-01-01",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "christmastide",
+   "is_feast_of_precept": true,
+   "celebration": "The Circumcision of Our Lord"
+  },
+  {
+   "date": "2026-01-02",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-01-02",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-01-03",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-01-03",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-01-04",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "christmastide",
+   "is_solemnity": true,
+   "celebration": "Epiphany of the Lord"
+  },
+  {
+   "date": "2026-01-04",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-01-05",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-01-05",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-01-06",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-01-06",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-01-07",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-01-07",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-01-08",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-01-08",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-01-09",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-01-09",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-01-10",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-01-10",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-01-11",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-01-11",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-01-12",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-12",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-13",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-13",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-14",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-14",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-15",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-15",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-16",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-16",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-17",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-17",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-18",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-18",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-19",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-19",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-20",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-20",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-21",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-21",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-22",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-22",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-23",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-23",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-24",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-24",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-25",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-25",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-26",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-26",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-27",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-27",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-28",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-28",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-29",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-29",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-30",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-30",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-31",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-01-31",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-01",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-01",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-02",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-02",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-03",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-03",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-04",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-04",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-05",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-05",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-06",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-06",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-07",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-07",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-08",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-08",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-09",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-09",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-10",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-10",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-11",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-11",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-12",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-12",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-13",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-13",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-14",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-14",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-15",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-15",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-16",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-16",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-17",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-17",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-02-18",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "lent",
+   "key": "ash_wednesday",
+   "celebration": "Ash Wednesday"
+  },
+  {
+   "date": "2026-02-18",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "lent",
+   "key": "ash_wednesday",
+   "celebration": "Ash Wednesday"
+  },
+  {
+   "date": "2026-02-19",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-02-19",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-02-20",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-02-20",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-02-21",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-02-21",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-02-22",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-02-22",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-02-23",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-02-23",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-02-24",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-02-24",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-02-25",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-02-25",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "lent",
+   "is_ember_day": true,
+   "celebration": "Ember Wednesday of Lent"
+  },
+  {
+   "date": "2026-02-26",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-02-26",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-02-27",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-02-27",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "lent",
+   "is_ember_day": true,
+   "celebration": "Ember Friday of Lent"
+  },
+  {
+   "date": "2026-02-28",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-02-28",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "lent",
+   "is_ember_day": true,
+   "celebration": "Ember Saturday of Lent"
+  },
+  {
+   "date": "2026-03-01",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-01",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-02",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-02",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-03",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-03",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-04",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-04",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-05",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-05",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-06",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-06",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-07",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-07",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-08",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-08",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-09",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-09",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-10",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-10",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-11",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-11",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-12",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-12",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-13",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-13",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-14",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-14",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-15",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-15",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-16",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-16",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-17",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-17",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-18",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-18",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-19",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "lent",
+   "is_solemnity": true,
+   "celebration": "Solemnity of St. Joseph"
+  },
+  {
+   "date": "2026-03-19",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-20",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-20",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-21",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-21",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-22",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-22",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-23",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-23",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-24",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-24",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-25",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "lent",
+   "is_solemnity": true,
+   "celebration": "Solemnity of the Annunciation"
+  },
+  {
+   "date": "2026-03-25",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-26",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-26",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-27",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-27",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-28",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-28",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-29",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-29",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-30",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-30",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-31",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-03-31",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-04-01",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-04-01",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-04-02",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-04-02",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-04-03",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "lent",
+   "key": "good_friday",
+   "celebration": "Good Friday"
+  },
+  {
+   "date": "2026-04-03",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "lent",
+   "key": "good_friday",
+   "celebration": "Good Friday"
+  },
+  {
+   "date": "2026-04-04",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-04-04",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "lent"
+  },
+  {
+   "date": "2026-04-05",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "eastertide",
+   "is_solemnity": true,
+   "celebration": "Easter Sunday"
+  },
+  {
+   "date": "2026-04-05",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-06",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-06",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-07",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-07",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-08",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-08",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-09",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-09",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-10",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-10",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-11",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-11",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-12",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-12",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-13",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-13",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-14",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-14",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-15",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-15",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-16",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-16",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-17",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-17",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-18",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-18",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-19",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-19",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-20",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-20",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-21",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-21",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-22",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-22",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-23",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-23",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-24",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-24",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-25",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-25",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-26",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-26",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-27",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-27",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-28",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-28",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-29",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-29",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-30",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-04-30",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-01",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-01",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-02",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-02",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-03",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-03",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-04",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-04",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-05",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-05",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-06",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-06",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-07",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-07",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-08",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-08",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-09",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-09",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-10",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-10",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-11",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-11",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-12",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-12",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-13",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-13",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-14",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "eastertide",
+   "is_solemnity": true,
+   "celebration": "Ascension of the Lord"
+  },
+  {
+   "date": "2026-05-14",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "eastertide",
+   "is_feast_of_precept": true,
+   "celebration": "The Ascension of Our Lord"
+  },
+  {
+   "date": "2026-05-15",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-15",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-16",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-16",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-17",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-17",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-18",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-18",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-19",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-19",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-20",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-20",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-21",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-21",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-22",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-22",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-23",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-23",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "eastertide",
+   "vigil": "pentecost",
+   "celebration": "Vigil of Pentecost"
+  },
+  {
+   "date": "2026-05-24",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "eastertide",
+   "is_solemnity": true,
+   "celebration": "Pentecost"
+  },
+  {
+   "date": "2026-05-24",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "eastertide"
+  },
+  {
+   "date": "2026-05-25",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-05-25",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-05-26",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-05-26",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-05-27",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-05-27",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary",
+   "is_ember_day": true,
+   "celebration": "Ember Wednesday of Pentecost"
+  },
+  {
+   "date": "2026-05-28",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-05-28",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-05-29",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-05-29",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary",
+   "is_ember_day": true,
+   "celebration": "Ember Friday of Pentecost"
+  },
+  {
+   "date": "2026-05-30",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-05-30",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary",
+   "is_ember_day": true,
+   "celebration": "Ember Saturday of Pentecost"
+  },
+  {
+   "date": "2026-05-31",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary",
+   "is_solemnity": true,
+   "celebration": "The Most Holy Trinity"
+  },
+  {
+   "date": "2026-05-31",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-01",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-01",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-02",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-02",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-03",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-03",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-04",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-04",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-05",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-05",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-06",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-06",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-07",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary",
+   "is_solemnity": true,
+   "celebration": "Corpus Christi"
+  },
+  {
+   "date": "2026-06-07",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-08",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-08",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-09",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-09",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-10",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-10",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-11",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-11",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-12",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary",
+   "is_solemnity": true,
+   "celebration": "The Most Sacred Heart of Jesus"
+  },
+  {
+   "date": "2026-06-12",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-13",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-13",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-14",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-14",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-15",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-15",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-16",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-16",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-17",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-17",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-18",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-18",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-19",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-19",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-20",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-20",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-21",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-21",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-22",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-22",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-23",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-23",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-24",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary",
+   "is_solemnity": true,
+   "celebration": "Nativity of St. John the Baptist"
+  },
+  {
+   "date": "2026-06-24",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-25",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-25",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-26",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-26",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-27",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-27",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-28",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-28",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-29",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary",
+   "is_solemnity": true,
+   "celebration": "Sts. Peter and Paul"
+  },
+  {
+   "date": "2026-06-29",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-30",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-06-30",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-01",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-01",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-02",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-02",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-03",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-03",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-04",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-04",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-05",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-05",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-06",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-06",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-07",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-07",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-08",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-08",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-09",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-09",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-10",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-10",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-11",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-11",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-12",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-12",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-13",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-13",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-14",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-14",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-15",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-15",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-16",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-16",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-17",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-17",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-18",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-18",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-19",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-19",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-20",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-20",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-21",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-21",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-22",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-22",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-23",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-23",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-24",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-24",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-25",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-25",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-26",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-26",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-27",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-27",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-28",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-28",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-29",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-29",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-30",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-30",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-31",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-07-31",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-01",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-01",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-02",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-02",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-03",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-03",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-04",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-04",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-05",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-05",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-06",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-06",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-07",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-07",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-08",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-08",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-09",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-09",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-10",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-10",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-11",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-11",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-12",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-12",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-13",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-13",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-14",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-14",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary",
+   "vigil": "assumption",
+   "celebration": "Vigil of the Assumption"
+  },
+  {
+   "date": "2026-08-15",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary",
+   "is_solemnity": true,
+   "celebration": "Assumption of the Blessed Virgin Mary"
+  },
+  {
+   "date": "2026-08-15",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary",
+   "is_feast_of_precept": true,
+   "celebration": "The Assumption of the Blessed Virgin Mary"
+  },
+  {
+   "date": "2026-08-16",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-16",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-17",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-17",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-18",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-18",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-19",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-19",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-20",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-20",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-21",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-21",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-22",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-22",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-23",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-23",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-24",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-24",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-25",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-25",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-26",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-26",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-27",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-27",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-28",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-28",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-29",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-29",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-30",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-30",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-31",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-08-31",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-01",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-01",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-02",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-02",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-03",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-03",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-04",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-04",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-05",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-05",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-06",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-06",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-07",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-07",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-08",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-08",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-09",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-09",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-10",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-10",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-11",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-11",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-12",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-12",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-13",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-13",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-14",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-14",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-15",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-15",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-16",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-16",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary",
+   "is_ember_day": true,
+   "celebration": "Ember Wednesday of September"
+  },
+  {
+   "date": "2026-09-17",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-17",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-18",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-18",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary",
+   "is_ember_day": true,
+   "celebration": "Ember Friday of September"
+  },
+  {
+   "date": "2026-09-19",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-19",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary",
+   "is_ember_day": true,
+   "celebration": "Ember Saturday of September"
+  },
+  {
+   "date": "2026-09-20",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-20",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-21",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-21",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-22",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-22",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-23",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-23",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-24",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-24",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-25",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-25",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-26",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-26",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-27",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-27",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-28",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-28",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-29",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-29",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-30",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-09-30",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-01",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-01",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-02",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-02",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-03",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-03",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-04",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-04",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-05",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-05",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-06",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-06",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-07",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-07",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-08",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-08",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-09",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-09",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-10",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-10",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-11",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-11",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-12",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-12",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-13",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-13",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-14",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-14",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-15",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-15",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-16",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-16",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-17",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-17",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-18",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-18",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-19",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-19",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-20",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-20",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-21",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-21",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-22",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-22",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-23",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-23",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-24",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-24",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-25",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-25",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-26",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-26",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-27",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-27",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-28",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-28",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-29",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-29",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-30",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-30",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-31",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-10-31",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-01",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary",
+   "is_solemnity": true,
+   "celebration": "All Saints"
+  },
+  {
+   "date": "2026-11-01",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary",
+   "is_feast_of_precept": true,
+   "celebration": "All Saints"
+  },
+  {
+   "date": "2026-11-02",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-02",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-03",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-03",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-04",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-04",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-05",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-05",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-06",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-06",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-07",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-07",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-08",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-08",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-09",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-09",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-10",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-10",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-11",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-11",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-12",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-12",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-13",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-13",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-14",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-14",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-15",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-15",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-16",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-16",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-17",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-17",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-18",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-18",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-19",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-19",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-20",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-20",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-21",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-21",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-22",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "ordinary",
+   "is_solemnity": true,
+   "celebration": "Christ the King"
+  },
+  {
+   "date": "2026-11-22",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-23",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-23",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-24",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-24",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-25",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-25",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-26",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-26",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-27",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-27",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-28",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-28",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "ordinary"
+  },
+  {
+   "date": "2026-11-29",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-11-29",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-11-30",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-11-30",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-01",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-01",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-02",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-02",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-03",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-03",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-04",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-04",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-05",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-05",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-06",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-06",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-07",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-07",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-08",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "advent",
+   "is_solemnity": true,
+   "celebration": "Immaculate Conception"
+  },
+  {
+   "date": "2026-12-08",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "advent",
+   "is_feast_of_precept": true,
+   "celebration": "The Immaculate Conception"
+  },
+  {
+   "date": "2026-12-09",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-09",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-10",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-10",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-11",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-11",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-12",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-12",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-13",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-13",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-14",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-14",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-15",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-15",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-16",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-16",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "advent",
+   "is_ember_day": true,
+   "celebration": "Ember Wednesday of Advent"
+  },
+  {
+   "date": "2026-12-17",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-17",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-18",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-18",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "advent",
+   "is_ember_day": true,
+   "celebration": "Ember Friday of Advent"
+  },
+  {
+   "date": "2026-12-19",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-19",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "advent",
+   "is_ember_day": true,
+   "celebration": "Ember Saturday of Advent"
+  },
+  {
+   "date": "2026-12-20",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-20",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-21",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-21",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-22",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-22",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-23",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-23",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-24",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "advent"
+  },
+  {
+   "date": "2026-12-24",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "advent",
+   "vigil": "christmas",
+   "celebration": "Vigil of the Nativity"
+  },
+  {
+   "date": "2026-12-25",
+   "calendar": "of",
+   "weekday": "friday",
+   "season": "christmastide",
+   "is_solemnity": true,
+   "celebration": "The Nativity of the Lord"
+  },
+  {
+   "date": "2026-12-25",
+   "calendar": "ef",
+   "weekday": "friday",
+   "season": "christmastide",
+   "is_feast_of_precept": true,
+   "celebration": "The Nativity of Our Lord"
+  },
+  {
+   "date": "2026-12-26",
+   "calendar": "of",
+   "weekday": "saturday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-12-26",
+   "calendar": "ef",
+   "weekday": "saturday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-12-27",
+   "calendar": "of",
+   "weekday": "sunday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-12-27",
+   "calendar": "ef",
+   "weekday": "sunday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-12-28",
+   "calendar": "of",
+   "weekday": "monday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-12-28",
+   "calendar": "ef",
+   "weekday": "monday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-12-29",
+   "calendar": "of",
+   "weekday": "tuesday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-12-29",
+   "calendar": "ef",
+   "weekday": "tuesday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-12-30",
+   "calendar": "of",
+   "weekday": "wednesday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-12-30",
+   "calendar": "ef",
+   "weekday": "wednesday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-12-31",
+   "calendar": "of",
+   "weekday": "thursday",
+   "season": "christmastide"
+  },
+  {
+   "date": "2026-12-31",
+   "calendar": "ef",
+   "weekday": "thursday",
+   "season": "christmastide"
+  }
+ ]
+}
