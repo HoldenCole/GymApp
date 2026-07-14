@@ -1,6 +1,7 @@
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { FitnessProvider } from "../src/fitness";
+import { FoodProvider } from "../src/food";
 import { ProfileProvider } from "../src/profile";
 import { colors } from "../src/theme";
 
@@ -16,13 +17,17 @@ export default function RootLayout() {
   return (
     <ProfileProvider>
       <FitnessProvider>
-        <StatusBar style="dark" />
-        <Stack screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="(tabs)" />
-          <Stack.Screen name="settings" options={detailScreen("Settings")} />
-          <Stack.Screen name="plan" options={detailScreen("Plan")} />
-          <Stack.Screen name="split" options={detailScreen("Split")} />
-        </Stack>
+        <FoodProvider>
+          <StatusBar style="dark" />
+          <Stack screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="(tabs)" />
+            <Stack.Screen name="settings" options={detailScreen("Settings")} />
+            <Stack.Screen name="plan" options={detailScreen("Plan")} />
+            <Stack.Screen name="split" options={detailScreen("Split")} />
+            <Stack.Screen name="recipe/[id]" options={detailScreen("Recipe")} />
+            <Stack.Screen name="add-food" options={detailScreen("Add food")} />
+          </Stack>
+        </FoodProvider>
       </FitnessProvider>
     </ProfileProvider>
   );

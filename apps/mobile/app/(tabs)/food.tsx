@@ -1,48 +1,162 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { Link, useRouter } from "expo-router";
+import { useMemo, useState } from "react";
+import {
+  FlatList,
+  Pressable,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from "react-native";
 import { FAST_CATEGORIES } from "@kanon/engine";
+import { CatalogItem, filterCatalog } from "@kanon/food";
+import { CATALOG } from "../../src/catalog";
+import { useFood } from "../../src/food";
 import { colors, sectionLabel } from "../../src/theme";
 
 /**
- * Food — the browse (UI brief §3.4). Visual grid + stackable tag facets
- * (fast rule / effort / goal / tradition), day-aware pre-filtering.
- * Scaffold: facet rail from the one controlled vocabulary; the 500-recipe
- * grid loads from data/packaged/recipes.json when the browse builds out.
+ * Food — the browse (UI brief §3.4): the recipe database behind stackable
+ * facets. Allergies apply silently and absolutely (set in Settings).
+ * The fast-rule facet here is the user's manual layer; the engine's
+ * day-aware pre-filter joins it when the calendar import lands.
  */
 export default function Food() {
+  const router = useRouter();
+  const { state } = useFood();
+  const [query, setQuery] = useState("");
+  const [avoid, setAvoid] = useState<string[]>([]);
+  const [effortMax, setEffortMax] = useState<number | undefined>(undefined);
+  const [abstinenceOnly, setAbstinenceOnly] = useState(false);
+
+  const results = useMemo(
+    () =>
+      filterCatalog(CATALOG, {
+        query,
+        allergies: state.allergies,
+        avoidCategories: avoid,
+        dislikedCategories: state.dislikedCategories,
+        effortMax,
+        abstinenceFriendlyOnly: abstinenceOnly,
+      }),
+    [query, avoid, effortMax, abstinenceOnly, state.allergies, state.dislikedCategories],
+  );
+
+  const toggleAvoid = (c: string) =>
+    setAvoid((prev) => (prev.includes(c) ? prev.filter((x) => x !== c) : [...prev, c]));
+
   return (
-    <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
-      <Text style={sectionLabel}>Fast rule</Text>
-      <View style={styles.facets}>
-        {FAST_CATEGORIES.map((c) => (
-          <Text key={c} style={styles.facet}>
-            no {c}
-          </Text>
-        ))}
-      </View>
-      <View style={styles.rule} />
+    <FlatList
+      style={styles.screen}
+      contentContainerStyle={styles.content}
+      data={results}
+      keyExtractor={(item) => item.id}
+      renderItem={({ item }) => (
+        <CatalogRow item={item} onPress={() => router.push(`/recipe/${item.id}`)} />
+      )}
+      ListHeaderComponent={
+        <View style={styles.header}>
+          <TextInput
+            value={query}
+            onChangeText={setQuery}
+            placeholder="Search recipes & products"
+            placeholderTextColor={colors.grayInactive}
+            style={styles.search}
+            autoCapitalize="none"
+          />
 
-      <Text style={sectionLabel}>Effort</Text>
-      <View style={styles.facets}>
-        {["1 Assembly", "2 Quick", "3 Standard", "4 Project"].map((e) => (
-          <Text key={e} style={styles.facet}>
-            {e}
-          </Text>
-        ))}
-      </View>
-      <View style={styles.rule} />
+          <Text style={sectionLabel}>Fast rule</Text>
+          <View style={styles.facets}>
+            <Facet
+              label="abstinence-friendly"
+              active={abstinenceOnly}
+              onPress={() => setAbstinenceOnly((v) => !v)}
+            />
+            {FAST_CATEGORIES.map((c) => (
+              <Facet
+                key={c}
+                label={`no ${c}`}
+                active={avoid.includes(c)}
+                onPress={() => toggleAvoid(c)}
+              />
+            ))}
+          </View>
 
-      <Text style={sectionLabel}>Recipes</Text>
-      <Text style={styles.placeholder}>
-        The 500-recipe visual grid lands here, pre-filtered by today's rule.
-        Allergies are a hard filter — oxblood, absolute, no override.
+          <Text style={sectionLabel}>Effort</Text>
+          <View style={styles.facets}>
+            {[1, 2, 3, 4].map((e) => (
+              <Facet
+                key={e}
+                label={`≤ ${["Assembly", "Quick", "Standard", "Project"][e - 1]}`}
+                active={effortMax === e}
+                onPress={() => setEffortMax(effortMax === e ? undefined : e)}
+              />
+            ))}
+          </View>
+
+          <Text style={styles.count}>
+            {results.length} of {CATALOG.length}
+            {state.allergies.length
+              ? ` · allergies filtered (${state.allergies.join(", ")})`
+              : ""}
+            {"  "}
+            <Link href="/add-food" style={styles.link}>
+              Add custom food
+            </Link>
+          </Text>
+          <View style={styles.rule} />
+        </View>
+      }
+    />
+  );
+}
+
+function Facet({
+  label,
+  active,
+  onPress,
+}: {
+  label: string;
+  active: boolean;
+  onPress: () => void;
+}) {
+  return (
+    <Pressable onPress={onPress} accessibilityRole="checkbox" accessibilityState={{ checked: active }}>
+      <Text style={[styles.facet, active && styles.facetActive]}>{label}</Text>
+    </Pressable>
+  );
+}
+
+function CatalogRow({ item, onPress }: { item: CatalogItem; onPress: () => void }) {
+  return (
+    <Pressable onPress={onPress} style={styles.row}>
+      <View style={styles.rowMain}>
+        <Text style={styles.rowTitle} numberOfLines={1}>
+          {item.title}
+        </Text>
+        <Text style={styles.rowSub} numberOfLines={1}>
+          {item.type === "product" ? item.brand ?? "Product" : item.effortName}
+          {item.abstinenceFriendly ? " · abstinence-friendly" : ""}
+          {item.fastCodes.length ? ` · ${item.fastCodes.join(" ")}` : ""}
+        </Text>
+      </View>
+      <Text style={styles.rowMacros}>
+        {item.macros.kcal} kcal · {item.macros.proteinG}g P
       </Text>
-    </ScrollView>
+    </Pressable>
   );
 }
 
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.paperWhite },
-  content: { paddingHorizontal: 16, paddingTop: 64, paddingBottom: 32, gap: 12 },
+  content: { paddingBottom: 32 },
+  header: { paddingHorizontal: 16, paddingTop: 64, gap: 10 },
+  search: {
+    borderBottomWidth: 1,
+    borderBottomColor: colors.hairlineMajor,
+    paddingVertical: 8,
+    fontSize: 16,
+    color: colors.inkNavy,
+  },
   facets: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
   facet: {
     borderWidth: 1,
@@ -51,7 +165,28 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 4,
     fontSize: 12,
+    overflow: "hidden",
   },
-  rule: { height: 1, backgroundColor: colors.hairlineMajor, marginHorizontal: -16 },
-  placeholder: { color: colors.graySecondary, fontSize: 13, lineHeight: 18 },
+  facetActive: {
+    borderColor: colors.inkNavy,
+    color: colors.inkNavy,
+    fontWeight: "600",
+  },
+  count: { color: colors.grayLabel, fontSize: 12, marginTop: 2 },
+  link: { color: colors.oxblood },
+  rule: { height: 1, backgroundColor: colors.hairlineMajor, marginHorizontal: -16, marginTop: 8 },
+  row: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    gap: 12,
+    paddingHorizontal: 16,
+    paddingVertical: 11,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.hairlineMinor,
+  },
+  rowMain: { flexShrink: 1, gap: 2 },
+  rowTitle: { fontSize: 15, color: colors.inkNavy },
+  rowSub: { fontSize: 12, color: colors.grayLabel },
+  rowMacros: { fontSize: 13, fontWeight: "600", color: colors.graySecondary },
 });

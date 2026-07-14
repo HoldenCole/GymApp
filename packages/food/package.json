@@ -1,0 +1,20 @@
+{
+  "name": "@kanon/food",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kanon food domain: diary, catalog browse over the recipe database, and the three filter layers (allergies hard, fast rule, preferences).",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@kanon/engine": "*"
+  },
+  "devDependencies": {
+    "@kanon/data": "*",
+    "typescript": "~5.9.0",
+    "vitest": "^3.2.0"
+  }
+}

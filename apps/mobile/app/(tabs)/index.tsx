@@ -9,6 +9,7 @@ import {
   View,
 } from "react-native";
 import {
+  energyTargets,
   formatWeight,
   GOAL_LABELS,
   kgToLb,
@@ -18,8 +19,10 @@ import {
   weeklyRate,
   weightUnitLabel,
 } from "@kanon/fitness";
+import { dayTotals } from "@kanon/food";
 import type { Weekday } from "@kanon/engine";
 import { useFitness } from "../../src/fitness";
+import { todayISO, useFood } from "../../src/food";
 import { colors, sacredSerif, sectionLabel } from "../../src/theme";
 
 /**
@@ -65,10 +68,7 @@ export default function Home() {
       <View style={styles.rule} />
 
       <Text style={sectionLabel}>Macros</Text>
-      <Text style={styles.placeholder}>
-        Slim single-baseline macro bars land here once the diary builds out —
-        targets are set in <Link href="/plan" style={styles.link}>Plan</Link>.
-      </Text>
+      <MacroGlance />
       <View style={styles.rule} />
 
       <Text style={sectionLabel}>Training</Text>
@@ -126,6 +126,53 @@ export default function Home() {
   );
 }
 
+function MacroGlance() {
+  const { state } = useFitness();
+  const { state: food } = useFood();
+  const today = todayISO();
+  const totals = dayTotals(food.diary, today);
+  const targets = state.body ? energyTargets(state.body, state.plan, today) : null;
+
+  if (!targets) {
+    return (
+      <Text style={styles.placeholder}>
+        Targets appear once your <Link href="/plan" style={styles.link}>plan</Link> is set.
+      </Text>
+    );
+  }
+  const rows = [
+    ["kcal", totals.kcal, targets.kcal, colors.inkNavy],
+    ["Protein", totals.proteinG, targets.proteinG, colors.goldDeep],
+    ["Carbs", totals.carbG, targets.carbG, colors.teal],
+    ["Fat", totals.fatG, targets.fatG, colors.burntCoral],
+  ] as const;
+  return (
+    <View style={{ gap: 7 }}>
+      {rows.map(([label, eaten, goal, color]) => (
+        <View key={label} style={{ gap: 3 }}>
+          <View style={styles.baselineRow}>
+            <Text style={styles.glanceLabel}>{label}</Text>
+            <Text style={styles.glanceValue}>
+              {eaten} <Text style={styles.glanceGoal}>/ {goal}</Text>
+            </Text>
+          </View>
+          <View style={[styles.glanceTrack, { backgroundColor: `${color}22` }]}>
+            <View
+              style={[
+                styles.glanceFill,
+                {
+                  backgroundColor: color,
+                  width: `${Math.min(100, goal ? (eaten / goal) * 100 : 0)}%`,
+                },
+              ]}
+            />
+          </View>
+        </View>
+      ))}
+    </View>
+  );
+}
+
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.paperWhite },
   content: { paddingHorizontal: 16, paddingTop: 64, paddingBottom: 32, gap: 12 },
@@ -147,4 +194,9 @@ const styles = StyleSheet.create({
     color: colors.inkNavy,
   },
   offering: { fontStyle: "italic", color: colors.goldDeep, fontSize: 15 },
+  glanceLabel: { fontSize: 13, color: colors.graySecondary },
+  glanceValue: { fontSize: 14, fontWeight: "600", color: colors.inkNavy },
+  glanceGoal: { fontSize: 12, fontWeight: "300", color: colors.grayInactive },
+  glanceTrack: { height: 2.5, borderRadius: 1.25, overflow: "hidden" },
+  glanceFill: { height: 2.5 },
 });

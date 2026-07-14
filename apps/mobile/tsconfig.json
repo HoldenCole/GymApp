@@ -4,7 +4,8 @@
     "strict": true,
     "paths": {
       "@kanon/engine": ["../../packages/engine/src"],
-      "@kanon/fitness": ["../../packages/fitness/src"]
+      "@kanon/fitness": ["../../packages/fitness/src"],
+      "@kanon/food": ["../../packages/food/src"]
     }
   },
   "include": ["app", "src", "expo-env.d.ts"]

@@ -15,7 +15,10 @@ import {
   NORM_PROFILE_ORDER,
 } from "@kanon/engine";
 import type { UnitSystem } from "@kanon/fitness";
+import { ALLERGENS } from "@kanon/food";
+import { FAST_CATEGORIES } from "@kanon/engine";
 import { useFitness } from "../src/fitness";
+import { useFood } from "../src/food";
 import { useProfile } from "../src/profile";
 import { colors, sacredSerif, sectionLabel } from "../src/theme";
 
@@ -31,7 +34,11 @@ import { colors, sacredSerif, sectionLabel } from "../src/theme";
 export default function Settings() {
   const { profile, setProfile } = useProfile();
   const { state, update } = useFitness();
+  const { state: food, update: updateFood } = useFood();
   const [birthDraft, setBirthDraft] = useState(profile.birthDate);
+
+  const toggle = (list: string[], value: string) =>
+    list.includes(value) ? list.filter((x) => x !== value) : [...list, value];
 
   const commitBirthDate = () => {
     if (/^\d{4}-\d{2}-\d{2}$/.test(birthDraft)) {
@@ -65,6 +72,54 @@ export default function Settings() {
               <Text style={[styles.unitChoice, active && styles.unitActive]}>
                 {u === "imperial" ? "lb / in" : "kg / cm"}
               </Text>
+            </Pressable>
+          );
+        })}
+      </View>
+      <View style={styles.rule} />
+
+      <Text style={styles.allergyLabel}>ALLERGIES</Text>
+      <Text style={styles.help}>
+        A safety filter: anything containing these is never suggested to
+        you, anywhere in the app. Absolute — there is no override.
+      </Text>
+      <View style={styles.chipWrap}>
+        {ALLERGENS.map((a) => {
+          const active = food.allergies.includes(a.code);
+          return (
+            <Pressable
+              key={a.code}
+              accessibilityRole="checkbox"
+              accessibilityState={{ checked: active }}
+              onPress={() => updateFood({ allergies: toggle(food.allergies, a.code) })}
+            >
+              <Text style={[styles.chip, active && styles.allergyChipActive]}>
+                {a.label}
+              </Text>
+            </Pressable>
+          );
+        })}
+      </View>
+      <View style={styles.rule} />
+
+      <Text style={sectionLabel}>Never eat</Text>
+      <Text style={styles.help}>
+        Preference, not law — categories you'd rather not see suggested.
+        Easy to set, easy to relax.
+      </Text>
+      <View style={styles.chipWrap}>
+        {FAST_CATEGORIES.map((c) => {
+          const active = food.dislikedCategories.includes(c);
+          return (
+            <Pressable
+              key={c}
+              accessibilityRole="checkbox"
+              accessibilityState={{ checked: active }}
+              onPress={() =>
+                updateFood({ dislikedCategories: toggle(food.dislikedCategories, c) })
+              }
+            >
+              <Text style={[styles.chip, active && styles.chipActive]}>{c}</Text>
             </Pressable>
           );
         })}
@@ -174,6 +229,25 @@ const styles = StyleSheet.create({
   footerQuiet: { fontSize: 11, color: colors.grayInactive },
   linkRow: { gap: 10 },
   navLink: { color: colors.oxblood, fontSize: 14, paddingVertical: 2 },
+  allergyLabel: {
+    fontSize: 11,
+    letterSpacing: 1.5,
+    fontWeight: "600",
+    color: colors.oxblood,
+    textTransform: "uppercase",
+  },
+  chipWrap: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
+  chip: {
+    borderWidth: 1,
+    borderColor: colors.hairlineMajor,
+    color: colors.graySecondary,
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    fontSize: 12,
+    overflow: "hidden",
+  },
+  chipActive: { borderColor: colors.inkNavy, color: colors.inkNavy, fontWeight: "600" },
+  allergyChipActive: { borderColor: colors.oxblood, color: colors.oxblood, fontWeight: "600" },
   unitsRow: { flexDirection: "row", gap: 16, marginTop: 4 },
   unitChoice: { fontSize: 13, color: colors.graySecondary },
   unitActive: { color: colors.inkNavy, fontWeight: "600" },

@@ -1,81 +1,118 @@
-import { Link } from "expo-router";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { Link, useRouter } from "expo-router";
+import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { energyTargets } from "@kanon/fitness";
+import { dayTotals, MEAL_LABELS, MEALS, mealEntries, sumMacros } from "@kanon/food";
 import { useFitness } from "../../src/fitness";
+import { todayISO, useFood } from "../../src/food";
 import { colors, sectionLabel } from "../../src/theme";
 
 /**
- * Macros — the ledger (UI brief §3.3). Targets are live from the plan
- * (Mifflin-St Jeor baseline, every value user-overridable); consumed
- * amounts fill in when the diary + USDA FoodData Central lookup build out.
+ * Macros — the ledger (UI brief §3.3). Live: kcal lead with running
+ * total, macro bars filling toward plan targets, diary rows per meal,
+ * pinned add-food bar. Values come from the catalog placeholders until
+ * the USDA re-pull.
  */
 export default function Macros() {
-  const { state } = useFitness();
-  const today = new Date().toISOString().slice(0, 10);
-  const targets = state.body ? energyTargets(state.body, state.plan, today) : null;
+  const router = useRouter();
+  const { state: fitness } = useFitness();
+  const { state: food, removeEntry } = useFood();
+  const today = todayISO();
 
-  const macroRows = targets
-    ? ([
-        ["Protein", targets.proteinG, colors.goldDeep],
-        ["Carbs", targets.carbG, colors.teal],
-        ["Fat", targets.fatG, colors.burntCoral],
-      ] as const)
-    : ([
-        ["Protein", null, colors.goldDeep],
-        ["Carbs", null, colors.teal],
-        ["Fat", null, colors.burntCoral],
-      ] as const);
+  const targets = fitness.body
+    ? energyTargets(fitness.body, fitness.plan, today)
+    : null;
+  const totals = dayTotals(food.diary, today);
+
+  const macroRows = [
+    ["Protein", totals.proteinG, targets?.proteinG, colors.goldDeep],
+    ["Carbs", totals.carbG, targets?.carbG, colors.teal],
+    ["Fat", totals.fatG, targets?.fatG, colors.burntCoral],
+  ] as const;
 
   return (
     <View style={styles.screen}>
       <ScrollView contentContainerStyle={styles.content}>
         <Text style={styles.kcal}>
-          0 <Text style={styles.kcalGoal}>/ {targets ? `${targets.kcal} kcal` : "set your plan"}</Text>
+          {totals.kcal}{" "}
+          <Text style={styles.kcalGoal}>
+            / {targets ? `${targets.kcal} kcal` : "set your plan"}
+          </Text>
         </Text>
-        {!targets ? (
-          <Text style={styles.placeholder}>
-            <Link href="/plan" style={styles.link}>
-              Set up your plan
-            </Link>{" "}
-            — goal, rate, and targets. Every computed value is overridable.
-          </Text>
-        ) : (
-          <Text style={styles.placeholder}>
-            {targets.dailyDeltaKcal === 0
+        <Text style={styles.planLine}>
+          {targets
+            ? targets.dailyDeltaKcal === 0
               ? "Maintenance"
-              : `${targets.dailyDeltaKcal > 0 ? "+" : ""}${targets.dailyDeltaKcal} kcal/day`}{" "}
-            · <Link href="/plan" style={styles.link}>Plan</Link>
-          </Text>
-        )}
+              : `${targets.dailyDeltaKcal > 0 ? "+" : ""}${targets.dailyDeltaKcal} kcal/day`
+            : ""}
+          {targets ? " · " : ""}
+          <Link href="/plan" style={styles.link}>
+            Plan
+          </Link>
+        </Text>
         <View style={styles.rule} />
 
-        {macroRows.map(([label, goal, color]) => (
-          <View key={label} style={styles.macroRow}>
-            <View style={styles.macroBaseline}>
-              <Text style={styles.macroLabel}>{label}</Text>
-              <Text style={styles.macroValue}>
-                0 <Text style={styles.kcalGoal}>/ {goal ?? "—"} g</Text>
-              </Text>
+        {macroRows.map(([label, eaten, goal, color]) => {
+          const pct = goal ? Math.min(100, (eaten / goal) * 100) : 0;
+          return (
+            <View key={label} style={styles.macroRow}>
+              <View style={styles.macroBaseline}>
+                <Text style={styles.macroLabel}>{label}</Text>
+                <Text style={styles.macroValue}>
+                  {eaten} <Text style={styles.kcalGoal}>/ {goal ?? "—"} g</Text>
+                </Text>
+              </View>
+              <View style={[styles.macroTrack, { backgroundColor: `${color}22` }]}>
+                <View
+                  style={[styles.macroFill, { backgroundColor: color, width: `${pct}%` }]}
+                />
+              </View>
             </View>
-            <View style={[styles.macroTrack, { backgroundColor: `${color}22` }]}>
-              <View style={[styles.macroFill, { backgroundColor: color, width: "0%" }]} />
-            </View>
-          </View>
-        ))}
+          );
+        })}
         <View style={styles.rule} />
 
-        {["Breakfast", "Lunch", "Dinner"].map((meal) => (
-          <View key={meal}>
-            <Text style={sectionLabel}>{meal}</Text>
-            <Text style={styles.placeholder}>Diary rows land here.</Text>
-            <View style={styles.rule} />
-          </View>
-        ))}
+        {MEALS.map((meal) => {
+          const entries = mealEntries(food.diary, today, meal);
+          const mealKcal = sumMacros(entries).kcal;
+          return (
+            <View key={meal}>
+              <View style={styles.mealHead}>
+                <Text style={sectionLabel}>{MEAL_LABELS[meal]}</Text>
+                <Text style={styles.mealKcal}>{mealKcal ? `${mealKcal} kcal` : ""}</Text>
+              </View>
+              {entries.length === 0 ? (
+                <Text style={styles.placeholder}>Nothing logged.</Text>
+              ) : (
+                entries.map((e) => (
+                  <View key={e.id} style={styles.entryRow}>
+                    <Text style={styles.entryName} numberOfLines={1}>
+                      {e.name}
+                      {e.servings !== 1 ? ` × ${e.servings}` : ""}
+                    </Text>
+                    <View style={styles.entryRight}>
+                      <Text style={styles.entryMacros}>
+                        {e.kcal} · {e.proteinG}P
+                      </Text>
+                      <Pressable onPress={() => removeEntry(e.id)} accessibilityRole="button">
+                        <Text style={styles.remove}>×</Text>
+                      </Pressable>
+                    </View>
+                  </View>
+                ))
+              )}
+              <View style={styles.rule} />
+            </View>
+          );
+        })}
       </ScrollView>
 
-      <View style={styles.addBar}>
+      <Pressable
+        style={styles.addBar}
+        onPress={() => router.push("/(tabs)/food")}
+        accessibilityRole="button"
+      >
         <Text style={styles.addBarText}>Add food</Text>
-      </View>
+      </Pressable>
     </View>
   );
 }
@@ -85,6 +122,8 @@ const styles = StyleSheet.create({
   content: { paddingHorizontal: 16, paddingTop: 64, paddingBottom: 96, gap: 12 },
   kcal: { fontSize: 28, fontWeight: "600", color: colors.inkNavy, letterSpacing: -0.5 },
   kcalGoal: { fontSize: 14, fontWeight: "300", color: colors.grayInactive },
+  planLine: { fontSize: 13, color: colors.graySecondary },
+  link: { color: colors.oxblood },
   rule: { height: 1, backgroundColor: colors.hairlineMajor, marginHorizontal: -16 },
   macroRow: { gap: 6 },
   macroBaseline: { flexDirection: "row", justifyContent: "space-between", alignItems: "baseline" },
@@ -92,8 +131,20 @@ const styles = StyleSheet.create({
   macroValue: { fontSize: 15, fontWeight: "600", color: colors.inkNavy },
   macroTrack: { height: 3, borderRadius: 1.5, overflow: "hidden" },
   macroFill: { height: 3 },
-  placeholder: { color: colors.grayInactive, fontSize: 13, marginBottom: 8 },
-  link: { color: colors.oxblood },
+  mealHead: { flexDirection: "row", justifyContent: "space-between", alignItems: "baseline" },
+  mealKcal: { fontSize: 12, color: colors.grayLabel },
+  placeholder: { color: colors.grayInactive, fontSize: 13, marginVertical: 6 },
+  entryRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingVertical: 7,
+    gap: 12,
+  },
+  entryName: { fontSize: 14, color: colors.inkNavy, flexShrink: 1 },
+  entryRight: { flexDirection: "row", alignItems: "center", gap: 12 },
+  entryMacros: { fontSize: 13, color: colors.graySecondary },
+  remove: { fontSize: 16, color: colors.grayInactive, paddingHorizontal: 4 },
   addBar: {
     position: "absolute",
     left: 0,
