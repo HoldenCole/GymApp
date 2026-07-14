@@ -24,6 +24,11 @@ const DISMISS_DAYS = 14;
 interface FastsState {
   fasts: PersonalFast[];
   accumulationDismissedUntil?: string;
+  /**
+   * Days the user claimed the Church's exemption (Part 2 §2). Private:
+   * a bare date list, never aggregated, never scored anywhere.
+   */
+  exemptDates: string[];
 }
 
 interface FastsStore {
@@ -33,18 +38,22 @@ interface FastsStore {
   setAside: (id: string, date: string) => void;
   resume: (id: string, date: string) => void;
   dismissAccumulation: (fromDate: string) => void;
+  /** One tap, no justification collected — the signature has no reason. */
+  claimExemption: (date: string) => void;
+  /** Quietly resume the day's observance. */
+  unclaimExemption: (date: string) => void;
   reset: () => void;
 }
 
 const FastsContext = createContext<FastsStore | null>(null);
 
 export function FastsProvider({ children }: { children: ReactNode }) {
-  const [state, setState] = useState<FastsState>({ fasts: [] });
+  const [state, setState] = useState<FastsState>({ fasts: [], exemptDates: [] });
 
   useEffect(() => {
     AsyncStorage.getItem(STORAGE_KEY)
       .then((raw) => {
-        if (raw) setState({ fasts: [], ...JSON.parse(raw) });
+        if (raw) setState({ fasts: [], exemptDates: [], ...JSON.parse(raw) });
       })
       .catch(() => {});
   }, []);
@@ -85,7 +94,13 @@ export function FastsProvider({ children }: { children: ReactNode }) {
           .slice(0, 10);
         persist({ ...state, accumulationDismissedUntil: until });
       },
-      reset: () => persist({ fasts: [] }),
+      claimExemption: (date) =>
+        state.exemptDates.includes(date)
+          ? undefined
+          : persist({ ...state, exemptDates: [...state.exemptDates, date] }),
+      unclaimExemption: (date) =>
+        persist({ ...state, exemptDates: state.exemptDates.filter((d) => d !== date) }),
+      reset: () => persist({ fasts: [], exemptDates: [] }),
     };
   }, [state]);
 

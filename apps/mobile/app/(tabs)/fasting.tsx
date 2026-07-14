@@ -3,17 +3,23 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import {
   ACCUMULATION_NOTICE_COPY,
   accumulationCheck,
+  activeAvoidSet,
   CUSTOM_ADVISORY_COPY,
   DISCIPLINES,
+  EXEMPTION_CHOSEN_NOTE,
+  EXEMPTION_CLAIMED_COPY,
+  EXEMPTION_COPY,
   fastAppliesOn,
+  Obligation,
   PersonalFast,
   resolveObligation,
   SET_ASIDE_COPY,
 } from "@kanon/engine";
-import { dayHeader, PROVENANCE_NOTE, todaysDayFacts } from "../../src/dayFacts";
-import { todayISO, todayWeekday } from "../../src/dates";
+import { dayFactsFor, dayHeader, PROVENANCE_NOTE } from "../../src/dayFacts";
+import { addDaysISO, todayISO, todayWeekday } from "../../src/dates";
 import { useFasts } from "../../src/fasts";
 import { feastOn } from "../../src/feasts";
+import { useTodaysObligation } from "../../src/obligation";
 import { useProfile } from "../../src/profile";
 import { colors, sacredSerif, sectionLabel } from "../../src/theme";
 
@@ -29,8 +35,8 @@ import { colors, sacredSerif, sectionLabel } from "../../src/theme";
 
 export default function Fasting() {
   const { profile } = useProfile();
-  const { facts: day, provenance } = todaysDayFacts(profile.discipline);
-  const obligation = resolveObligation(day, profile);
+  const { facts: day, provenance, law, obligation, exemptedToday } =
+    useTodaysObligation();
   const discipline = DISCIPLINES[profile.discipline];
   const note = PROVENANCE_NOTE[provenance];
 
@@ -40,12 +46,17 @@ export default function Fasting() {
         <Text style={styles.heroLabel}>TODAY</Text>
         <Text style={[styles.heroDay, sacredSerif]}>{dayHeader(day)}</Text>
         <Text style={[styles.heroLine, sacredSerif]}>
-          {obligation.abstinence !== "none" || obligation.fast
-            ? describe(obligation.fast, obligation.abstinence)
-            : obligation.lifted
+          {law.abstinence !== "none" || law.fast
+            ? describe(law.fast, law.abstinence)
+            : law.lifted
               ? "The day's penance is lifted — a feast of the Lord's own keeping."
               : "No fast or abstinence binds today."}
         </Text>
+        {exemptedToday ? (
+          <Text style={[styles.heroSoftening, sacredSerif]}>
+            {EXEMPTION_CLAIMED_COPY}
+          </Text>
+        ) : null}
         {feastOn(day.date)?.softens ? (
           <Text style={[styles.heroSoftening, sacredSerif]}>
             {feastOn(day.date)!.label} — a feast is a feast; the emphasis
@@ -57,8 +68,14 @@ export default function Fasting() {
 
       <Text style={sectionLabel}>What today allows</Text>
       <Text style={styles.body}>
-        Rendered from the obligation record ({obligation.ruleRefs.join(", ") || "—"}).
+        Rendered from the obligation record ({law.ruleRefs.join(", ") || "—"}).
       </Text>
+      <View style={styles.rule} />
+
+      <ExemptionBlock law={law} exemptedToday={exemptedToday} date={day.date} />
+
+      <Text style={sectionLabel}>The week</Text>
+      <WeekStrip />
       <View style={styles.rule} />
 
       <Text style={sectionLabel}>Your discipline</Text>
@@ -70,16 +87,123 @@ export default function Fasting() {
       </Text>
       <View style={styles.rule} />
 
-      <Text style={styles.exemptions}>Exemptions</Text>
-      <Text style={styles.body}>
-        One tap from the obligation, no justification asked, never scored.
-        The Church's own provision, not a shortcut.
-      </Text>
-      <View style={styles.rule} />
-
       <PersonalCommitments />
     </ScrollView>
   );
+}
+
+/**
+ * The exemption flow (Part 2 §2): one tap from the obligation itself, no
+ * justification, no confirmation gauntlet, no reason logged. Shown only
+ * when something actually binds; framed as the Church's own provision.
+ */
+function ExemptionBlock({
+  law,
+  exemptedToday,
+  date,
+}: {
+  law: Obligation;
+  exemptedToday: boolean;
+  date: string;
+}) {
+  const { state, claimExemption, unclaimExemption } = useFasts();
+  const bindsSomething =
+    (law.fast && law.binds.fast) || (law.abstinence !== "none" && law.binds.abstinence);
+  if (!bindsSomething && !exemptedToday) return null;
+
+  const commitmentsToday =
+    activeAvoidSet(state.fasts, date, todayWeekday()).categories.length > 0 ||
+    state.fasts.some((f) => fastAppliesOn(f, date, todayWeekday()));
+
+  return (
+    <>
+      <Text style={styles.exemptions}>Exemptions</Text>
+      <Text style={styles.body}>{EXEMPTION_COPY}</Text>
+      {exemptedToday ? (
+        <>
+          <Text style={styles.body}>{EXEMPTION_CLAIMED_COPY}</Text>
+          {commitmentsToday ? <Text style={styles.body}>{EXEMPTION_CHOSEN_NOTE}</Text> : null}
+          <Pressable onPress={() => unclaimExemption(date)} accessibilityRole="button">
+            <Text style={styles.exemptAction}>Resume the day's observance</Text>
+          </Pressable>
+        </>
+      ) : (
+        <Pressable onPress={() => claimExemption(date)} accessibilityRole="button">
+          <Text style={styles.exemptAction}>I'm excused today</Text>
+        </Pressable>
+      )}
+      <Text style={styles.bodyQuiet}>
+        Unsure whether you're excused? That's a good question for your
+        pastor or confessor — and your doctor where health is involved.
+      </Text>
+      <View style={styles.rule} />
+    </>
+  );
+}
+
+/** The week ahead — today-first, each day's rule from the calendar. */
+function WeekStrip() {
+  const { profile } = useProfile();
+  const { state } = useFasts();
+  const today = todayISO();
+
+  const rows = Array.from({ length: 7 }, (_, i) => {
+    const date = addDaysISO(today, i);
+    const { facts } = dayFactsFor(date, profile.discipline);
+    const law = resolveObligation(facts, profile);
+    const chosen = activeAvoidSet(state.fasts, date, facts.weekday);
+    return { date, facts, law, exempt: state.exemptDates.includes(date), chosen };
+  });
+
+  return (
+    <View>
+      {rows.map(({ date, facts, law, exempt, chosen }, i) => {
+        const obligationText = shortObligation(law);
+        return (
+          <View key={date} style={styles.weekRow}>
+            <View style={styles.weekDay}>
+              <Text style={styles.weekDayName}>
+                {i === 0 ? "Today" : facts.weekday.slice(0, 3)}
+              </Text>
+              <Text style={styles.weekDate}>{date.slice(8)}</Text>
+            </View>
+            <View style={styles.weekMain}>
+              {facts.celebration ? (
+                <Text style={[styles.weekCelebration, sacredSerif]} numberOfLines={1}>
+                  {facts.celebration}
+                </Text>
+              ) : null}
+              <Text
+                style={[
+                  styles.weekObligation,
+                  obligationText && !exempt && styles.weekObligationBinds,
+                ]}
+                numberOfLines={1}
+              >
+                {exempt
+                  ? "excused — the Church's provision"
+                  : obligationText ?? (law.lifted ? "penance lifted" : "—")}
+                {chosen.categories.length > 0
+                  ? `  ·  yours: no ${chosen.categories.join(", no ")}`
+                  : ""}
+              </Text>
+            </View>
+          </View>
+        );
+      })}
+    </View>
+  );
+}
+
+function shortObligation(law: Obligation): string | null {
+  if (law.lifted) return null;
+  const parts: string[] = [];
+  if (law.fast) parts.push("fast");
+  if (law.abstinence === "abstinence") parts.push("abstinence");
+  if (law.abstinence === "complete") parts.push("complete abstinence");
+  if (law.abstinence === "partial") parts.push("partial abstinence");
+  if (law.abstinence === "penance_or_abstinence") parts.push("Friday penance");
+  return parts.length > 0 ? parts.join(" · ") : null;
 }
 
 /**
@@ -229,6 +353,35 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   link: { color: colors.oxblood },
+  bodyQuiet: {
+    color: colors.grayLabel,
+    fontSize: 12,
+    lineHeight: 17,
+    paddingHorizontal: 16,
+    marginTop: 6,
+  },
+  exemptAction: {
+    color: colors.teal,
+    fontSize: 14,
+    paddingHorizontal: 16,
+    marginTop: 8,
+  },
+  weekRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 14,
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.hairlineMinor,
+  },
+  weekDay: { width: 44, alignItems: "flex-start" },
+  weekDayName: { fontSize: 12, fontWeight: "600", color: colors.inkNavy, textTransform: "capitalize" },
+  weekDate: { fontSize: 10, color: colors.grayLabel },
+  weekMain: { flex: 1, gap: 1 },
+  weekCelebration: { fontSize: 12, fontStyle: "italic", color: colors.graySecondary },
+  weekObligation: { fontSize: 12, color: colors.grayInactive },
+  weekObligationBinds: { color: colors.oxblood, fontWeight: "600" },
   commitHead: {
     flexDirection: "row",
     justifyContent: "space-between",

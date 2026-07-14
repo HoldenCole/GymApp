@@ -36,8 +36,7 @@ export interface TodaysFacts {
   provenance: DayFactsProvenance;
 }
 
-export function todaysDayFacts(discipline: Discipline, now: Date = new Date()): TodaysFacts {
-  const iso = now.toISOString().slice(0, 10);
+export function dayFactsFor(iso: string, discipline: Discipline): TodaysFacts {
   const imported = calendar.dayFacts(iso, discipline);
   if (imported) {
     return { facts: imported, provenance: calendar.meta.provenance };
@@ -45,13 +44,17 @@ export function todaysDayFacts(discipline: Discipline, now: Date = new Date()): 
   return {
     facts: {
       date: iso,
-      weekday: WEEKDAYS[now.getDay()] as Weekday,
+      weekday: WEEKDAYS[new Date(`${iso}T00:00:00Z`).getUTCDay()] as Weekday,
       // Liturgical facts unknown — "ordinary" is a stand-in the UI must
       // label as pending, never present as truth.
       season: "ordinary",
     },
     provenance: "civil_fallback",
   };
+}
+
+export function todaysDayFacts(discipline: Discipline, now: Date = new Date()): TodaysFacts {
+  return dayFactsFor(now.toISOString().slice(0, 10), discipline);
 }
 
 /** Human header for the day: celebration if named, else season + weekday. */

@@ -116,4 +116,9 @@ export interface Obligation {
   ruleRefs: string[];
   /** Open items from the priest review that touch this result. */
   openFlags?: string[];
+  /**
+   * The user claimed the Church's own exemption today (Part 2 §2). The
+   * law's statement stands; binding is removed. Private — never scored.
+   */
+  exempted?: boolean;
 }

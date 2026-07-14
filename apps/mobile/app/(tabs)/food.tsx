@@ -8,19 +8,13 @@ import {
   TextInput,
   View,
 } from "react-native";
-import {
-  activeAvoidSet,
-  FAST_CATEGORIES,
-  obligationAvoids,
-  resolveObligation,
-} from "@kanon/engine";
+import { activeAvoidSet, FAST_CATEGORIES, obligationAvoids } from "@kanon/engine";
 import { CatalogItem, filterCatalog } from "@kanon/food";
 import { CATALOG } from "../../src/catalog";
-import { todaysDayFacts } from "../../src/dayFacts";
 import { todayISO, todayWeekday } from "../../src/dates";
 import { useFasts } from "../../src/fasts";
 import { useFood } from "../../src/food";
-import { useProfile } from "../../src/profile";
+import { useTodaysObligation } from "../../src/obligation";
 import { colors, sectionLabel } from "../../src/theme";
 
 /**
@@ -42,15 +36,12 @@ export default function Food() {
   // obligation and the user's chosen commitments apply automatically;
   // the manual facets stack on top. EF partial abstinence deliberately
   // does not hard-filter (meat is permitted at the principal meal).
-  const { profile } = useProfile();
+  const { obligation } = useTodaysObligation();
   const personalToday = useMemo(
     () => activeAvoidSet(fastsState.fasts, todayISO(), todayWeekday()),
     [fastsState.fasts],
   );
-  const churchToday = useMemo(() => {
-    const { facts } = todaysDayFacts(profile.discipline);
-    return obligationAvoids(resolveObligation(facts, profile));
-  }, [profile]);
+  const churchToday = useMemo(() => obligationAvoids(obligation), [obligation]);
 
   const results = useMemo(
     () =>

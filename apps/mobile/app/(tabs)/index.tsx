@@ -20,16 +20,12 @@ import {
   weightUnitLabel,
 } from "@kanon/fitness";
 import { dayTotals, filterCatalog } from "@kanon/food";
-import {
-  activeAvoidSet,
-  obligationAvoids,
-  resolveObligation,
-  type Weekday,
-} from "@kanon/engine";
+import { activeAvoidSet, obligationAvoids, type Weekday } from "@kanon/engine";
 import patrons from "@kanon/content/packaged/patrons.json";
 import { CATALOG } from "../../src/catalog";
-import { dayHeader, PROVENANCE_NOTE, todaysDayFacts } from "../../src/dayFacts";
+import { dayHeader, PROVENANCE_NOTE } from "../../src/dayFacts";
 import { feastOn } from "../../src/feasts";
+import { useTodaysObligation } from "../../src/obligation";
 import { todayWeekday } from "../../src/dates";
 import { useFasts } from "../../src/fasts";
 import { useFitness } from "../../src/fitness";
@@ -143,8 +139,7 @@ function OfferingLine() {
 }
 
 function LiturgicalHeader() {
-  const { profile } = useProfile();
-  const { facts, provenance } = todaysDayFacts(profile.discipline);
+  const { facts, provenance } = useTodaysObligation();
   const note = PROVENANCE_NOTE[provenance];
   return (
     <View style={{ gap: 2 }}>
@@ -160,23 +155,23 @@ function LiturgicalHeader() {
 }
 
 function FastingTrainingSplit({ sessionName }: { sessionName: string }) {
-  const { profile } = useProfile();
   const { state } = useFitness();
-  const { facts: day, provenance } = todaysDayFacts(profile.discipline);
-  const obligation = resolveObligation(day, profile);
-  const bound = obligation.fast || obligation.abstinence !== "none";
+  const { law, provenance, exemptedToday } = useTodaysObligation();
+  const bound = law.fast || law.abstinence !== "none";
 
   return (
     <View style={{ gap: 4 }}>
-      <Text style={bound ? styles.obligationLine : styles.body}>
-        {bound
-          ? `The Church asks: ${[
-              obligation.fast ? "fast" : "",
-              obligation.abstinence !== "none" ? "abstinence" : "",
-            ]
-              .filter(Boolean)
-              .join(" and ")} today.`
-          : "No fast or abstinence binds today."}
+      <Text style={bound && !exemptedToday ? styles.obligationLine : styles.body}>
+        {exemptedToday
+          ? "You're excused today — the Church's own provision."
+          : bound
+            ? `The Church asks: ${[
+                law.fast ? "fast" : "",
+                law.abstinence !== "none" ? "abstinence" : "",
+              ]
+                .filter(Boolean)
+                .join(" and ")} today.`
+            : "No fast or abstinence binds today."}
         {provenance === "civil_fallback" ? " (weekday rules only — calendar pending)" : ""}
       </Text>
       <View style={styles.baselineRow}>
@@ -199,10 +194,9 @@ function FastingTrainingSplit({ sessionName }: { sessionName: string }) {
 function MealPicks() {
   const { state: food } = useFood();
   const { state: fasts } = useFasts();
-  const { profile } = useProfile();
+  const { obligation } = useTodaysObligation();
   const personalToday = activeAvoidSet(fasts.fasts, todayISO(), todayWeekday());
-  const { facts } = todaysDayFacts(profile.discipline);
-  const churchToday = obligationAvoids(resolveObligation(facts, profile));
+  const churchToday = obligationAvoids(obligation);
 
   const candidates = filterCatalog(CATALOG, {
     allergies: food.allergies,
