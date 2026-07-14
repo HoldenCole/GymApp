@@ -1,5 +1,6 @@
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
+import { FastsProvider } from "../src/fasts";
 import { FitnessProvider } from "../src/fitness";
 import { FoodProvider } from "../src/food";
 import { ProfileProvider } from "../src/profile";
@@ -18,15 +19,21 @@ export default function RootLayout() {
     <ProfileProvider>
       <FitnessProvider>
         <FoodProvider>
-          <StatusBar style="dark" />
-          <Stack screenOptions={{ headerShown: false }}>
-            <Stack.Screen name="(tabs)" />
-            <Stack.Screen name="settings" options={detailScreen("Settings")} />
-            <Stack.Screen name="plan" options={detailScreen("Plan")} />
-            <Stack.Screen name="split" options={detailScreen("Split")} />
-            <Stack.Screen name="recipe/[id]" options={detailScreen("Recipe")} />
-            <Stack.Screen name="add-food" options={detailScreen("Add food")} />
-          </Stack>
+          <FastsProvider>
+            <StatusBar style="dark" />
+            <Stack screenOptions={{ headerShown: false }}>
+              <Stack.Screen name="(tabs)" />
+              <Stack.Screen name="settings" options={detailScreen("Settings")} />
+              <Stack.Screen name="plan" options={detailScreen("Plan")} />
+              <Stack.Screen name="split" options={detailScreen("Split")} />
+              <Stack.Screen name="recipe/[id]" options={detailScreen("Recipe")} />
+              <Stack.Screen name="add-food" options={detailScreen("Add food")} />
+              <Stack.Screen
+                name="add-commitment"
+                options={detailScreen("Your commitment")}
+              />
+            </Stack>
+          </FastsProvider>
         </FoodProvider>
       </FitnessProvider>
     </ProfileProvider>

@@ -1,7 +1,18 @@
 import { Link } from "expo-router";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
-import { DISCIPLINES, resolveObligation } from "@kanon/engine";
+import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import {
+  ACCUMULATION_NOTICE_COPY,
+  accumulationCheck,
+  CUSTOM_ADVISORY_COPY,
+  DISCIPLINES,
+  fastAppliesOn,
+  PersonalFast,
+  resolveObligation,
+  SET_ASIDE_COPY,
+} from "@kanon/engine";
 import { civilDayFactsToday } from "../../src/dayFacts";
+import { todayWeekday } from "../../src/dates";
+import { useFasts } from "../../src/fasts";
 import { useProfile } from "../../src/profile";
 import { colors, sacredSerif, sectionLabel } from "../../src/theme";
 
@@ -61,12 +72,116 @@ export default function Fasting() {
       </Text>
       <View style={styles.rule} />
 
-      <Text style={sectionLabel}>Personal commitments</Text>
-      <Text style={styles.body}>
-        Chosen commitments render in their own treatment — never the visual
-        language of an obligation. Setting one aside is nothing to confess.
-      </Text>
+      <PersonalCommitments />
     </ScrollView>
+  );
+}
+
+/**
+ * Chosen commitments — deliberately NOT the obligation treatment: no dark
+ * hero, no oxblood, "you've chosen" language throughout. Set-aside is one
+ * tap, met with reassurance, and never counted.
+ */
+function PersonalCommitments() {
+  const { state, setAside, resume, dismissAccumulation } = useFasts();
+  const today = civilDayFactsToday().date;
+  const weekday = todayWeekday();
+
+  const accumulation = accumulationCheck(state.fasts, today);
+  const noticeVisible =
+    accumulation.noticeSuggested &&
+    (!state.accumulationDismissedUntil || state.accumulationDismissedUntil <= today);
+
+  return (
+    <>
+      <View style={styles.commitHead}>
+        <Text style={sectionLabel}>Your commitments</Text>
+        <Link href="/add-commitment" style={styles.link}>
+          Add
+        </Link>
+      </View>
+
+      {state.fasts.length === 0 ? (
+        <Text style={styles.body}>
+          Nothing here yet. A chosen commitment — no sweets on Fridays, a
+          Lenten discipline — lives alongside what the Church asks, always
+          clearly yours.
+        </Text>
+      ) : (
+        state.fasts.map((f) => (
+          <CommitmentRow
+            key={f.id}
+            fast={f}
+            today={today}
+            appliesToday={fastAppliesOn(f, today, weekday)}
+            setAsideToday={f.setAsideDates.includes(today)}
+            onSetAside={() => setAside(f.id, today)}
+            onResume={() => resume(f.id, today)}
+          />
+        ))
+      )}
+
+      {noticeVisible ? (
+        <View style={styles.notice}>
+          <Text style={styles.noticeText}>{ACCUMULATION_NOTICE_COPY}</Text>
+          <Pressable onPress={() => dismissAccumulation(today)} accessibilityRole="button">
+            <Text style={styles.noticeDismiss}>Thanks — dismiss</Text>
+          </Pressable>
+        </View>
+      ) : null}
+    </>
+  );
+}
+
+function CommitmentRow({
+  fast,
+  appliesToday,
+  setAsideToday,
+  onSetAside,
+  onResume,
+}: {
+  fast: PersonalFast;
+  today: string;
+  appliesToday: boolean;
+  setAsideToday: boolean;
+  onSetAside: () => void;
+  onResume: () => void;
+}) {
+  const parts = fast.avoidCategories.map((c) => `no ${c}`);
+  const scheduleLabel =
+    fast.schedule.kind === "daily"
+      ? "every day"
+      : fast.schedule.days.map((d) => d.slice(0, 3)).join(" · ");
+
+  return (
+    <View style={styles.commitment}>
+      <Text style={styles.commitName}>{fast.name}</Text>
+      <Text style={styles.commitDetail}>
+        You've chosen: {[...parts, ...(fast.customText ? [fast.customText] : [])].join(", ")}
+        {" — "}
+        {scheduleLabel}
+      </Text>
+      {fast.customText ? (
+        <Text style={styles.commitAdvisory}>{CUSTOM_ADVISORY_COPY}</Text>
+      ) : null}
+      {fast.intention ? (
+        <Text style={[styles.commitIntention, sacredSerif]}>{fast.intention}</Text>
+      ) : null}
+      {setAsideToday ? (
+        <>
+          <Text style={styles.commitDetail}>{SET_ASIDE_COPY}</Text>
+          <Pressable onPress={onResume} accessibilityRole="button">
+            <Text style={styles.commitAction}>Resume today</Text>
+          </Pressable>
+        </>
+      ) : appliesToday ? (
+        <Pressable onPress={onSetAside} accessibilityRole="button">
+          <Text style={styles.commitAction}>Set aside for today</Text>
+        </Pressable>
+      ) : (
+        <Text style={styles.commitAdvisory}>Not scheduled today.</Text>
+      )}
+    </View>
   );
 }
 
@@ -106,4 +221,33 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   link: { color: colors.oxblood },
+  commitHead: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "baseline",
+    paddingRight: 16,
+  },
+  commitment: {
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.hairlineMinor,
+    gap: 4,
+  },
+  commitName: { fontSize: 15, fontWeight: "600", color: colors.inkNavy },
+  commitDetail: { fontSize: 13, lineHeight: 18, color: colors.graySecondary },
+  commitAdvisory: { fontSize: 12, color: colors.grayLabel },
+  commitIntention: { fontSize: 13, fontStyle: "italic", color: colors.goldDeep },
+  commitAction: { fontSize: 13, color: colors.teal, marginTop: 2 },
+  notice: {
+    marginHorizontal: 16,
+    marginTop: 14,
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    borderColor: colors.hairlineMajor,
+    paddingVertical: 12,
+    gap: 8,
+  },
+  noticeText: { fontSize: 13, lineHeight: 19, color: colors.graySecondary },
+  noticeDismiss: { fontSize: 13, color: colors.teal },
 });

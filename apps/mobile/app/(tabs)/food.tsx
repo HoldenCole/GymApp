@@ -8,9 +8,11 @@ import {
   TextInput,
   View,
 } from "react-native";
-import { FAST_CATEGORIES } from "@kanon/engine";
+import { activeAvoidSet, FAST_CATEGORIES } from "@kanon/engine";
 import { CatalogItem, filterCatalog } from "@kanon/food";
 import { CATALOG } from "../../src/catalog";
+import { todayISO, todayWeekday } from "../../src/dates";
+import { useFasts } from "../../src/fasts";
 import { useFood } from "../../src/food";
 import { colors, sectionLabel } from "../../src/theme";
 
@@ -23,22 +25,39 @@ import { colors, sectionLabel } from "../../src/theme";
 export default function Food() {
   const router = useRouter();
   const { state } = useFood();
+  const { state: fastsState } = useFasts();
   const [query, setQuery] = useState("");
   const [avoid, setAvoid] = useState<string[]>([]);
   const [effortMax, setEffortMax] = useState<number | undefined>(undefined);
   const [abstinenceOnly, setAbstinenceOnly] = useState(false);
+
+  // Day-aware pre-filtering: the user's chosen commitments apply today
+  // automatically; the manual facets stack on top. The engine's church
+  // obligation joins this set when the calendar import lands.
+  const personalToday = useMemo(
+    () => activeAvoidSet(fastsState.fasts, todayISO(), todayWeekday()),
+    [fastsState.fasts],
+  );
 
   const results = useMemo(
     () =>
       filterCatalog(CATALOG, {
         query,
         allergies: state.allergies,
-        avoidCategories: avoid,
+        avoidCategories: [...new Set([...avoid, ...personalToday.categories])],
         dislikedCategories: state.dislikedCategories,
         effortMax,
         abstinenceFriendlyOnly: abstinenceOnly,
       }),
-    [query, avoid, effortMax, abstinenceOnly, state.allergies, state.dislikedCategories],
+    [
+      query,
+      avoid,
+      effortMax,
+      abstinenceOnly,
+      state.allergies,
+      state.dislikedCategories,
+      personalToday,
+    ],
   );
 
   const toggleAvoid = (c: string) =>
@@ -93,6 +112,16 @@ export default function Food() {
             ))}
           </View>
 
+          {personalToday.categories.length > 0 ? (
+            <Text style={styles.personalLine}>
+              Your commitments today: {personalToday.categories.map((c) => `no ${c}`).join(" · ")}
+            </Text>
+          ) : null}
+          {personalToday.customAdvisory.length > 0 ? (
+            <Text style={styles.advisoryLine}>
+              Tracked but not filtered: {personalToday.customAdvisory.join("; ")}
+            </Text>
+          ) : null}
           <Text style={styles.count}>
             {results.length} of {CATALOG.length}
             {state.allergies.length
@@ -173,6 +202,8 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
   count: { color: colors.grayLabel, fontSize: 12, marginTop: 2 },
+  personalLine: { color: colors.graySecondary, fontSize: 12 },
+  advisoryLine: { color: colors.grayLabel, fontSize: 12 },
   link: { color: colors.oxblood },
   rule: { height: 1, backgroundColor: colors.hairlineMajor, marginHorizontal: -16, marginTop: 8 },
   row: {
