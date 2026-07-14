@@ -6,6 +6,7 @@ import {
   activeAvoidSet,
   CUSTOM_ADVISORY_COPY,
   DISCIPLINES,
+  TRAINING_COLLISION_NUDGE,
   EXEMPTION_CHOSEN_NOTE,
   EXEMPTION_CLAIMED_COPY,
   EXEMPTION_COPY,
@@ -15,10 +16,12 @@ import {
   resolveObligation,
   SET_ASIDE_COPY,
 } from "@kanon/engine";
+import { sessionFor, trainingCollision } from "@kanon/fitness";
 import { dayFactsFor, dayHeader, PROVENANCE_NOTE } from "../../src/dayFacts";
 import { addDaysISO, todayISO, todayWeekday } from "../../src/dates";
 import { useFasts } from "../../src/fasts";
 import { feastOn } from "../../src/feasts";
+import { useFitness } from "../../src/fitness";
 import { useTodaysObligation } from "../../src/obligation";
 import { useProfile } from "../../src/profile";
 import { colors, sacredSerif, sectionLabel } from "../../src/theme";
@@ -73,6 +76,8 @@ export default function Fasting() {
       <View style={styles.rule} />
 
       <ExemptionBlock law={law} exemptedToday={exemptedToday} date={day.date} />
+
+      <CollisionNudge />
 
       <Text style={sectionLabel}>The week</Text>
       <WeekStrip />
@@ -135,6 +140,43 @@ function ExemptionBlock({
       <Text style={styles.bodyQuiet}>
         Unsure whether you're excused? That's a good question for your
         pastor or confessor — and your doctor where health is involved.
+      </Text>
+      <View style={styles.rule} />
+    </>
+  );
+}
+
+/**
+ * The §4 fast-day collision nudge: a suggestion, never a lock. Softened
+ * feast days don't prompt (guidance nudges soften with the emphasis).
+ */
+function CollisionNudge() {
+  const { law, obligation, facts } = useTodaysObligation();
+  const { state: fitness } = useFitness();
+  const session = sessionFor(fitness.split, todayWeekday());
+  const softened = feastOn(facts.date)?.softens ?? false;
+  const fastBinds = obligation.fast && obligation.binds.fast;
+
+  if (!trainingCollision(fastBinds, session) || softened) {
+    return (
+      <Text style={styles.bodyQuiet}>
+        <Link href="/guidance" style={styles.link}>
+          Fasting & training
+        </Link>
+        {" — how the two fit together."}
+      </Text>
+    );
+  }
+  return (
+    <>
+      <Text style={styles.nudge}>
+        {TRAINING_COLLISION_NUDGE} ({session!.name} is scheduled today.)
+      </Text>
+      <Text style={styles.bodyQuiet}>
+        <Link href="/guidance" style={styles.link}>
+          Fasting & training
+        </Link>
+        {" — why the workout bends and the fast doesn't."}
       </Text>
       <View style={styles.rule} />
     </>
@@ -365,6 +407,12 @@ const styles = StyleSheet.create({
     fontSize: 14,
     paddingHorizontal: 16,
     marginTop: 8,
+  },
+  nudge: {
+    color: colors.graySecondary,
+    fontSize: 13,
+    lineHeight: 19,
+    paddingHorizontal: 16,
   },
   weekRow: {
     flexDirection: "row",

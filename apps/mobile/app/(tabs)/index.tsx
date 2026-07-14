@@ -15,10 +15,16 @@ import {
   kgToLb,
   lbToKg,
   sessionFor,
+  SessionType,
+  trainingCollision,
   trendSeries,
   weeklyRate,
   weightUnitLabel,
 } from "@kanon/fitness";
+import { Dimensions } from "react-native";
+import { TRAINING_COLLISION_NUDGE } from "@kanon/engine";
+import { AxedLineChart } from "../../src/charts";
+import { weightChartData } from "../../src/weightChart";
 import { dayTotals, filterCatalog } from "@kanon/food";
 import { activeAvoidSet, obligationAvoids, type Weekday } from "@kanon/engine";
 import patrons from "@kanon/content/packaged/patrons.json";
@@ -52,6 +58,12 @@ export default function Home() {
   const trend = trendSeries(state.weightLog);
   const latestTrend = trend[trend.length - 1];
   const rate = weeklyRate(state.weightLog);
+  const sparkline = weightChartData(
+    state.weightLog,
+    todayISO(),
+    30,
+    state.units === "metric",
+  );
 
   const commitWeight = () => {
     const n = Number(draft);
@@ -73,14 +85,26 @@ export default function Home() {
       <View style={styles.rule} />
 
       <Text style={sectionLabel}>Fasting · Training</Text>
-      <FastingTrainingSplit sessionName={session ? session.name : "Rest"} />
+      <FastingTrainingSplit session={session} />
       <View style={styles.rule} />
 
       <Text style={sectionLabel}>Today's picks</Text>
       <MealPicks />
       <View style={styles.rule} />
 
-      <Text style={sectionLabel}>Weight · trend</Text>
+      <Text style={sectionLabel}>Weight · 30 days</Text>
+      {trend.length >= 2 ? (
+        <AxedLineChart
+          series={[{ label: "trend", color: colors.teal, values: sparkline.values }]}
+          dots={sparkline.dots}
+          xLabels={sparkline.xLabels}
+          pointCount={30}
+          width={Dimensions.get("window").width - 32}
+          height={90}
+          zoomY
+          yFormat={(v) => String(Math.round(v))}
+        />
+      ) : null}
       {latestTrend ? (
         <View style={styles.baselineRow}>
           <Text style={styles.weightValue}>
@@ -154,10 +178,13 @@ function LiturgicalHeader() {
   );
 }
 
-function FastingTrainingSplit({ sessionName }: { sessionName: string }) {
+function FastingTrainingSplit({ session }: { session: SessionType | null }) {
   const { state } = useFitness();
-  const { law, provenance, exemptedToday } = useTodaysObligation();
+  const { law, obligation, facts, provenance, exemptedToday } = useTodaysObligation();
   const bound = law.fast || law.abstinence !== "none";
+  const softened = feastOn(facts.date)?.softens ?? false;
+  const collision =
+    trainingCollision(obligation.fast && obligation.binds.fast, session) && !softened;
 
   return (
     <View style={{ gap: 4 }}>
@@ -176,12 +203,13 @@ function FastingTrainingSplit({ sessionName }: { sessionName: string }) {
       </Text>
       <View style={styles.baselineRow}>
         <Text style={styles.body}>
-          {sessionName} · {GOAL_LABELS[state.plan.goal]}
+          {session ? session.name : "Rest"} · {GOAL_LABELS[state.plan.goal]}
         </Text>
         <Link href="/split" style={styles.link}>
           Split
         </Link>
       </View>
+      {collision ? <Text style={styles.placeholder}>{TRAINING_COLLISION_NUDGE}</Text> : null}
     </View>
   );
 }

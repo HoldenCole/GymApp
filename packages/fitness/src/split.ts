@@ -21,10 +21,30 @@ export const WEEKDAYS: Weekday[] = [
 
 export const REST = "rest";
 
+export type SessionIntensity = "easy" | "moderate" | "hard";
+
 export interface SessionType {
   id: string;
   /** User-editable — "Push", "Squat day", "Sprints", anything. */
   name: string;
+  /**
+   * Optional, user-set. Drives the fast-day collision nudge: an "easy"
+   * session doesn't prompt; unset is treated as possibly-hard (the safe
+   * default — the nudge is information, never a lock).
+   */
+  intensity?: SessionIntensity;
+}
+
+/**
+ * Should the fast-day nudge show for this session? True when a session
+ * is scheduled and isn't marked easy. The caller decides suppression
+ * for feast-softened days (guidance nudges soften rather than prompt).
+ */
+export function trainingCollision(
+  fastBindsToday: boolean,
+  session: SessionType | null,
+): boolean {
+  return fastBindsToday && session !== null && session.intensity !== "easy";
 }
 
 export interface Split {

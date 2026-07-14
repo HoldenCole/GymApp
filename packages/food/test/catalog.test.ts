@@ -100,6 +100,24 @@ describe("the three filter layers", () => {
   it("no filters returns everything", () => {
     expect(filterCatalog(catalog, {})).toHaveLength(500);
   });
+
+  it("goal facet matches training tags including compound ones", () => {
+    const highProtein = filterCatalog(catalog, { goalTag: "high-protein" });
+    expect(highProtein.length).toBeGreaterThan(400); // plain + abstinence-friendly variants
+    expect(
+      highProtein.every((i) => i.trainingTags.some((t) => t.includes("high-protein"))),
+    ).toBe(true);
+    const postWorkout = filterCatalog(catalog, { goalTag: "post-workout" });
+    expect(postWorkout.length).toBeGreaterThan(0);
+  });
+
+  it("tradition facet finds each patron's table", () => {
+    for (const patron of ["Joseph", "Benedict", "Hyacinth", "Therese", "Anthony"]) {
+      const dishes = filterCatalog(catalog, { tradition: patron });
+      expect(dishes.length, patron).toBeGreaterThan(0);
+      expect(dishes.every((d) => d.culturalTag?.includes(patron))).toBe(true);
+    }
+  });
 });
 
 describe("catalog → diary", () => {

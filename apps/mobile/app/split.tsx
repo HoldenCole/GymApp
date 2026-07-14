@@ -53,11 +53,25 @@ export default function SplitScreen() {
       <View style={styles.rule} />
 
       <Text style={sectionLabel}>Sessions</Text>
-      <Text style={styles.help}>Name them anything — Push, Squat day, Sprints.</Text>
+      <Text style={styles.help}>
+        Name them anything — Push, Squat day, Sprints. Marking one "easy"
+        quiets the fast-day nudge for it; unset is treated as possibly hard.
+      </Text>
       {split.sessions.map((s) => (
         <SessionRow
           key={s.id}
           name={s.name}
+          intensity={s.intensity}
+          onCycleIntensity={() => {
+            const order = [undefined, "easy", "moderate", "hard"] as const;
+            const next = order[(order.indexOf(s.intensity) + 1) % order.length];
+            setSplit({
+              ...split,
+              sessions: split.sessions.map((x) =>
+                x.id === s.id ? { ...x, intensity: next } : x,
+              ),
+            });
+          }}
           onRename={(name) =>
             name.trim() &&
             setSplit({
@@ -118,10 +132,14 @@ export default function SplitScreen() {
 
 function SessionRow({
   name,
+  intensity,
+  onCycleIntensity,
   onRename,
   onRemove,
 }: {
   name: string;
+  intensity?: "easy" | "moderate" | "hard";
+  onCycleIntensity: () => void;
   onRename: (name: string) => void;
   onRemove?: () => void;
 }) {
@@ -134,6 +152,9 @@ function SessionRow({
         onBlur={() => onRename(draft)}
         style={styles.sessionInput}
       />
+      <Pressable onPress={onCycleIntensity} accessibilityRole="button">
+        <Text style={styles.intensity}>{intensity ?? "intensity?"}</Text>
+      </Pressable>
       {onRemove ? (
         <Pressable onPress={onRemove} accessibilityRole="button">
           <Text style={styles.remove}>Remove</Text>
@@ -167,6 +188,15 @@ const styles = StyleSheet.create({
     color: colors.inkNavy,
   },
   remove: { color: colors.oxblood, fontSize: 13 },
+  intensity: {
+    color: colors.graySecondary,
+    fontSize: 12,
+    borderWidth: 1,
+    borderColor: colors.hairlineMajor,
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    overflow: "hidden",
+  },
   add: { paddingVertical: 8 },
   addText: { color: colors.oxblood, fontSize: 14 },
   dayRow: {

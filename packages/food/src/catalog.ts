@@ -134,6 +134,10 @@ export interface CatalogFilter {
   effortMax?: number;
   abstinenceFriendlyOnly?: boolean;
   type?: "recipe" | "product";
+  /** Goal facet — matches any training tag containing this token. */
+  goalTag?: string;
+  /** Tradition facet — matches a cultural tag containing this token. */
+  tradition?: string;
 }
 
 export function filterCatalog(
@@ -160,6 +164,13 @@ export function filterCatalog(
     }
     if (f.effortMax !== undefined && (item.effortLevel ?? 1) > f.effortMax) return false;
     if (f.abstinenceFriendlyOnly && !item.abstinenceFriendly) return false;
+    if (f.goalTag && !item.trainingTags.some((t) => t.includes(f.goalTag!))) return false;
+    if (
+      f.tradition &&
+      !(item.culturalTag ?? "").toLowerCase().includes(f.tradition.toLowerCase())
+    ) {
+      return false;
+    }
     if (q) {
       const hay = `${item.title} ${item.brand ?? ""}`.toLowerCase();
       if (!hay.includes(q)) return false;

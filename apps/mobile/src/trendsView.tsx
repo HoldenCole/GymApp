@@ -10,12 +10,13 @@
 
 import { useMemo, useState } from "react";
 import { Dimensions, Pressable, StyleSheet, Text, View } from "react-native";
-import { energyTargets, kgToLb, trendSeries } from "@kanon/fitness";
+import { energyTargets } from "@kanon/fitness";
 import { dailySeries } from "@kanon/food";
-import { AxedLineChart, ChartDot, ChartSeries } from "./charts";
+import { AxedLineChart, ChartSeries } from "./charts";
 import { useFitness } from "./fitness";
 import { todayISO, useFood } from "./food";
 import { colors, sectionLabel } from "./theme";
+import { weightChartData } from "./weightChart";
 
 const RANGES = [30, 90] as const;
 
@@ -80,22 +81,10 @@ export function TrendsView() {
 
   // Weight: align the trend to the same day grid; dots are raw weigh-ins.
   const metric = fitness.units === "metric";
-  const display = (kg: number) => (metric ? kg : kgToLb(kg));
-  const { weightValues, weightDots } = useMemo(() => {
-    const trend = trendSeries(fitness.weightLog);
-    const trendByDate = new Map(trend.map((t) => [t.date, t]));
-    const values: (number | null)[] = [];
-    const dots: ChartDot[] = [];
-    points.forEach((p, i) => {
-      const t = trendByDate.get(p.date);
-      values.push(t ? display(t.trendKg) : null);
-      if (t) {
-        dots.push({ index: i, value: display(t.weightKg), filled: p.date === today });
-      }
-    });
-    return { weightValues: values, weightDots: dots };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [fitness.weightLog, points, metric]);
+  const { values: weightValues, dots: weightDots } = useMemo(
+    () => weightChartData(fitness.weightLog, today, days, metric),
+    [fitness.weightLog, today, days, metric],
+  );
 
   return (
     <View style={styles.wrap}>

@@ -5,6 +5,7 @@ import {
   sessionFor,
   Split,
   SPLIT_TEMPLATES,
+  trainingCollision,
   validateSplit,
   WEEKDAYS,
 } from "../src";
@@ -74,5 +75,25 @@ describe("customization", () => {
   it("weekday list covers the whole week once", () => {
     expect(WEEKDAYS).toHaveLength(7);
     expect(new Set(WEEKDAYS).size).toBe(7);
+  });
+});
+
+describe("the fast-day collision nudge", () => {
+  const session = (intensity?: "easy" | "moderate" | "hard") => ({
+    id: "s",
+    name: "Session",
+    ...(intensity ? { intensity } : {}),
+  });
+
+  it("prompts for a scheduled session on a fast day — unset intensity treated as possibly hard", () => {
+    expect(trainingCollision(true, session())).toBe(true);
+    expect(trainingCollision(true, session("hard"))).toBe(true);
+    expect(trainingCollision(true, session("moderate"))).toBe(true);
+  });
+
+  it("an easy session doesn't prompt; neither do rest days or non-fast days", () => {
+    expect(trainingCollision(true, session("easy"))).toBe(false);
+    expect(trainingCollision(true, null)).toBe(false);
+    expect(trainingCollision(false, session("hard"))).toBe(false);
   });
 });

@@ -31,6 +31,8 @@ export default function Food() {
   const [avoid, setAvoid] = useState<string[]>([]);
   const [effortMax, setEffortMax] = useState<number | undefined>(undefined);
   const [abstinenceOnly, setAbstinenceOnly] = useState(false);
+  const [goalTag, setGoalTag] = useState<string | undefined>(undefined);
+  const [tradition, setTradition] = useState<string | undefined>(undefined);
 
   // Day-aware pre-filtering (UI brief §4 layer 2): the engine's church
   // obligation and the user's chosen commitments apply automatically;
@@ -54,12 +56,16 @@ export default function Food() {
         dislikedCategories: state.dislikedCategories,
         effortMax,
         abstinenceFriendlyOnly: abstinenceOnly,
+        goalTag,
+        tradition,
       }),
     [
       query,
       avoid,
       effortMax,
       abstinenceOnly,
+      goalTag,
+      tradition,
       state.allergies,
       state.dislikedCategories,
       personalToday,
@@ -115,6 +121,36 @@ export default function Food() {
                 label={`≤ ${["Assembly", "Quick", "Standard", "Project"][e - 1]}`}
                 active={effortMax === e}
                 onPress={() => setEffortMax(effortMax === e ? undefined : e)}
+              />
+            ))}
+          </View>
+
+          <Text style={sectionLabel}>Goal</Text>
+          <View style={styles.facets}>
+            {(
+              [
+                ["high-protein", "high-protein"],
+                ["fast-compatible / light", "light"],
+                ["post-workout", "post-workout"],
+              ] as const
+            ).map(([tag, label]) => (
+              <Facet
+                key={tag}
+                label={label}
+                active={goalTag === tag}
+                onPress={() => setGoalTag(goalTag === tag ? undefined : tag)}
+              />
+            ))}
+          </View>
+
+          <Text style={sectionLabel}>Tradition</Text>
+          <View style={styles.facets}>
+            {["Joseph", "Benedict", "Hyacinth", "Therese", "Anthony"].map((p) => (
+              <Facet
+                key={p}
+                label={`St. ${p === "Therese" ? "Thérèse" : p}`}
+                active={tradition === p}
+                onPress={() => setTradition(tradition === p ? undefined : p)}
               />
             ))}
           </View>

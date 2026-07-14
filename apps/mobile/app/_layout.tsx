@@ -36,6 +36,10 @@ export default function RootLayout() {
                   options={detailScreen("Your commitment")}
                 />
                 <Stack.Screen name="reading/[idx]" options={detailScreen("Reading")} />
+                <Stack.Screen
+                  name="guidance"
+                  options={detailScreen("Fasting & training")}
+                />
               </Stack>
             </JournalProvider>
           </FastsProvider>
