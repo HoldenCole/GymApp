@@ -8,7 +8,16 @@
 import { describe, expect, it } from "vitest";
 import rules from "../../../content/packaged/fasting-rules.json";
 import vocabulary from "../../../content/packaged/food-vocabulary.json";
-import { EF_AGES, FAST_CATEGORIES, NORM_PROFILES, OF_AGES } from "../src";
+import {
+  DISCIPLINE_ORDER,
+  DISCIPLINES,
+  EF_AGES,
+  FAST_CATEGORIES,
+  NORM_PROFILE_INFO,
+  NORM_PROFILE_ORDER,
+  NORM_PROFILES,
+  OF_AGES,
+} from "../src";
 
 describe("resolver constants match content/packaged/fasting-rules.json", () => {
   it("OF binding ages", () => {
@@ -50,6 +59,20 @@ describe("resolver constants match content/packaged/fasting-rules.json", () => {
     expect(rules.disciplines.of.rank_lift.threshold).toBe("solemnity");
     expect(rules.disciplines.ef.rank_lift.threshold).toBe("feast_of_precept_or_sunday");
     expect(rules.disciplines.ef.rank_lift.lent_exception).toBe(true);
+  });
+});
+
+describe("selection metadata covers every discipline and profile", () => {
+  it("both disciplines are selectable, the modern calendar (OF / Novus Ordo) first", () => {
+    expect(DISCIPLINE_ORDER).toEqual(["of", "ef"]);
+    expect(Object.keys(DISCIPLINES).sort()).toEqual(Object.keys(rules.disciplines).sort());
+    expect(DISCIPLINES.of.sublabel).toContain("Novus Ordo");
+  });
+
+  it("every norm profile in the corpus is selectable", () => {
+    const encoded = Object.keys(rules.norm_profiles).filter((k) => k !== "selection");
+    expect([...NORM_PROFILE_ORDER].sort()).toEqual(encoded.sort());
+    expect(Object.keys(NORM_PROFILE_INFO).sort()).toEqual(Object.keys(NORM_PROFILES).sort());
   });
 });
 

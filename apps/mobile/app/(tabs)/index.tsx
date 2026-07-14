@@ -1,3 +1,4 @@
+import { Link } from "expo-router";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { colors, sacredSerif, sectionLabel } from "../../src/theme";
 
@@ -10,9 +11,14 @@ import { colors, sacredSerif, sectionLabel } from "../../src/theme";
 export default function Home() {
   return (
     <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
-      <Text style={styles.liturgicalHeader}>
-        Liturgical day — awaiting calendar import
-      </Text>
+      <View style={styles.header}>
+        <Text style={styles.liturgicalHeader}>
+          Liturgical day — awaiting calendar import
+        </Text>
+        <Link href="/settings" style={styles.settingsLink}>
+          Settings
+        </Link>
+      </View>
       <View style={styles.rule} />
 
       <Text style={sectionLabel}>Macros</Text>
@@ -44,7 +50,9 @@ export default function Home() {
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.paperWhite },
   content: { paddingHorizontal: 16, paddingTop: 64, paddingBottom: 32, gap: 12 },
-  liturgicalHeader: { ...sacredSerif, fontSize: 16, color: colors.inkNavy },
+  header: { flexDirection: "row", justifyContent: "space-between", alignItems: "baseline", gap: 12 },
+  liturgicalHeader: { ...sacredSerif, fontSize: 16, color: colors.inkNavy, flexShrink: 1 },
+  settingsLink: { color: colors.oxblood, fontSize: 13 },
   rule: { height: 1, backgroundColor: colors.hairlineMajor, marginHorizontal: -16 },
   placeholder: { color: colors.graySecondary, fontSize: 13, lineHeight: 18 },
   offering: { fontStyle: "italic", color: colors.goldDeep, fontSize: 15 },

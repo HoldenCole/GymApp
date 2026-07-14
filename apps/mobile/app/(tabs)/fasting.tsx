@@ -1,6 +1,8 @@
+import { Link } from "expo-router";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
-import { resolveObligation, type UserProfile } from "@kanon/engine";
+import { DISCIPLINES, resolveObligation } from "@kanon/engine";
 import { civilDayFactsToday } from "../../src/dayFacts";
+import { useProfile } from "../../src/profile";
 import { colors, sacredSerif, sectionLabel } from "../../src/theme";
 
 /**
@@ -13,17 +15,12 @@ import { colors, sacredSerif, sectionLabel } from "../../src/theme";
  * presents a fabricated liturgical day as truth.
  */
 
-// Placeholder profile until onboarding + accounts exist.
-const PROFILE: UserProfile = {
-  discipline: "of",
-  normProfile: "us",
-  birthDate: "1990-01-01",
-};
-
 export default function Fasting() {
+  const { profile } = useProfile();
   const day = civilDayFactsToday();
-  const obligation = resolveObligation(day, PROFILE);
+  const obligation = resolveObligation(day, profile);
   const pending = day.liturgicalFactsPending;
+  const discipline = DISCIPLINES[profile.discipline];
 
   return (
     <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
@@ -45,6 +42,15 @@ export default function Fasting() {
       <Text style={sectionLabel}>What today allows</Text>
       <Text style={styles.body}>
         Rendered from the obligation record ({obligation.ruleRefs.join(", ") || "—"}).
+      </Text>
+      <View style={styles.rule} />
+
+      <Text style={sectionLabel}>Your discipline</Text>
+      <Text style={styles.body}>
+        {discipline.label} — {discipline.sublabel}.{" "}
+        <Link href="/settings" style={styles.link}>
+          Change
+        </Link>
       </Text>
       <View style={styles.rule} />
 
@@ -99,4 +105,5 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     marginBottom: 4,
   },
+  link: { color: colors.oxblood },
 });
