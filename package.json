@@ -1,0 +1,17 @@
+{
+  "name": "kanon",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Kanon — a Catholic physical-and-spiritual training app. A Lampstand product.",
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "content",
+    "data"
+  ],
+  "scripts": {
+    "test": "npm --workspace @kanon/engine run test",
+    "typecheck": "npm --workspace @kanon/engine run typecheck && npm --workspace @kanon/mobile run typecheck",
+    "package-content": "python3 tools/package_content.py"
+  }
+}

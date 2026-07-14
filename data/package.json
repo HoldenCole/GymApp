@@ -1,0 +1,6 @@
+{
+  "name": "@kanon/data",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Canonical Kanon data: recipe database and packaged JSON exports. Import subpaths, e.g. @kanon/data/packaged/recipes.json"
+}

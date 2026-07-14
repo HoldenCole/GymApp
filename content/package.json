@@ -1,0 +1,6 @@
+{
+  "name": "@kanon/content",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Verified Kanon content: source documents and their packaged JSON. Import subpaths, e.g. @kanon/content/packaged/patrons.json"
+}
